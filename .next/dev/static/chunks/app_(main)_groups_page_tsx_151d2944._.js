@@ -26,11 +26,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 const SkeletonRow = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(8);
-    if ($[0] !== "69c62a2c9e2ccac764ae9bc40e33c23441e8a9fcd8136c2223a81055daef7082") {
+    if ($[0] !== "15d6f3ecdbbd144c97a7feacfe63ebdd4a68f355ff2c3cb33ff49d9ce403aa58") {
         for(let $i = 0; $i < 8; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "69c62a2c9e2ccac764ae9bc40e33c23441e8a9fcd8136c2223a81055daef7082";
+        $[0] = "15d6f3ecdbbd144c97a7feacfe63ebdd4a68f355ff2c3cb33ff49d9ce403aa58";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -323,72 +323,72 @@ const Groups = ()=>{
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full p-6 min-h-screen  text-foreground font-sans",
+        className: "w-full p-3 sm:p-6 min-h-screen text-foreground font-sans overflow-x-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mb-8 flex flex-col md:flex-row justify-between items-center gap-4",
+                className: "mb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-2xl font-bold tracking-tight",
-                        children: "Guruhlar ro'yxati"
+                        className: "text-xl sm:text-2xl font-bold tracking-tight",
+                        children: "Guruhlar"
                     }, void 0, false, {
                         fileName: "[project]/app/(main)/groups/page.tsx",
                         lineNumber: 190,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-3 w-full md:w-auto",
+                        className: "flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative flex-1 md:w-64",
+                                className: "relative w-full md:w-64",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                         className: "absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground",
                                         size: 16
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 195,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         type: "text",
-                                        placeholder: "Ustoz nomi bo'yicha...",
-                                        className: "w-full  border border-input rounded-lg py-2 pl-10 pr-4 text-sm outline-none focus:ring-1 focus:ring-ring transition-all",
+                                        placeholder: "Ustoz nomi...",
+                                        className: "w-full border border-input rounded-lg py-2 pl-10 pr-4 text-sm outline-none focus:ring-1 focus:ring-ring transition-all",
                                         value: searchTerm,
                                         onChange: (e_0)=>setSearchTerm(e_0.target.value)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 194,
+                                        lineNumber: 196,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                lineNumber: 192,
+                                lineNumber: 194,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: ()=>setIsAddModalOpen(true),
-                                className: "flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all active:scale-95 whitespace-nowrap",
+                                className: "flex w-full sm:w-auto items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all active:scale-95 whitespace-nowrap",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 197,
+                                        lineNumber: 199,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
-                                    " Guruh Qo'shish"
+                                    " Qo'shish"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                lineNumber: 196,
+                                lineNumber: 198,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(main)/groups/page.tsx",
-                        lineNumber: 191,
+                        lineNumber: 193,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -399,242 +399,249 @@ const Groups = ()=>{
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "border border-border rounded-xl overflow-hidden shadow-sm",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
-                    className: "w-full text-left border-collapse",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
-                            className: "text-[11px] uppercase tracking-widest border-b border-border text-muted-foreground",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "p-4 w-12 text-center",
-                                        children: "No"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 206,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "p-4",
-                                        children: "Guruh nomi"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 207,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "p-4",
-                                        children: "Ustoz"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 208,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "p-4 text-center",
-                                        children: "O'quvchilar soni"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 209,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "p-4",
-                                        children: "Boshlangan vaqti"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 210,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "p-4",
-                                        children: "Tugagan vaqti"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 211,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "p-4 text-right",
-                                        children: "Amallar"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 212,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/(main)/groups/page.tsx",
-                                lineNumber: 205,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0))
-                        }, void 0, false, {
-                            fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 204,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
-                            className: "text-[13px] divide-y divide-border",
-                            children: loading ? [
-                                ...Array(10)
-                            ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SkeletonRow, {}, i, false, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "overflow-x-auto w-full",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
+                        className: "w-full text-left border-collapse min-w-[650px]",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
+                                className: "text-[11px] uppercase tracking-widest border-b border-border text-muted-foreground",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "p-4 w-12 text-center",
+                                            children: "No"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 209,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "p-4",
+                                            children: "Guruh nomi"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 210,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "p-4",
+                                            children: "Ustoz"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 211,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "p-4 text-center",
+                                            children: "O'quvchilar"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 212,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "p-4",
+                                            children: "Boshlanish"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 213,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "p-4",
+                                            children: "Tugash"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 214,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "p-4 text-right",
+                                            children: "Amallar"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 215,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 216,
-                                    columnNumber: 53
-                                }, ("TURBOPACK compile-time value", void 0))) : data.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                    colSpan: 7,
-                                    className: "p-20 text-center text-muted-foreground",
-                                    children: "Hech qanday guruh topilmadi."
-                                }, void 0, false, {
-                                    fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 217,
-                                    columnNumber: 17
+                                    lineNumber: 208,
+                                    columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                lineNumber: 216,
-                                columnNumber: 100
-                            }, ("TURBOPACK compile-time value", void 0)) : data.map((group, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                    className: "hover:transition-colors",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                            className: "p-4 text-center text-muted-foreground",
-                                            children: index + 1
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 221,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                            className: "p-4 font-semibold text-foreground",
-                                            children: group.name
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 224,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                            className: "p-4 text-muted-foreground",
-                                            children: group.teacher ? `${group.teacher.first_name} ${group.teacher.last_name}` : "Tayinlanmagan"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 227,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                            className: "p-4 text-center",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "bg-muted px-2 py-1 rounded text-foreground",
-                                                children: group.students?.length || 0
+                                lineNumber: 207,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
+                                className: "text-[13px] divide-y divide-border",
+                                children: loading ? [
+                                    ...Array(10)
+                                ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SkeletonRow, {}, i, false, {
+                                        fileName: "[project]/app/(main)/groups/page.tsx",
+                                        lineNumber: 219,
+                                        columnNumber: 55
+                                    }, ("TURBOPACK compile-time value", void 0))) : data.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                        colSpan: 7,
+                                        className: "p-12 text-center text-muted-foreground",
+                                        children: "Hech qanday guruh topilmadi."
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/(main)/groups/page.tsx",
+                                        lineNumber: 220,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/app/(main)/groups/page.tsx",
+                                    lineNumber: 219,
+                                    columnNumber: 102
+                                }, ("TURBOPACK compile-time value", void 0)) : data.map((group, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                        className: "hover:bg-accent/30 transition-colors",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "p-4 text-center text-muted-foreground",
+                                                children: index + 1
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                                lineNumber: 231,
+                                                lineNumber: 224,
                                                 columnNumber: 21
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 230,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                            className: "p-4 text-muted-foreground",
-                                            children: group.started_group ? new Date(group.started_group).toLocaleDateString() : "---"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 235,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                            className: "p-4 text-muted-foreground",
-                                            children: group.end_group ? new Date(group.end_group).toLocaleDateString() : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-emerald-500 font-medium italic text-[11px]",
-                                                children: "Faol (Tugallanmagan)"
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "p-4 font-semibold text-foreground",
+                                                children: group.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                                lineNumber: 239,
-                                                columnNumber: 89
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 238,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                            className: "p-4 text-right",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                onClick: ()=>handleViewGroup(group._id),
-                                                className: "text-muted-foreground hover:text-foreground transition-colors p-1 rounded-md hover:bg-accent",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$ellipsis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MoreHorizontal$3e$__["MoreHorizontal"], {
-                                                    size: 20
+                                                lineNumber: 227,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "p-4 text-muted-foreground",
+                                                children: group.teacher ? `${group.teacher.first_name} ${group.teacher.last_name}` : "Tayinlanmagan"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/(main)/groups/page.tsx",
+                                                lineNumber: 230,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "p-4 text-center",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "bg-muted px-2 py-1 rounded text-foreground",
+                                                    children: group.students?.length || 0
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                                    lineNumber: 245,
+                                                    lineNumber: 234,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                                lineNumber: 244,
+                                                lineNumber: 233,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "p-4 text-muted-foreground",
+                                                children: group.started_group ? new Date(group.started_group).toLocaleDateString() : "---"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/(main)/groups/page.tsx",
+                                                lineNumber: 238,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "p-4 text-muted-foreground",
+                                                children: group.end_group ? new Date(group.end_group).toLocaleDateString() : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-emerald-500 font-medium italic text-[11px]",
+                                                    children: "Faol"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/(main)/groups/page.tsx",
+                                                    lineNumber: 242,
+                                                    columnNumber: 91
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/(main)/groups/page.tsx",
+                                                lineNumber: 241,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "p-4 text-right",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    onClick: ()=>handleViewGroup(group._id),
+                                                    className: "text-muted-foreground hover:text-foreground transition-colors p-1 rounded-md hover:bg-accent",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$ellipsis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MoreHorizontal$3e$__["MoreHorizontal"], {
+                                                        size: 20
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/(main)/groups/page.tsx",
+                                                        lineNumber: 248,
+                                                        columnNumber: 25
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/(main)/groups/page.tsx",
+                                                    lineNumber: 247,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/(main)/groups/page.tsx",
+                                                lineNumber: 246,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 243,
-                                            columnNumber: 19
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    ]
-                                }, group._id, true, {
-                                    fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 220,
-                                    columnNumber: 50
-                                }, ("TURBOPACK compile-time value", void 0)))
-                        }, void 0, false, {
-                            fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 215,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
+                                        ]
+                                    }, group._id, true, {
+                                        fileName: "[project]/app/(main)/groups/page.tsx",
+                                        lineNumber: 223,
+                                        columnNumber: 52
+                                    }, ("TURBOPACK compile-time value", void 0)))
+                            }, void 0, false, {
+                                fileName: "[project]/app/(main)/groups/page.tsx",
+                                lineNumber: 218,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/(main)/groups/page.tsx",
+                        lineNumber: 206,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0))
+                }, void 0, false, {
                     fileName: "[project]/app/(main)/groups/page.tsx",
-                    lineNumber: 203,
+                    lineNumber: 205,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/groups/page.tsx",
-                lineNumber: 202,
+                lineNumber: 204,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             isAddModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed inset-0 flex items-center justify-center z-[110] p-4 bg-black/60 backdrop-blur-sm",
+                className: "fixed inset-0 flex items-center justify-center z-[110] p-3 bg-black/60 backdrop-blur-sm",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "border border-border w-full max-w-lg rounded-2xl p-8 relative shadow-2xl animate-in fade-in zoom-in-95 duration-200",
+                    className: "border border-border w-full max-w-lg rounded-2xl p-5 sm:p-8 relative shadow-2xl animate-in fade-in zoom-in-95 duration-200 bg-background overflow-y-auto max-h-[95vh]",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>setIsAddModalOpen(false),
-                            className: "absolute right-6 top-6 text-muted-foreground hover:text-foreground transition-colors",
+                            className: "absolute right-4 top-4 text-muted-foreground hover:text-foreground transition-colors",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                lineNumber: 256,
+                                lineNumber: 260,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 255,
+                            lineNumber: 259,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-xl font-bold mb-8 text-foreground",
+                            className: "text-lg sm:text-xl font-bold mb-6 text-foreground",
                             children: "Guruh qo'shish"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 258,
+                            lineNumber: 262,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                             onSubmit: handleAddGroup,
-                            className: "space-y-6",
+                            className: "space-y-4 sm:space-y-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "space-y-2 relative",
@@ -644,114 +651,34 @@ const Groups = ()=>{
                                             children: "Guruh nomi"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 267,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "relative",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                    required: true,
-                                                    className: "w-full  border border-input rounded-xl p-4 text-sm outline-none focus:ring-1 focus:ring-ring transition-colors pr-10",
-                                                    placeholder: "Masalan: Ingliz tili",
-                                                    value: formData.name,
-                                                    onChange: (e_1)=>setFormData({
-                                                            ...formData,
-                                                            name: e_1.target.value
-                                                        })
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/(main)/groups/page.tsx",
-                                                    lineNumber: 267,
-                                                    columnNumber: 19
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                formData.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                    type: "button",
-                                                    onClick: ()=>setFormData({
-                                                            ...formData,
-                                                            name: ""
-                                                        }),
-                                                    className: "absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                                        size: 16
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                                        lineNumber: 275,
-                                                        columnNumber: 23
-                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/(main)/groups/page.tsx",
-                                                    lineNumber: 271,
-                                                    columnNumber: 37
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 266,
-                                            columnNumber: 17
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 262,
-                                    columnNumber: 15
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "space-y-2 relative",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "text-sm font-medium text-foreground",
-                                            children: "Ustoz"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 280,
-                                            columnNumber: 17
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "relative",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                 required: true,
-                                                className: "w-full  border border-input rounded-xl p-4 text-sm outline-none focus:ring-1 focus:ring-ring transition-colors appearance-none text-foreground",
-                                                value: formData.teacher_id,
-                                                onChange: (e_2)=>setFormData({
+                                                className: "w-full border border-input rounded-xl p-3 sm:p-4 text-sm outline-none focus:ring-1 focus:ring-ring transition-colors pr-10",
+                                                placeholder: "Ingliz tili...",
+                                                value: formData.name,
+                                                onChange: (e_1)=>setFormData({
                                                         ...formData,
-                                                        teacher_id: e_2.target.value
-                                                    }),
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        value: "",
-                                                        children: "Ustozni tanlang"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/(main)/groups/page.tsx",
-                                                        lineNumber: 288,
-                                                        columnNumber: 21
-                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                    teachers.map((t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                            value: t._id,
-                                                            children: [
-                                                                t.first_name,
-                                                                " ",
-                                                                t.last_name
-                                                            ]
-                                                        }, t._id, true, {
-                                                            fileName: "[project]/app/(main)/groups/page.tsx",
-                                                            lineNumber: 289,
-                                                            columnNumber: 40
-                                                        }, ("TURBOPACK compile-time value", void 0)))
-                                                ]
-                                            }, void 0, true, {
+                                                        name: e_1.target.value
+                                                    })
+                                            }, void 0, false, {
                                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                                lineNumber: 284,
+                                                lineNumber: 271,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 283,
+                                            lineNumber: 270,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 279,
+                                    lineNumber: 266,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -759,16 +686,68 @@ const Groups = ()=>{
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                             className: "text-sm font-medium text-foreground",
-                                            children: "Boshlanish sanasi"
+                                            children: "Ustoz"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 296,
+                                            lineNumber: 278,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                                            required: true,
+                                            className: "w-full border border-input rounded-xl p-3 sm:p-4 text-sm outline-none focus:ring-1 focus:ring-ring appearance-none text-foreground",
+                                            value: formData.teacher_id,
+                                            onChange: (e_2)=>setFormData({
+                                                    ...formData,
+                                                    teacher_id: e_2.target.value
+                                                }),
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                    value: "",
+                                                    children: "Ustozni tanlang"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/(main)/groups/page.tsx",
+                                                    lineNumber: 285,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                teachers.map((t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                        value: t._id,
+                                                        children: [
+                                                            t.first_name,
+                                                            " ",
+                                                            t.last_name
+                                                        ]
+                                                    }, t._id, true, {
+                                                        fileName: "[project]/app/(main)/groups/page.tsx",
+                                                        lineNumber: 286,
+                                                        columnNumber: 38
+                                                    }, ("TURBOPACK compile-time value", void 0)))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 281,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/(main)/groups/page.tsx",
+                                    lineNumber: 277,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "space-y-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                            className: "text-sm font-medium text-foreground",
+                                            children: "Sana"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/groups/page.tsx",
+                                            lineNumber: 292,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             required: true,
                                             type: "date",
-                                            className: "w-full  border border-input rounded-xl p-4 text-sm outline-none focus:ring-1 focus:ring-ring text-foreground",
+                                            className: "w-full border border-input rounded-xl p-3 sm:p-4 text-sm outline-none focus:ring-1 focus:ring-ring text-foreground",
                                             value: formData.start_date,
                                             onChange: (e_3)=>setFormData({
                                                     ...formData,
@@ -776,95 +755,95 @@ const Groups = ()=>{
                                                 })
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 299,
+                                            lineNumber: 295,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 295,
+                                    lineNumber: 291,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "pt-4 flex justify-end",
+                                    className: "pt-2 flex justify-end",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "submit",
-                                        className: "bg-primary text-primary-foreground font-semibold py-3 px-8 rounded-xl hover:opacity-90 transition-all active:scale-[0.98]",
-                                        children: "Save changes"
+                                        className: "w-full sm:w-auto bg-primary text-primary-foreground font-semibold py-3 px-8 rounded-xl hover:opacity-90 transition-all active:scale-[0.98]",
+                                        children: "Saqlash"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/groups/page.tsx",
-                                        lineNumber: 305,
+                                        lineNumber: 301,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 304,
+                                    lineNumber: 300,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 261,
+                            lineNumber: 265,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/groups/page.tsx",
-                    lineNumber: 254,
+                    lineNumber: 258,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/groups/page.tsx",
-                lineNumber: 253,
+                lineNumber: 257,
                 columnNumber: 26
             }, ("TURBOPACK compile-time value", void 0)),
             isDetailsOpen && selectedGroup && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed inset-0 flex items-center justify-center z-[110] p-4 bg-black/60 backdrop-blur-sm",
+                className: "fixed inset-0 flex items-center justify-center z-[110] p-3 bg-black/60 backdrop-blur-sm",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "border border-border w-full max-w-lg rounded-2xl p-8 relative shadow-2xl animate-in fade-in zoom-in-95 duration-200",
+                    className: "border border-border w-full max-w-lg rounded-2xl p-5 sm:p-8 relative shadow-2xl bg-background animate-in fade-in zoom-in-95 duration-200",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>setIsDetailsOpen(false),
-                            className: "absolute right-6 top-6 text-muted-foreground hover:text-foreground",
+                            className: "absolute right-4 top-4 text-muted-foreground hover:text-foreground",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                 size: 24
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/groups/page.tsx",
-                                lineNumber: 316,
+                                lineNumber: 312,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 315,
+                            lineNumber: 311,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-2xl font-bold mb-6 italic text-foreground",
+                            className: "text-xl sm:text-2xl font-bold mb-6 italic text-foreground break-words",
                             children: [
                                 "Guruh: ",
                                 selectedGroup.name
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 318,
+                            lineNumber: 314,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid gap-4",
+                            className: "grid gap-3 sm:gap-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "p-4 rounded-xl border border-border bg-muted/30",
+                                    className: "p-3 sm:p-4 rounded-xl border border-border bg-muted/30",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-[10px] text-muted-foreground uppercase mb-1 font-bold",
                                             children: "O'qituvchi"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 323,
+                                            lineNumber: 319,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "font-medium text-foreground",
+                                            className: "font-medium text-foreground text-sm sm:text-base",
                                             children: [
                                                 selectedGroup.teacher?.first_name,
                                                 " ",
@@ -872,98 +851,98 @@ const Groups = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 326,
+                                            lineNumber: 322,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 322,
+                                    lineNumber: 318,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex gap-4",
+                                    className: "flex flex-col sm:flex-row gap-3 sm:gap-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex-1 p-4 rounded-xl border border-border bg-muted/30",
+                                            className: "flex-1 p-3 sm:p-4 rounded-xl border border-border bg-muted/30",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-[10px] text-muted-foreground uppercase mb-1 font-bold",
-                                                    children: "Talabalar soni"
+                                                    children: "Talabalar"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                                    lineNumber: 333,
+                                                    lineNumber: 329,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-xl font-bold text-foreground",
+                                                    className: "text-lg sm:text-xl font-bold text-foreground",
                                                     children: selectedGroup.students?.length || 0
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                                    lineNumber: 336,
+                                                    lineNumber: 332,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 332,
+                                            lineNumber: 328,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex-1 p-4 rounded-xl border border-border bg-muted/30",
+                                            className: "flex-1 p-3 sm:p-4 rounded-xl border border-border bg-muted/30",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-[10px] text-muted-foreground uppercase mb-1 font-bold",
                                                     children: "Holati"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                                    lineNumber: 341,
+                                                    lineNumber: 337,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-emerald-500 font-extrabold uppercase text-xs",
+                                                    className: "text-emerald-500 font-extrabold uppercase text-[10px] sm:text-xs",
                                                     children: selectedGroup.status || "Faol"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                                    lineNumber: 344,
+                                                    lineNumber: 340,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/groups/page.tsx",
-                                            lineNumber: 340,
+                                            lineNumber: 336,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/groups/page.tsx",
-                                    lineNumber: 331,
+                                    lineNumber: 327,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 321,
+                            lineNumber: 317,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>setIsDetailsOpen(false),
-                            className: "w-full bg-secondary text-secondary-foreground font-bold py-3 rounded-xl mt-8 hover:bg-secondary/80 transition-all",
+                            className: "w-full bg-secondary text-secondary-foreground font-bold py-3 rounded-xl mt-6 sm:mt-8 hover:bg-secondary/80 transition-all text-sm sm:text-base",
                             children: "Yopish"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/groups/page.tsx",
-                            lineNumber: 350,
+                            lineNumber: 346,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/groups/page.tsx",
-                    lineNumber: 314,
+                    lineNumber: 310,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/groups/page.tsx",
-                lineNumber: 313,
+                lineNumber: 309,
                 columnNumber: 42
             }, ("TURBOPACK compile-time value", void 0))
         ]

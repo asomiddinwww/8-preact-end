@@ -133,25 +133,25 @@ const Managers = () => {
   };
 
   return (
-    <div className="w-full p-6 min-h-screen text-foreground">
+    <div className="w-full p-3 sm:p-6 min-h-screen text-foreground">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold tracking-tight">
+        <h1 className="text-xl sm:text-2xl font-bold tracking-tight">
           Menejerlar ro'yxati
         </h1>
       </div>
 
-      <div className="overflow-visible border border-zinc-800 rounded-xl  text-card-foreground shadow-sm">
-        <table className="w-full text-left">
-          <thead className="text-xs uppercase text-muted-foreground font-medium border-b border-zinc-800">
+      <div className="w-full overflow-x-auto border border-zinc-800 rounded-xl text-card-foreground shadow-sm ">
+        <table className="w-full text-left min-w-[500px] sm:min-w-full">
+          <thead className="text-[10px] sm:text-xs uppercase text-muted-foreground font-medium border-b border-zinc-800">
             <tr>
-              <th className="p-4">Ism</th>
-              <th className="p-4">Familiya</th>
-              <th className="p-4">Email</th>
-              <th className="p-4 text-right">Amallar</th>
+              <th className="p-3 sm:p-4">Ism</th>
+              <th className="p-3 sm:p-4">Familiya</th>
+              <th className="p-3 sm:p-4">Email</th>
+              <th className="p-3 sm:p-4 text-right">Amallar</th>
             </tr>
           </thead>
 
-          <tbody className="text-sm">
+          <tbody className="text-xs sm:text-sm">
             {loading
               ? [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
               : data.map((item) => (
@@ -159,10 +159,12 @@ const Managers = () => {
                     key={item._id}
                     className="border-t border-zinc-800 hover:bg-muted/50 transition-colors"
                   >
-                    <td className="p-4">{item.first_name}</td>
-                    <td className="p-4">{item.last_name}</td>
-                    <td className="p-4 text-muted-foreground">{item.email}</td>
-                    <td className="p-4 text-right relative">
+                    <td className="p-3 sm:p-4">{item.first_name}</td>
+                    <td className="p-3 sm:p-4">{item.last_name}</td>
+                    <td className="p-3 sm:p-4 text-muted-foreground truncate max-w-[120px] sm:max-w-none">
+                      {item.email}
+                    </td>
+                    <td className="p-3 sm:p-4 text-right relative">
                       <button
                         onClick={() =>
                           setActiveMenu(
@@ -180,16 +182,16 @@ const Managers = () => {
                             className="fixed inset-0 z-40"
                             onClick={() => setActiveMenu(null)}
                           />
-                          <div className="absolute right-4 mt-2 w-40 border bg-popover text-popover-foreground border-zinc-800 rounded-md z-50 shadow-lg overflow-hidden text-left animate-in fade-in zoom-in-95 duration-100">
+                          <div className="absolute right-4 mt-2 w-32 sm:w-40 border bg-popover text-popover-foreground border-zinc-800 rounded-md z-50 shadow-lg overflow-hidden text-left animate-in fade-in zoom-in-95 duration-100">
                             <button
-                              className="w-full px-3 py-2 text-sm flex items-center gap-2 hover:bg-muted transition-colors border-b border-zinc-800"
+                              className="w-full px-3 py-2 text-[12px] sm:text-sm flex items-center gap-2 hover:bg-muted transition-colors border-b border-zinc-800"
                               onClick={() => handleEditClick(item)}
                             >
                               <Pencil size={14} /> Tahrirlash
                             </button>
                             <button
                               onClick={() => handleDelete(item._id)}
-                              className="w-full px-3 py-2 text-sm flex items-center gap-2 hover:bg-destructive/10 text-destructive transition-colors"
+                              className="w-full px-3 py-2 text-[12px] sm:text-sm flex items-center gap-2 hover:bg-destructive/10 text-destructive transition-colors"
                             >
                               <Trash2 size={14} /> O'chirish
                             </button>
@@ -204,10 +206,10 @@ const Managers = () => {
       </div>
 
       {isEditModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-[200] bg-black/80 backdrop-blur-sm p-4">
-          <div className="text-foreground p-6 rounded-lg w-full max-w-md border border-zinc-800 shadow-xl animate-in fade-in zoom-in duration-200">
+        <div className="fixed inset-0 flex items-center justify-center z-[200]  backdrop-blur-sm p-4">
+          <div className="bg-background text-foreground p-5 sm:p-6 rounded-lg w-full max-w-[280px] xs:max-w-md border border-zinc-800 shadow-xl animate-in fade-in zoom-in duration-200">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-lg font-semibold tracking-tight">
+              <h2 className="text-base sm:text-lg font-semibold tracking-tight">
                 Menejerni tahrirlash
               </h2>
               <button
@@ -223,12 +225,12 @@ const Managers = () => {
               className="flex flex-col gap-4"
             >
               <div className="space-y-1.5">
-                <label className="text-sm font-medium leading-none text-muted-foreground">
+                <label className="text-[12px] sm:text-sm font-medium leading-none text-muted-foreground">
                   Ism
                 </label>
                 <input
                   required
-                  className="w-full bg-zinc-950 border border-zinc-800 p-2.5 rounded-md text-sm outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all"
+                  className="w-full border border-zinc-800 p-2 sm:p-2.5 rounded-md text-sm outline-none focus:ring-2 focus:ring-ring transition-all"
                   value={editFormData.first_name}
                   onChange={(e) =>
                     setEditFormData({
@@ -240,12 +242,12 @@ const Managers = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-medium leading-none text-muted-foreground">
+                <label className="text-[12px] sm:text-sm font-medium leading-none text-muted-foreground">
                   Familiya
                 </label>
                 <input
                   required
-                  className="w-full bg-zinc-950 border border-zinc-800 p-2.5 rounded-md text-sm outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all"
+                  className="w-full border border-zinc-800 p-2 sm:p-2.5 rounded-md text-sm outline-none focus:ring-2 focus:ring-ring transition-all"
                   value={editFormData.last_name}
                   onChange={(e) =>
                     setEditFormData({
@@ -257,29 +259,29 @@ const Managers = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-medium leading-none text-muted-foreground">
+                <label className="text-[12px]  sm:text-sm font-medium leading-none text-muted-foreground">
                   Email
                 </label>
                 <input
                   required
                   type="email"
-                  className="w-full bg-zinc-900 border border-zinc-800 p-2.5 rounded-md text-sm outline-none opacity-60 cursor-not-allowed"
+                  className="w-full  border border-zinc-800 p-2 sm:p-2.5 rounded-md text-sm outline-none opacity-60 cursor-not-allowed"
                   value={editFormData.email}
                   disabled
                 />
               </div>
 
-              <div className="flex gap-3 mt-4">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-4">
                 <button
                   type="button"
                   onClick={() => setIsEditModalOpen(false)}
-                  className="flex-1 bg-secondary text-secondary-foreground hover:bg-secondary/80 py-2.5 rounded-md text-sm font-medium transition-colors border border-zinc-800"
+                  className="order-2 sm:order-1 flex-1 bg-secondary text-secondary-foreground hover:bg-secondary/80 py-2 sm:py-2.5 rounded-md text-sm font-medium transition-colors border border-zinc-800"
                 >
                   Bekor qilish
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 py-2.5 rounded-md text-sm font-medium transition-colors shadow-sm"
+                  className="order-1 sm:order-2 flex-1 bg-primary text-primary-foreground hover:bg-primary/90 py-2 sm:py-2.5 rounded-md text-sm font-medium transition-colors shadow-sm"
                 >
                   Saqlash
                 </button>

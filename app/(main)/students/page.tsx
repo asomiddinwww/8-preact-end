@@ -143,117 +143,143 @@ const Students = () => {
   };
 
   return (
-    <div className="w-full p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h1>Studentlar ro'yxati</h1>
-        <div className="flex gap-3">
-          <div className="relative">
-            <select
-              className="appearance-none border rounded-lg py-2 pl-4 pr-10 text-sm outline-none bg-white text-black cursor-pointer"
-              value={filterStatus}
-              onChange={(e) => setFilterStatus(e.target.value)}
+    <div className="w-full p-2 sm:p-6 min-h-screen">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+        <h1 className="text-lg font-bold">Studentlar ro'yxati</h1>
+        <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <div className="flex gap-2 w-full sm:w-auto">
+            <div className="relative flex-1 sm:flex-initial">
+              <select
+                className="w-full appearance-none border rounded-lg py-2 pl-4 pr-10 text-sm outline-none bg-white text-black cursor-pointer"
+                value={filterStatus}
+                onChange={(e) => setFilterStatus(e.target.value)}
+              >
+                <option value="">All</option>
+                <option value="faol">Faol</option>
+                <option value="ta'tilda">Ta'tilda</option>
+                <option value="yakunladi">Yakunladi</option>
+              </select>
+              <ChevronDown
+                className="absolute right-3 top-2.5 pointer-events-none text-black"
+                size={16}
+              />
+            </div>
+
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="sm:hidden border p-2 rounded-lg flex items-center justify-center"
             >
-              <option value="">All</option>
-              <option value="faol">Faol</option>
-              <option value="ta'tilda">Ta'tilda</option>
-              <option value="yakunladi">Yakunladi</option>
-            </select>
-            <ChevronDown
-              className="absolute right-3 top-2.5 pointer-events-none text-black"
-              size={16}
-            />
+              <Plus size={20} />
+            </button>
           </div>
 
-          <div className="relative">
-            <Search className="absolute left-3 top-2.5" size={18} />
+          <div className="relative w-full sm:w-64">
+            <Search
+              className="absolute left-3 top-2.5 text-gray-400"
+              size={18}
+            />
             <input
               type="text"
               placeholder="Qidiruv..."
-              className="border rounded-lg py-2 pl-10 pr-4 text-sm outline-none w-64"
+              className="w-full border rounded-lg py-2 pl-10 pr-4 text-sm outline-none"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="border px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2"
+            className="hidden sm:flex border px-4 py-2 rounded-lg text-sm font-bold items-center gap-2 whitespace-nowrap"
           >
             <Plus size={18} /> Student Qo'shish
           </button>
         </div>
       </div>
 
-      <div className="border rounded-2xl overflow-visible">
-        <table className="w-full text-left">
-          <thead className="text-xs uppercase border-b">
-            <tr>
-              <th className="p-4">Ism</th>
-              <th className="p-4">Familiya</th>
-              <th className="p-4">Telefon</th>
-              <th className="p-4">Holat</th>
-              <th className="p-4 text-right">Amallar</th>
-            </tr>
-          </thead>
-          <tbody className="text-sm">
-            {loading
-              ? [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
-              : data
-                  .filter((s) =>
-                    s.first_name
-                      .toLowerCase()
-                      .includes(searchTerm.toLowerCase()),
-                  )
-                  .map((student) => (
-                    <tr key={student._id} className="border-b last:border-0">
-                      <td className="p-4">{student.first_name}</td>
-                      <td className="p-4">{student.last_name}</td>
-                      <td className="p-4">{student.phone}</td>
-                      <td className="p-4">
-                        <span className="border px-2 py-1 rounded text-[10px] uppercase font-bold">
-                          {student.status}
-                        </span>
-                      </td>
-                      <td className="p-4 text-right relative">
-                        <button
-                          onClick={() =>
-                            setActiveMenu(
-                              activeMenu === student._id ? null : student._id,
-                            )
-                          }
-                        >
-                          <MoreHorizontal size={20} />
-                        </button>
+      <div className="border rounded-2xl overflow-x-auto">
+        <div className="min-w-[600px]">
+          <table className="w-full text-left">
+            <thead className="text-xs uppercase border-b">
+              <tr>
+                <th className="p-4">Ism</th>
+                <th className="p-4">Familiya</th>
+                <th className="p-4">Telefon</th>
+                <th className="p-4">Holat</th>
+                <th className="p-4 text-right">Amallar</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm">
+              {loading
+                ? [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
+                : data
+                    .filter((s) =>
+                      s.first_name
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase()),
+                    )
+                    .map((student) => (
+                      <tr
+                        key={student._id}
+                        className="border-b last:border-0 hover:bg-gray-50/50 transition-colors"
+                      >
+                        <td className="p-4">{student.first_name}</td>
+                        <td className="p-4">{student.last_name}</td>
+                        <td className="p-4">{student.phone}</td>
+                        <td className="p-4">
+                          <span className="border px-2 py-1 rounded text-[10px] uppercase font-bold whitespace-nowrap">
+                            {student.status}
+                          </span>
+                        </td>
+                        <td className="p-4 text-right relative">
+                          <button
+                            onClick={() =>
+                              setActiveMenu(
+                                activeMenu === student._id ? null : student._id,
+                              )
+                            }
+                            className="p-1 hover:bg-gray-100 rounded-full"
+                          >
+                            <MoreHorizontal size={20} />
+                          </button>
 
-                        {activeMenu === student._id && (
-                          <div className="absolute right-4 mt-2 w-48 border rounded-lg z-[100] text-black border-black border-1 shadow-lg bg-white">
-                            <button
-                              onClick={() => handleLeaveReturn(student)}
-                              className="w-full text-left px-4 py-2 text-xs border-b hover:bg-gray-50"
-                            >
-                              {student.status === "ta'tilda"
-                                ? "Markazga qaytarish"
-                                : "Ta'tilga chiqarish"}
-                            </button>
-                            <button
-                              onClick={() => handleDelete(student._id)}
-                              className="w-full text-left px-4 py-2 text-xs hover:bg-gray-50"
-                            >
-                              O'chirish
-                            </button>
-                          </div>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-          </tbody>
-        </table>
+                          {activeMenu === student._id && (
+                            <>
+                              <div
+                                className="fixed inset-0 z-[90]"
+                                onClick={() => setActiveMenu(null)}
+                              />
+                              <div className="absolute right-4 mt-2 w-48 border rounded-lg z-[100] text-black border-black shadow-lg bg-white">
+                                <button
+                                  onClick={() => handleLeaveReturn(student)}
+                                  className="w-full text-left px-4 py-2 text-xs border-b hover:bg-gray-50"
+                                >
+                                  {student.status === "ta'tilda"
+                                    ? "Markazga qaytarish"
+                                    : "Ta'tilga chiqarish"}
+                                </button>
+                                <button
+                                  onClick={() => handleDelete(student._id)}
+                                  className="w-full text-left px-4 py-2 text-xs hover:bg-gray-50"
+                                >
+                                  O'chirish
+                                </button>
+                              </div>
+                            </>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-[200] bg-black/50">
-          <div className="bg-white text-black p-6 rounded-xl w-96 border shadow-xl">
+        <div className="fixed inset-0 flex items-center justify-center z-[200] bg-black/50 p-4">
+          <div className="bg-white text-black p-6 rounded-xl w-full max-w-[320px] border shadow-xl">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="font-bold">Yangi student qo'shish</h2>
+              <h2 className="font-bold text-sm sm:text-base">
+                Student qo'shish
+              </h2>
               <button onClick={() => setIsModalOpen(false)}>
                 <X size={20} />
               </button>
@@ -288,7 +314,7 @@ const Students = () => {
               />
               <button
                 type="submit"
-                className="border bg-black text-white py-2 rounded font-bold transition-opacity hover:opacity-90"
+                className="border bg-black text-white py-2 rounded font-bold transition-opacity hover:opacity-90 text-sm"
               >
                 Saqlash
               </button>

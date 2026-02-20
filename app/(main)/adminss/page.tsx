@@ -93,7 +93,6 @@ const AdminPanel = () => {
     );
   }, [searchTerm, data]);
 
-  // 1. STATUSNI O'ZGARTIRISH (ISHGA QAYTARISH YOKI BO'SHATISH)
   const handleStatusToggle = async (admin: AdminUser) => {
     if (!token) return;
     const isRestoring = admin.status === "ishdan bo'shatilgan";
@@ -212,37 +211,43 @@ const AdminPanel = () => {
       alert(err.response?.data?.message || "Xatolik yuz berdi");
     }
   };
+
   return (
-    <div className="w-full p-4 sm:p-6 min-h-screen">
+    <div className="w-full p-2 sm:p-4 md:p-6 min-h-screen overflow-x-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6">
-          <h1 className="text-xl font-semibold">Adminlar boshqaruvi</h1>
-          <div className="flex gap-2 w-full sm:w-auto">
-            <div className="relative flex-1">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+          <h1 className="text-lg md:text-xl font-semibold">
+            Adminlar boshqaruvi
+          </h1>
+          <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+            <div className="relative flex-1 min-w-[140px]">
               <Search
                 className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"
-                size={16}
+                size={14}
               />
               <input
                 type="text"
                 placeholder="Qidiruv..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-background border border-zinc-800 rounded-lg py-1.5 pl-9 text-sm outline-none focus:ring-1 focus:ring-zinc-700"
+                className="w-full bg-background border border-zinc-800 rounded-lg py-1.5 pl-8 pr-2 text-xs md:text-sm outline-none focus:ring-1 focus:ring-zinc-700"
               />
             </div>
 
             <button
               onClick={() => openModal(null)}
-              className="flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm bg-zinc-100 text-black hover:bg-zinc-300 transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs md:text-sm bg-zinc-100 text-black hover:bg-zinc-300 transition-all whitespace-nowrap"
             >
-              <UserPlus size={16} /> Qo'shish
+              <UserPlus size={14} />{" "}
+              <span className="hidden xs:inline">Qo'shish</span>
+              <span className="xs:hidden">+</span>
             </button>
-            <div className="relative">
+
+            <div className="relative min-w-[80px]">
               <select
                 value={filterStatus}
                 onChange={(e) => setFilterStatus(e.target.value)}
-                className="appearance-none bg-background border border-zinc-800 rounded-lg py-1.5 pl-3 pr-8 text-sm outline-none focus:ring-1 focus:ring-zinc-700 cursor-pointer text-zinc-400"
+                className="w-full appearance-none bg-background border border-zinc-800 rounded-lg py-1.5 pl-2 pr-7 text-xs md:text-sm outline-none focus:ring-1 focus:ring-zinc-700 cursor-pointer text-zinc-400"
               >
                 <option value="">All</option>
                 <option value="faol">Faol</option>
@@ -251,15 +256,15 @@ const AdminPanel = () => {
               </select>
               <ChevronDown
                 className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none"
-                size={14}
+                size={12}
               />
             </div>
           </div>
         </div>
 
-        <div className="rounded-xl border border-zinc-800  overflow-hidden">
-          <table className="w-full text-left">
-            <thead className=" text-zinc-500 text-[12px] uppercase">
+        <div className="rounded-xl border border-zinc-800 overflow-hidden w-full overflow-x-auto">
+          <table className="w-full text-left min-w-[600px] md:min-w-full">
+            <thead className="text-zinc-500 text-[10px] md:text-[12px] uppercase ">
               <tr>
                 <th className="p-3">Ism Familiya</th>
                 <th className="p-3">Email</th>
@@ -268,7 +273,7 @@ const AdminPanel = () => {
                 <th className="p-3 text-right">Amallar</th>
               </tr>
             </thead>
-            <tbody className="text-sm divide-y divide-zinc-800">
+            <tbody className="text-xs md:text-sm divide-y divide-zinc-800">
               {loading
                 ? [...Array(10)].map((_, index) => (
                     <SkeletonRow key={`skeleton-${index}`} />
@@ -278,20 +283,20 @@ const AdminPanel = () => {
                       key={item._id}
                       className="hover:bg-zinc-800/30 transition-colors group"
                     >
-                      <td className="p-3 text-zinc-200">
+                      <td className="p-3 ">
                         {item.first_name} {item.last_name}
                       </td>
-                      <td className="p-3 text-zinc-400 text-xs font-mono">
+                      <td className="p-3 font-mono text-[10px] md:text-xs">
                         {item.email}
                       </td>
                       <td className="p-3">
-                        <span className="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-400 text-[10px] font-bold uppercase">
+                        <span className="px-2 py-0.5 rounded  border border-zinc-700 text-zinc-400 text-[9px] md:text-[10px] font-bold uppercase whitespace-nowrap">
                           {item.role}
                         </span>
                       </td>
                       <td className="p-3">
                         <span
-                          className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${
+                          className={`px-2 py-0.5 rounded-full text-[9px] md:text-[10px] font-bold border whitespace-nowrap ${
                             item.status === "faol"
                               ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
                               : item.status === "tatilda"
@@ -303,7 +308,7 @@ const AdminPanel = () => {
                         </span>
                       </td>
                       <td className="p-3 text-right">
-                        <div className="flex justify-end gap-1">
+                        <div className="flex justify-end gap-1 md:gap-2">
                           <button
                             onClick={() => openModal(item)}
                             className="p-1.5 hover:bg-zinc-700 rounded-md text-zinc-400 hover:text-white transition-all"
@@ -339,25 +344,28 @@ const AdminPanel = () => {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[100] p-4 animate-in fade-in duration-200">
-          <div className="bg-background border border-border w-full max-w-md rounded-xl p-6 shadow-lg animate-in zoom-in-95 duration-200">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-semibold tracking-tight text-foreground">
-                {editingAdmin ? "Tahrirlash" : "Yangi admin qo'shish"}
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[100] p-2 md:p-4 animate-in fade-in duration-200">
+          <div className="bg-background border border-border w-full max-w-[500px] xs:max-w-md rounded-xl p-4 md:p-6 shadow-lg animate-in zoom-in-95 duration-200 overflow-y-auto max-h-[90vh]">
+            <div className="flex items-center justify-between mb-4 md:mb-6">
+              <h2 className="text-base md:text-lg font-semibold tracking-tight text-foreground">
+                {editingAdmin ? "Tahrirlash" : "Yangi admin"}
               </h2>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 p-1"
               >
                 <X size={18} className="text-muted-foreground" />
                 <span className="sr-only">Yopish</span>
               </button>
             </div>
 
-            <form onSubmit={handleSave} className="space-y-4 text-sm">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-xs font-medium text-muted-foreground uppercase ml-1">
+            <form
+              onSubmit={handleSave}
+              className="space-y-3 md:space-y-4 text-xs md:text-sm"
+            >
+              <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 md:gap-4">
+                <div className="space-y-1.5 md:space-y-2">
+                  <label className="text-[10px] md:text-xs font-medium text-muted-foreground uppercase ml-1">
                     Ism
                   </label>
                   <input
@@ -366,12 +374,12 @@ const AdminPanel = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, first_name: e.target.value })
                     }
-                    className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="w-full flex h-9 md:h-10 rounded-md border border-input bg-background px-3 py-1 md:py-2 text-xs md:text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                     required
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-medium text-muted-foreground uppercase ml-1">
+                <div className="space-y-1.5 md:space-y-2">
+                  <label className="text-[10px] md:text-xs font-medium text-muted-foreground uppercase ml-1">
                     Familiya
                   </label>
                   <input
@@ -380,14 +388,14 @@ const AdminPanel = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, last_name: e.target.value })
                     }
-                    className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="w-full flex h-9 md:h-10 rounded-md border border-input bg-background px-3 py-1 md:py-2 text-xs md:text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                     required
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="text-xs font-medium text-muted-foreground uppercase ml-1">
+              <div className="space-y-1.5 md:space-y-2">
+                <label className="text-[10px] md:text-xs font-medium text-muted-foreground uppercase ml-1">
                   Email
                 </label>
                 <input
@@ -397,14 +405,14 @@ const AdminPanel = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="w-full flex h-9 md:h-10 rounded-md border border-input bg-background px-3 py-1 md:py-2 text-xs md:text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   required
                 />
               </div>
 
               {!editingAdmin && (
-                <div className="space-y-2">
-                  <label className="text-xs font-medium text-muted-foreground uppercase ml-1">
+                <div className="space-y-1.5 md:space-y-2">
+                  <label className="text-[10px] md:text-xs font-medium text-muted-foreground uppercase ml-1">
                     Parol
                   </label>
                   <input
@@ -414,23 +422,23 @@ const AdminPanel = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, password: e.target.value })
                     }
-                    className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="w-full flex h-9 md:h-10 rounded-md border border-input bg-background px-3 py-1 md:py-2 text-xs md:text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                     required
                   />
                 </div>
               )}
 
-              <div className="flex gap-3 pt-4">
+              <div className="flex flex-col xs:flex-row gap-2 md:gap-3 pt-2 md:pt-4">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="flex-1 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+                  className="order-2 xs:order-1 flex-1 inline-flex items-center justify-center rounded-md text-xs md:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 md:h-10 px-4 py-2"
                 >
                   Bekor qilish
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                  className="order-1 xs:order-2 flex-1 inline-flex items-center justify-center rounded-md text-xs md:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 h-9 md:h-10 px-4 py-2"
                 >
                   Saqlash
                 </button>
