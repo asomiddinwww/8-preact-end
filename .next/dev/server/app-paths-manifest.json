@@ -1,3 +1,15 @@
 {
-  "/(main)/teachers/page": "app/(main)/teachers/page.js"
+  "/(main)/adminss/page": "app/(main)/adminss/page.js",
+  "/(main)/courses/page": "app/(main)/courses/page.js",
+  "/(main)/groups/page": "app/(main)/groups/page.js",
+  "/(main)/menagers/page": "app/(main)/menagers/page.js",
+  "/(main)/payment/page": "app/(main)/payment/page.js",
+  "/(main)/profile/page": "app/(main)/profile/page.js",
+  "/(main)/settings/page": "app/(main)/settings/page.js",
+  "/(main)/students/page": "app/(main)/students/page.js",
+  "/(main)/teachers/[id]/page": "app/(main)/teachers/[id]/page.js",
+  "/(main)/teachers/page": "app/(main)/teachers/page.js",
+  "/api/auth/sign-in/route": "app/api/auth/sign-in/route.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js"
 }

@@ -19,27 +19,27 @@ interface Group {
 }
 
 const SkeletonRow = () => (
-  <tr className="border-t border-zinc-800 animate-pulse">
+  <tr className="border-t border-border animate-pulse">
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-8 mx-auto"></div>
+      <div className="h-4 bg-muted rounded w-3/4 mx-auto"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-32"></div>
+      <div className="h-4 bg-muted rounded w-3/4"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-40"></div>
+      <div className="h-4 bg-muted rounded w-full"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-12 mx-auto"></div>
+      <div className="h-4 bg-muted rounded w-12 mx-auto"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-24"></div>
+      <div className="h-4 bg-muted rounded w-20"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-24"></div>
+      <div className="h-4 bg-muted rounded w-20"></div>
     </td>
     <td className="p-4 text-right">
-      <div className="h-4 bg-zinc-800 rounded w-8 ml-auto"></div>
+      <div className="h-8 w-8 bg-muted rounded ml-auto"></div>
     </td>
   </tr>
 );
@@ -70,7 +70,6 @@ const Groups = () => {
     try {
       setLoading(true);
       let response;
-
       if (searchTerm) {
         response = await axios.get(`${BASE_URL}/api/group/search-teacher`, {
           headers: { Authorization: `Bearer ${token}` },
@@ -84,7 +83,6 @@ const Groups = () => {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
-
       if (response.data && response.data.data) {
         setData(response.data.data);
       } else {
@@ -94,7 +92,6 @@ const Groups = () => {
       console.error("Guruhlarni yuklashda xatolik:", error);
       setData([]);
     } finally {
-      // Skeletonni biroz ko'proq ko'rinishi uchun ixtiyoriy setTimeout (shart emas)
       setTimeout(() => setLoading(false), 600);
     }
   }, [BASE_URL, searchTerm, filterStatus, token]);
@@ -142,9 +139,7 @@ const Groups = () => {
     try {
       const response = await axios.get(
         `${BASE_URL}/api/group/one-group/${id}`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        },
+        { headers: { Authorization: `Bearer ${token}` } },
       );
       setSelectedGroup(response.data?.data || response.data);
       setIsDetailsOpen(true);
@@ -154,80 +149,86 @@ const Groups = () => {
   };
 
   return (
-    <div className="w-full p-6 min-h-screen font-sans">
+    <div className="w-full p-6 min-h-screen  text-foreground font-sans">
       <div className="mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <h1 className="text-2xl font-bold tracking-tight">Guruhlar ro'yxati</h1>
         <div className="flex items-center gap-3 w-full md:w-auto">
           <div className="relative flex-1 md:w-64">
             <Search
-              className="absolute left-3 top-1/2 -translate-y-1/2 "
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
               size={16}
             />
             <input
               type="text"
               placeholder="Ustoz nomi bo'yicha..."
-              className="w-full bg-transparent border border-zinc-800 rounded-lg py-2 pl-10 pr-4 text-sm outline-none focus:border-white transition-all"
+              className="w-full  border border-input rounded-lg py-2 pl-10 pr-4 text-sm outline-none focus:ring-1 focus:ring-ring transition-all"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
           <button
             onClick={() => setIsAddModalOpen(true)}
-            className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-zinc-200 transition-all active:scale-95 whitespace-nowrap"
+            className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all active:scale-95 whitespace-nowrap"
           >
             <Plus size={18} /> Guruh Qo'shish
           </button>
         </div>
       </div>
 
-      <div className="border border-zinc-800 rounded-xl overflow-hidden">
+      <div className="border border-border rounded-xl overflow-hidden shadow-sm">
         <table className="w-full text-left border-collapse">
-          <thead className=" text-[11px] uppercase tracking-widest border-b border-zinc-800 ">
+          <thead className="text-[11px] uppercase tracking-widest border-b border-border text-muted-foreground">
             <tr>
               <th className="p-4 w-12 text-center">No</th>
               <th className="p-4">Guruh nomi</th>
               <th className="p-4">Ustoz</th>
               <th className="p-4 text-center">O'quvchilar soni</th>
               <th className="p-4">Boshlangan vaqti</th>
-              <th className="p-4">Tugagan vaqti</th>{" "}
+              <th className="p-4">Tugagan vaqti</th>
               <th className="p-4 text-right">Amallar</th>
             </tr>
           </thead>
-          <tbody className="text-[13px] divide-y ">
+          <tbody className="text-[13px] divide-y divide-border">
             {loading ? (
-              // --- Loading bo'lganda 5 ta skeleton qatori ko'rinadi ---
-              [...Array(5)].map((_, i) => <SkeletonRow key={i} />)
+              [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
             ) : data.length === 0 ? (
               <tr>
-                <td colSpan={7} className="p-20 text-center ">
+                <td
+                  colSpan={7}
+                  className="p-20 text-center text-muted-foreground"
+                >
                   Hech qanday guruh topilmadi.
                 </td>
               </tr>
             ) : (
               data.map((group, index) => (
-                <tr key={group._id} className="hover:/40 transition-colors">
-                  <td className="p-4 text-center ">{index + 1}</td>
-                  <td className="p-4 font-semibold">{group.name}</td>
-                  <td className="p-4 text-zinc-400">
+                <tr key={group._id} className="hover:transition-colors">
+                  <td className="p-4 text-center text-muted-foreground">
+                    {index + 1}
+                  </td>
+                  <td className="p-4 font-semibold text-foreground">
+                    {group.name}
+                  </td>
+                  <td className="p-4 text-muted-foreground">
                     {group.teacher
                       ? `${group.teacher.first_name} ${group.teacher.last_name}`
                       : "Tayinlanmagan"}
                   </td>
                   <td className="p-4 text-center">
-                    <span className=" px-2 py-1 rounded ">
+                    <span className="bg-muted px-2 py-1 rounded text-foreground">
                       {group.students?.length || 0}
                     </span>
                   </td>
-                  <td className="p-4 text-zinc-400">
+                  <td className="p-4 text-muted-foreground">
                     {group.started_group
                       ? new Date(group.started_group).toLocaleDateString()
                       : "---"}
                   </td>
-                  <td className="p-4 text-zinc-400">
+                  <td className="p-4 text-muted-foreground">
                     {group.end_group ? (
                       new Date(group.end_group).toLocaleDateString()
                     ) : (
-                      <span className="text-emerald-500/70 italic text-[11px]">
+                      <span className="text-emerald-500 font-medium italic text-[11px]">
                         Faol (Tugallanmagan)
                       </span>
                     )}
@@ -235,7 +236,7 @@ const Groups = () => {
                   <td className="p-4 text-right">
                     <button
                       onClick={() => handleViewGroup(group._id)}
-                      className=" hover:text-white transition-colors p-1 rounded-md hover:"
+                      className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-md hover:bg-accent"
                     >
                       <MoreHorizontal size={20} />
                     </button>
@@ -248,24 +249,26 @@ const Groups = () => {
       </div>
 
       {isAddModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-[110] p-4 backdrop-blur-sm">
-          <div className=" border border-zinc-800 w-full max-w-lg rounded-2xl p-8 relative shadow-2xl">
+        <div className="fixed inset-0 flex items-center justify-center z-[110] p-4 bg-black/60 backdrop-blur-sm">
+          <div className="border border-border w-full max-w-lg rounded-2xl p-8 relative shadow-2xl animate-in fade-in zoom-in-95 duration-200">
             <button
               onClick={() => setIsAddModalOpen(false)}
-              className="absolute right-6 top-6  hover:text-white transition-colors"
+              className="absolute right-6 top-6 text-muted-foreground hover:text-foreground transition-colors"
             >
               <X size={20} />
             </button>
-
-            <h2 className="text-xl font-bold mb-8">Guruh qo'shish</h2>
-
+            <h2 className="text-xl font-bold mb-8 text-foreground">
+              Guruh qo'shish
+            </h2>
             <form onSubmit={handleAddGroup} className="space-y-6">
               <div className="space-y-2 relative">
-                <label className="text-sm font-medium ">Guruh nomi</label>
+                <label className="text-sm font-medium text-foreground">
+                  Guruh nomi
+                </label>
                 <div className="relative">
                   <input
                     required
-                    className="w-full  border border-zinc-800 rounded-xl p-4 text-sm outline-none focus:border-zinc-500 transition-colors pr-10"
+                    className="w-full  border border-input rounded-xl p-4 text-sm outline-none focus:ring-1 focus:ring-ring transition-colors pr-10"
                     placeholder="Masalan: Ingliz tili"
                     value={formData.name}
                     onChange={(e) =>
@@ -276,20 +279,21 @@ const Groups = () => {
                     <button
                       type="button"
                       onClick={() => setFormData({ ...formData, name: "" })}
-                      className="absolute right-4 top-1/2 -translate-y-1/2  hover:text-white"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
                     >
                       <X size={16} />
                     </button>
                   )}
                 </div>
               </div>
-
               <div className="space-y-2 relative">
-                <label className="text-sm font-medium ">Ustoz</label>
+                <label className="text-sm font-medium text-foreground">
+                  Ustoz
+                </label>
                 <div className="relative">
                   <select
                     required
-                    className="w-full  border border-zinc-800 rounded-xl p-4 text-sm outline-none focus:border-zinc-500 transition-colors appearance-none"
+                    className="w-full  border border-input rounded-xl p-4 text-sm outline-none focus:ring-1 focus:ring-ring transition-colors appearance-none text-foreground"
                     value={formData.teacher_id}
                     onChange={(e) =>
                       setFormData({ ...formData, teacher_id: e.target.value })
@@ -302,41 +306,26 @@ const Groups = () => {
                       </option>
                     ))}
                   </select>
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none flex items-center gap-2">
-                    {formData.teacher_id && (
-                      <button
-                        type="button"
-                        onClick={() =>
-                          setFormData({ ...formData, teacher_id: "" })
-                        }
-                        className="pointer-events-auto  hover:text-white mr-1"
-                      >
-                        <X size={16} />
-                      </button>
-                    )}
-                  </div>
                 </div>
               </div>
-
               <div className="space-y-2">
-                <label className="text-sm font-medium ">
+                <label className="text-sm font-medium text-foreground">
                   Boshlanish sanasi
                 </label>
                 <input
                   required
                   type="date"
-                  className="w-full  border border-zinc-800 rounded-xl p-4 text-sm outline-none focus:border-zinc-500"
+                  className="w-full  border border-input rounded-xl p-4 text-sm outline-none focus:ring-1 focus:ring-ring text-foreground"
                   value={formData.start_date}
                   onChange={(e) =>
                     setFormData({ ...formData, start_date: e.target.value })
                   }
                 />
               </div>
-
               <div className="pt-4 flex justify-end">
                 <button
                   type="submit"
-                  className="bg-white text-black font-semibold py-3 px-8 rounded-xl hover:bg-zinc-200 transition-all active:scale-[0.98]"
+                  className="bg-primary text-primary-foreground font-semibold py-3 px-8 rounded-xl hover:opacity-90 transition-all active:scale-[0.98]"
                 >
                   Save changes
                 </button>
@@ -347,35 +336,41 @@ const Groups = () => {
       )}
 
       {isDetailsOpen && selectedGroup && (
-        <div className="fixed inset-0 flex items-center justify-center z-[110] p-4 backdrop-blur-sm">
-          <div className=" border border-zinc-800 w-full max-w-lg rounded-2xl p-8 relative">
+        <div className="fixed inset-0 flex items-center justify-center z-[110] p-4 bg-black/60 backdrop-blur-sm">
+          <div className="border border-border w-full max-w-lg rounded-2xl p-8 relative shadow-2xl animate-in fade-in zoom-in-95 duration-200">
             <button
               onClick={() => setIsDetailsOpen(false)}
-              className="absolute right-6 top-6  hover:text-white"
+              className="absolute right-6 top-6 text-muted-foreground hover:text-foreground"
             >
               <X size={24} />
             </button>
-            <h2 className="text-2xl font-bold mb-6 italic">
+            <h2 className="text-2xl font-bold mb-6 italic text-foreground">
               Guruh: {selectedGroup.name}
             </h2>
             <div className="grid gap-4">
-              <div className="p-4 rounded-xl  border border-zinc-800">
-                <p className="text-[10px]  uppercase mb-1">O'qituvchi</p>
-                <p className="font-medium">
+              <div className="p-4 rounded-xl border border-border bg-muted/30">
+                <p className="text-[10px] text-muted-foreground uppercase mb-1 font-bold">
+                  O'qituvchi
+                </p>
+                <p className="font-medium text-foreground">
                   {selectedGroup.teacher?.first_name}{" "}
                   {selectedGroup.teacher?.last_name || "Tayinlanmagan"}
                 </p>
               </div>
               <div className="flex gap-4">
-                <div className="flex-1 p-4 rounded-xl  border border-zinc-800">
-                  <p className="text-[10px]  uppercase mb-1">Talabalar soni</p>
-                  <p className="text-xl font-bold">
+                <div className="flex-1 p-4 rounded-xl border border-border bg-muted/30">
+                  <p className="text-[10px] text-muted-foreground uppercase mb-1 font-bold">
+                    Talabalar soni
+                  </p>
+                  <p className="text-xl font-bold text-foreground">
                     {selectedGroup.students?.length || 0}
                   </p>
                 </div>
-                <div className="flex-1 p-4 rounded-xl  border border-zinc-800">
-                  <p className="text-[10px]  uppercase mb-1">Holati</p>
-                  <p className="text-emerald-500 font-bold uppercase text-xs">
+                <div className="flex-1 p-4 rounded-xl border border-border bg-muted/30">
+                  <p className="text-[10px] text-muted-foreground uppercase mb-1 font-bold">
+                    Holati
+                  </p>
+                  <p className="text-emerald-500 font-extrabold uppercase text-xs">
                     {selectedGroup.status || "Faol"}
                   </p>
                 </div>
@@ -383,7 +378,7 @@ const Groups = () => {
             </div>
             <button
               onClick={() => setIsDetailsOpen(false)}
-              className="w-full bg-zinc-100 text-black font-bold py-3 rounded-xl mt-8"
+              className="w-full bg-secondary text-secondary-foreground font-bold py-3 rounded-xl mt-8 hover:bg-secondary/80 transition-all"
             >
               Yopish
             </button>

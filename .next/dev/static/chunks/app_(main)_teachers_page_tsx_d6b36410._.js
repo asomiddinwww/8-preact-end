@@ -41,11 +41,11 @@ const STATIC_COURSES = [
 ];
 const SkeletonRow = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "f0af6c7b386ce92ea62660985e819fc5eb4246e9ed5c6794b6872651047569a2") {
+    if ($[0] !== "c467248f2d6d7dff487e8c98b5efb0a5c65e5c3ac6ec6f31aa2ab83bfc97bac0") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "f0af6c7b386ce92ea62660985e819fc5eb4246e9ed5c6794b6872651047569a2";
+        $[0] = "c467248f2d6d7dff487e8c98b5efb0a5c65e5c3ac6ec6f31aa2ab83bfc97bac0";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -402,12 +402,12 @@ const Teachers = ()=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-full overflow-x-auto border border-border rounded-xl bg-card shadow-sm scrollbar-hide",
+                className: "w-full overflow-x-auto border border-border rounded-xl  shadow-sm scrollbar-hide",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
                     className: "w-full text-left min-w-[500px]",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
-                            className: "text-[10px] sm:text-xs uppercase text-muted-foreground bg-muted/50 border-b border-border",
+                            className: "text-[10px] sm:text-xs uppercase text-muted-foreground border-b border-border",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -464,11 +464,11 @@ const Teachers = ()=>{
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
                             className: "text-xs sm:text-sm",
                             children: loading ? [
-                                ...Array(6)
+                                ...Array(10)
                             ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SkeletonRow, {}, i, false, {
                                     fileName: "[project]/app/(main)/teachers/page.tsx",
                                     lineNumber: 208,
-                                    columnNumber: 52
+                                    columnNumber: 53
                                 }, ("TURBOPACK compile-time value", void 0))) : filteredData.map((t_0)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                     className: "border-t border-border hover:bg-muted/30 transition-colors",
                                     children: [
@@ -536,7 +536,7 @@ const Teachers = ()=>{
                                                             onClick: ()=>setActiveMenu(null)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                            lineNumber: 229,
+                                                            lineNumber: 228,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -550,14 +550,14 @@ const Teachers = ()=>{
                                                                             size: 14
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                                            lineNumber: 232,
+                                                                            lineNumber: 231,
                                                                             columnNumber: 33
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         " O'chirish"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                                    lineNumber: 231,
+                                                                    lineNumber: 230,
                                                                     columnNumber: 54
                                                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                     onClick: ()=>handleReturnTeacher(t_0._id),
@@ -567,14 +567,14 @@ const Teachers = ()=>{
                                                                             size: 14
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                                            lineNumber: 234,
+                                                                            lineNumber: 233,
                                                                             columnNumber: 33
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         " Qaytarish"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                                    lineNumber: 233,
+                                                                    lineNumber: 232,
                                                                     columnNumber: 43
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -585,20 +585,20 @@ const Teachers = ()=>{
                                                                             size: 14
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                                            lineNumber: 237,
+                                                                            lineNumber: 236,
                                                                             columnNumber: 31
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         " Ma'lumot"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                                    lineNumber: 236,
+                                                                    lineNumber: 235,
                                                                     columnNumber: 29
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                            lineNumber: 230,
+                                                            lineNumber: 229,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
@@ -613,7 +613,7 @@ const Teachers = ()=>{
                                 }, t_0._id, true, {
                                     fileName: "[project]/app/(main)/teachers/page.tsx",
                                     lineNumber: 208,
-                                    columnNumber: 103
+                                    columnNumber: 104
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/teachers/page.tsx",
@@ -634,7 +634,7 @@ const Teachers = ()=>{
             isModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fixed inset-0 /80 backdrop-blur-sm flex items-center justify-center z-[200] p-2 sm:p-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "bg-card border border-border w-full max-w-[450px] max-h-[95vh] overflow-y-auto rounded-xl p-5 sm:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200",
+                    className: " border border-border w-full max-w-[450px] max-h-[95vh] overflow-y-auto rounded-xl p-5 sm:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>setIsModalOpen(false),
@@ -643,12 +643,12 @@ const Teachers = ()=>{
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/teachers/page.tsx",
-                                lineNumber: 250,
+                                lineNumber: 249,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                            lineNumber: 249,
+                            lineNumber: 248,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -656,7 +656,7 @@ const Teachers = ()=>{
                             children: "Ustoz Qo'shish"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                            lineNumber: 253,
+                            lineNumber: 252,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -705,7 +705,7 @@ const Teachers = ()=>{
                                                         children: input.label
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                        lineNumber: 285,
+                                                        lineNumber: 284,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -720,13 +720,13 @@ const Teachers = ()=>{
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                        lineNumber: 288,
+                                                        lineNumber: 287,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, input.key, true, {
                                                 fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                lineNumber: 284,
+                                                lineNumber: 283,
                                                 columnNumber: 29
                                             }, ("TURBOPACK compile-time value", void 0))),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -737,7 +737,7 @@ const Teachers = ()=>{
                                                     children: "Ustoz Sohasi"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                    lineNumber: 295,
+                                                    lineNumber: 294,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -755,12 +755,12 @@ const Teachers = ()=>{
                                                                     children: c.name
                                                                 }, c.id, false, {
                                                                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                                    lineNumber: 303,
+                                                                    lineNumber: 302,
                                                                     columnNumber: 48
                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                            lineNumber: 299,
+                                                            lineNumber: 298,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -770,30 +770,30 @@ const Teachers = ()=>{
                                                                 className: "rotate-90"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                                lineNumber: 308,
+                                                                lineNumber: 307,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                            lineNumber: 307,
+                                                            lineNumber: 306,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                                                    lineNumber: 298,
+                                                    lineNumber: 297,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                            lineNumber: 294,
+                                            lineNumber: 293,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                                    lineNumber: 258,
+                                    lineNumber: 257,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -806,7 +806,7 @@ const Teachers = ()=>{
                                             children: "Bekor qilish"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                            lineNumber: 315,
+                                            lineNumber: 314,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -815,30 +815,30 @@ const Teachers = ()=>{
                                             children: "Saqlash"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                                            lineNumber: 318,
+                                            lineNumber: 317,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                                    lineNumber: 314,
+                                    lineNumber: 313,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/teachers/page.tsx",
-                            lineNumber: 257,
+                            lineNumber: 256,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/teachers/page.tsx",
-                    lineNumber: 248,
+                    lineNumber: 247,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/teachers/page.tsx",
-                lineNumber: 247,
+                lineNumber: 246,
                 columnNumber: 23
             }, ("TURBOPACK compile-time value", void 0))
         ]

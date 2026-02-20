@@ -198,9 +198,9 @@ const Teachers = () => {
         </div>
       </div>
 
-      <div className="w-full overflow-x-auto border border-border rounded-xl bg-card shadow-sm scrollbar-hide">
+      <div className="w-full overflow-x-auto border border-border rounded-xl  shadow-sm scrollbar-hide">
         <table className="w-full text-left min-w-[500px]">
-          <thead className="text-[10px] sm:text-xs uppercase text-muted-foreground bg-muted/50 border-b border-border">
+          <thead className="text-[10px] sm:text-xs uppercase text-muted-foreground border-b border-border">
             <tr>
               <th className="p-3 sm:p-4 font-medium">Ism</th>
               <th className="p-3 sm:p-4 font-medium">Familiya</th>
@@ -211,7 +211,7 @@ const Teachers = () => {
           </thead>
           <tbody className="text-xs sm:text-sm">
             {loading
-              ? [...Array(6)].map((_, i) => <SkeletonRow key={i} />)
+              ? [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
               : filteredData.map((t) => (
                   <tr
                     key={t._id}
@@ -248,7 +248,6 @@ const Teachers = () => {
                       </button>
                       {activeMenu === t._id && (
                         <>
-                          {/* Close backdrop for menu */}
                           <div
                             className="fixed inset-0 z-[90]"
                             onClick={() => setActiveMenu(null)}
@@ -287,7 +286,7 @@ const Teachers = () => {
 
       {isModalOpen && (
         <div className="fixed inset-0 /80 backdrop-blur-sm flex items-center justify-center z-[200] p-2 sm:p-4">
-          <div className="bg-card border border-border w-full max-w-[450px] max-h-[95vh] overflow-y-auto rounded-xl p-5 sm:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200">
+          <div className=" border border-border w-full max-w-[450px] max-h-[95vh] overflow-y-auto rounded-xl p-5 sm:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200">
             <button
               onClick={() => setIsModalOpen(false)}
               className="absolute right-4 top-4 text-muted-foreground hover:text-foreground transition-colors"

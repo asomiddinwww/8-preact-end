@@ -3,7 +3,16 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { Pencil, Trash2, UserPlus, Search, X } from "lucide-react";
+import {
+  Pencil,
+  Trash2,
+  UserPlus,
+  Search,
+  X,
+  ChevronDown,
+  RotateCcw,
+  Ban,
+} from "lucide-react";
 
 interface AdminUser {
   _id: string;
@@ -11,25 +20,25 @@ interface AdminUser {
   last_name: string;
   email: string;
   status: string;
-  role?: string;
+  role: string;
 }
 
 const SkeletonRow = () => (
-  <tr className="border-t border-zinc-800 animate-pulse">
+  <tr className="border-t border-zinc-200 dark:border-zinc-800 animate-pulse">
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-24 sm:w-32 "></div>
+      <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-3/4"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-32 sm:w-48 "></div>
+      <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-full"></div>
     </td>
     <td className="p-4">
-      <div className="h-6 bg-zinc-800 rounded w-16 "></div>
+      <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-12"></div>
+    </td>
+    <td className="p-4">
+      <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-16"></div>
     </td>
     <td className="p-4 text-right">
-      <div className="flex justify-end gap-2">
-        <div className="h-4 bg-zinc-800 w-4 rounded "></div>
-        <div className="h-4 bg-zinc-800 w-4 rounded "></div>
-      </div>
+      <div className="h-8 w-16 bg-zinc-200 dark:bg-zinc-800 rounded ml-auto"></div>
     </td>
   </tr>
 );
@@ -38,27 +47,24 @@ const AdminPanel = () => {
   const [data, setData] = useState<AdminUser[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const [filterStatus, setFilterStatus] = useState("faol");
+  const [filterStatus, setFilterStatus] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingAdmin, setEditingAdmin] = useState<AdminUser | null>(null);
+
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     email: "",
-    status: "faol",
     password: "",
     role: "admin",
-    work_date: new Date().toISOString().slice(0, 10),
-    active: true,
-    is_deleted: false,
+    status: "faol",
   });
 
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:7070";
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const token = Cookies.get("token");
 
   const fetchAdmins = useCallback(async () => {
     if (!token) return;
-
     try {
       setLoading(true);
       const res = await axios.get(
@@ -67,14 +73,8 @@ const AdminPanel = () => {
           headers: { Authorization: `Bearer ${token}` },
         },
       );
-
-      if (res.data && res.data.data) {
-        setData(res.data.data);
-      } else {
-        setData([]);
-      }
+      setData(res.data?.data || []);
     } catch (err) {
-      console.error("Fetch error:", err);
       setData([]);
     } finally {
       setLoading(false);
@@ -93,15 +93,68 @@ const AdminPanel = () => {
     );
   }, [searchTerm, data]);
 
+  // 1. STATUSNI O'ZGARTIRISH (ISHGA QAYTARISH YOKI BO'SHATISH)
+  const handleStatusToggle = async (admin: AdminUser) => {
+    if (!token) return;
+    const isRestoring = admin.status === "ishdan bo'shatilgan";
+    if (
+      !confirm(
+        isRestoring ? "Ishga qaytarmoqchimisiz?" : "Ishdan bo'shatmoqchimisiz?",
+      )
+    )
+      return;
+
+    try {
+      const newStatus = isRestoring ? "faol" : "ishdan bo'shatilgan";
+      await axios.post(
+        `${BASE_URL}/api/staff/edited-admin`,
+        {
+          _id: admin._id,
+          first_name: admin.first_name,
+          last_name: admin.last_name,
+          email: admin.email,
+          status: newStatus,
+        },
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+      fetchAdmins();
+    } catch (err) {
+      alert("Xatolik yuz berdi");
+    }
+  };
+
+  const handleDelete = async (id: string) => {
+    if (
+      !confirm(
+        "Haqiqatan ham ushbu adminni bazadan butunlay o'chirmoqchimisiz?",
+      )
+    )
+      return;
+    try {
+      await axios.delete(`${BASE_URL}/api/staff/deleted-admin`, {
+        headers: { Authorization: `Bearer ${token}` },
+        data: { _id: id },
+      });
+      fetchAdmins();
+      alert("Muvaffaqiyatli o'chirildi");
+    } catch (err: any) {
+      alert(
+        err.response?.status === 403
+          ? "Huquqingiz yetarli emas!"
+          : "Xatolik yuz berdi",
+      );
+    }
+  };
+
   const openModal = (admin: AdminUser | null = null) => {
     if (admin) {
       setEditingAdmin(admin);
       setFormData({
-        ...formData,
         first_name: admin.first_name,
         last_name: admin.last_name,
         email: admin.email,
-        status: admin.status,
+        role: admin.role,
+        status: admin.status || "faol",
         password: "",
       });
     } else {
@@ -110,12 +163,9 @@ const AdminPanel = () => {
         first_name: "",
         last_name: "",
         email: "",
-        status: "all",
         password: "",
         role: "admin",
-        work_date: new Date().toISOString().slice(0, 10),
-        active: true,
-        is_deleted: false,
+        status: "faol",
       });
     }
     setIsModalOpen(true);
@@ -127,275 +177,264 @@ const AdminPanel = () => {
 
     try {
       if (editingAdmin) {
-        await axios.post(
-          `${BASE_URL}/api/staff/edited-admin`,
-          {
-            _id: editingAdmin._id,
-            first_name: formData.first_name,
-            last_name: formData.last_name,
-            email: formData.email,
-            status: formData.status,
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              "Content-Type": "application/json",
-            },
-          },
-        );
+        const updatePayload = {
+          _id: editingAdmin._id,
+          first_name: formData.first_name,
+          last_name: formData.last_name,
+          email: formData.email,
+          status: formData.status,
+        };
+
+        await axios.post(`${BASE_URL}/api/staff/edited-admin`, updatePayload, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
       } else {
-        const payload = {
+        const createPayload = {
           first_name: formData.first_name,
           last_name: formData.last_name,
           email: formData.email,
           password: formData.password,
-          role: "admin",
-          status: formData.status || "faol",
+          role: formData.role.toLowerCase(),
+          status: formData.status,
           work_date: new Date().toISOString().split("T")[0],
         };
 
-        await axios.post(`${BASE_URL}/api/staff/create-admin`, payload, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
+        await axios.post(`${BASE_URL}/api/staff/create-admin`, createPayload, {
+          headers: { Authorization: `Bearer ${token}` },
         });
       }
 
       await fetchAdmins();
       setIsModalOpen(false);
-      setEditingAdmin(null);
-      setFormData({
-        first_name: "",
-        last_name: "",
-        email: "",
-        status: "all",
-        password: "",
-        role: "admin",
-        work_date: new Date().toISOString().slice(0, 10),
-        active: true,
-        is_deleted: false,
-      });
-
       alert("Muvaffaqiyatli saqlandi!");
     } catch (err: any) {
-      const errorMsg = err.response?.data?.message || "Server xatosi";
-      console.error("Xatolik tafsiloti:", err.response?.data);
-      alert(`Xatolik: ${errorMsg}`);
+      console.error("API Error:", err.response?.data);
+      alert(err.response?.data?.message || "Xatolik yuz berdi");
     }
   };
-
-  const handleDelete = async (id: string) => {
-    if (!confirm("O'chirmoqchimisiz?")) return;
-    if (!token) return;
-
-    try {
-      await axios.delete(`${BASE_URL}/api/staff/deleted-admin`, {
-        headers: { Authorization: `Bearer ${token}` },
-        data: { _id: id },
-      });
-      setData((prev) => prev.filter((item) => item._id !== id));
-    } catch (err) {
-      console.error(err);
-      alert("O'chirishda xatolik");
-    }
-  };
-
   return (
-    <div className="w-full p-4 sm:p-6 min-h-screen ">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-        <h1 className="text-xl sm:text-2xl font-bold">Adminlar</h1>
-        <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-          <div className="relative w-full sm:w-auto">
-            <Search
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"
-              size={18}
-            />
-            <input
-              type="text"
-              placeholder="Qidiruv..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full sm:w-64 border border-zinc-800 rounded-lg py-2 pl-10 pr-4 text-sm outline-none focus:border-white transition-all bg-transparent"
-            />
-          </div>
+    <div className="w-full p-4 sm:p-6 min-h-screen">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6">
+          <h1 className="text-xl font-semibold">Adminlar boshqaruvi</h1>
+          <div className="flex gap-2 w-full sm:w-auto">
+            <div className="relative flex-1">
+              <Search
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"
+                size={16}
+              />
+              <input
+                type="text"
+                placeholder="Qidiruv..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full bg-background border border-zinc-800 rounded-lg py-1.5 pl-9 text-sm outline-none focus:ring-1 focus:ring-zinc-700"
+              />
+            </div>
 
-          <button
-            onClick={() => openModal(null)}
-            className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold bg-white text-black hover:bg-zinc-200 active:scale-95 transition-all w-full sm:w-auto"
-          >
-            <UserPlus size={18} /> Qo'shish
-          </button>
-          <select
-            value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value)}
-            className="w-full sm:w-auto  border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-white transition-all text-sm  cursor-pointer"
-          >
-            <option value="" className="">
-              All
-            </option>
-            <option value="faol" className="">
-              Faol
-            </option>
-            <option value="ishdan bo'shatilgan" className="">
-              Nofaol
-            </option>
-            <option value="ishdan bo'shatilgan" className="">
-              Ishdan bo'shatilgan
-            </option>
-            <option value="ta'tilda" className="">
-              Ta'tilda
-            </option>
-          </select>
+            <button
+              onClick={() => openModal(null)}
+              className="flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm bg-zinc-100 text-black hover:bg-zinc-300 transition-all"
+            >
+              <UserPlus size={16} /> Qo'shish
+            </button>
+            <div className="relative">
+              <select
+                value={filterStatus}
+                onChange={(e) => setFilterStatus(e.target.value)}
+                className="appearance-none bg-background border border-zinc-800 rounded-lg py-1.5 pl-3 pr-8 text-sm outline-none focus:ring-1 focus:ring-zinc-700 cursor-pointer text-zinc-400"
+              >
+                <option value="">All</option>
+                <option value="faol">Faol</option>
+                <option value="tatilda">Tatilda</option>
+                <option value="ishdan bo'shatilgan">Nofaol</option>
+              </select>
+              <ChevronDown
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none"
+                size={14}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-xl border border-zinc-800  overflow-hidden">
+          <table className="w-full text-left">
+            <thead className=" text-zinc-500 text-[12px] uppercase">
+              <tr>
+                <th className="p-3">Ism Familiya</th>
+                <th className="p-3">Email</th>
+                <th className="p-3">Rol</th>
+                <th className="p-3">Holat</th>
+                <th className="p-3 text-right">Amallar</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm divide-y divide-zinc-800">
+              {loading
+                ? [...Array(10)].map((_, index) => (
+                    <SkeletonRow key={`skeleton-${index}`} />
+                  ))
+                : filteredData.map((item) => (
+                    <tr
+                      key={item._id}
+                      className="hover:bg-zinc-800/30 transition-colors group"
+                    >
+                      <td className="p-3 text-zinc-200">
+                        {item.first_name} {item.last_name}
+                      </td>
+                      <td className="p-3 text-zinc-400 text-xs font-mono">
+                        {item.email}
+                      </td>
+                      <td className="p-3">
+                        <span className="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-400 text-[10px] font-bold uppercase">
+                          {item.role}
+                        </span>
+                      </td>
+                      <td className="p-3">
+                        <span
+                          className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${
+                            item.status === "faol"
+                              ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+                              : item.status === "tatilda"
+                                ? "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                                : "bg-red-500/10 text-red-400 border-red-500/20"
+                          }`}
+                        >
+                          {item.status}
+                        </span>
+                      </td>
+                      <td className="p-3 text-right">
+                        <div className="flex justify-end gap-1">
+                          <button
+                            onClick={() => openModal(item)}
+                            className="p-1.5 hover:bg-zinc-700 rounded-md text-zinc-400 hover:text-white transition-all"
+                            title="Tahrirlash"
+                          >
+                            <Pencil size={14} />
+                          </button>
+
+                          {item.status === "ishdan bo'shatilgan" && (
+                            <button
+                              onClick={() => handleStatusToggle(item)}
+                              className="p-1.5 rounded-md text-emerald-500 hover:bg-emerald-900/20 transition-all"
+                              title="Ishga qaytarish"
+                            >
+                              <RotateCcw size={14} />
+                            </button>
+                          )}
+
+                          <button
+                            onClick={() => handleDelete(item._id)}
+                            className="p-1.5 hover:bg-red-900/40 rounded-md text-red-500 transition-all"
+                            title="Butunlay o'chirish"
+                          >
+                            <Trash2 size={14} />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <div className="overflow-x-auto border border-zinc-800 rounded-2xl ">
-        <table className="w-full text-left min-w-[500px]">
-          <thead className="text-xs uppercase text-zinc-400 /50">
-            <tr>
-              <th className="p-4">F.I.SH</th>
-              <th className="p-4">Email</th>
-              <th className="p-4">Holat</th>
-              <th className="p-4 text-right">Amallar</th>
-            </tr>
-          </thead>
-          <tbody className="text-sm">
-            {loading ? (
-              [...Array(5)].map((_, i) => <SkeletonRow key={i} />)
-            ) : filteredData.length > 0 ? (
-              filteredData.map((item) => (
-                <tr
-                  key={item._id}
-                  className="border-t border-zinc-800 hover:/40 transition-colors group"
-                >
-                  <td className="p-4">
-                    {item.first_name} {item.last_name}
-                  </td>
-                  <td className="p-4 text-zinc-400">{item.email}</td>
-                  <td className="p-4">
-                    <span
-                      className={`px-2 py-1 rounded-md text-[10px] uppercase font-bold whitespace-nowrap ${
-                        item.status === "faol"
-                          ? "bg-emerald-500/10 text-emerald-500"
-                          : item.status === "ta'tilda"
-                            ? "bg-blue-500/10 text-blue-500"
-                            : "bg-amber-500/10 text-amber-500"
-                      }`}
-                    >
-                      {item.status}
-                    </span>
-                  </td>
-                  <td className="p-4 text-right space-x-2">
-                    <button
-                      onClick={() => openModal(item)}
-                      className="hover:text-blue-400 p-1"
-                    >
-                      <Pencil size={17} />
-                    </button>
-                    <button
-                      onClick={() => handleDelete(item._id)}
-                      className="hover:text-rose-500 p-1"
-                    >
-                      <Trash2 size={17} />
-                    </button>
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td
-                  colSpan={4}
-                  className="p-10 text-center italic text-zinc-500"
-                >
-                  Ma'lumot topilmadi
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
-
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className=" border border-zinc-800 w-full max-w-md rounded-2xl p-6 relative max-h-[95vh] overflow-y-auto">
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute right-4 top-4 text-zinc-400 hover:"
-            >
-              <X size={20} />
-            </button>
-            <h2 className="text-xl font-bold mb-6 ">
-              {editingAdmin ? "Tahrirlash" : "Yangi Qo'shish"}
-            </h2>
-            <form onSubmit={handleSave} className="space-y-4">
-              <input
-                placeholder="Ism"
-                value={formData.first_name}
-                onChange={(e) =>
-                  setFormData({ ...formData, first_name: e.target.value })
-                }
-                className="w-full  border border-zinc-700 rounded-lg p-2.5  outline-none focus:border-white transition-all text-sm"
-                required
-              />
-              <input
-                placeholder="Familiya"
-                value={formData.last_name}
-                onChange={(e) =>
-                  setFormData({ ...formData, last_name: e.target.value })
-                }
-                className="w-full  border border-zinc-700 rounded-lg p-2.5  outline-none focus:border-white transition-all text-sm"
-                required
-              />
-              <input
-                placeholder="Email"
-                type="email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                className="w-full  border border-zinc-700 rounded-lg p-2.5  outline-none focus:border-white transition-all text-sm"
-                required
-              />
-              {!editingAdmin && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[100] p-4 animate-in fade-in duration-200">
+          <div className="bg-background border border-border w-full max-w-md rounded-xl p-6 shadow-lg animate-in zoom-in-95 duration-200">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-lg font-semibold tracking-tight text-foreground">
+                {editingAdmin ? "Tahrirlash" : "Yangi admin qo'shish"}
+              </h2>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              >
+                <X size={18} className="text-muted-foreground" />
+                <span className="sr-only">Yopish</span>
+              </button>
+            </div>
+
+            <form onSubmit={handleSave} className="space-y-4 text-sm">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <label className="text-xs font-medium text-muted-foreground uppercase ml-1">
+                    Ism
+                  </label>
+                  <input
+                    placeholder="Ism"
+                    value={formData.first_name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, first_name: e.target.value })
+                    }
+                    className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs font-medium text-muted-foreground uppercase ml-1">
+                    Familiya
+                  </label>
+                  <input
+                    placeholder="Familiya"
+                    value={formData.last_name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, last_name: e.target.value })
+                    }
+                    className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-xs font-medium text-muted-foreground uppercase ml-1">
+                  Email
+                </label>
                 <input
-                  placeholder="Parol"
-                  type="password"
-                  value={formData.password}
+                  placeholder="Email"
+                  type="email"
+                  value={formData.email}
                   onChange={(e) =>
-                    setFormData({ ...formData, password: e.target.value })
+                    setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full  border border-zinc-700 rounded-lg p-2.5  outline-none focus:border-white transition-all text-sm"
+                  className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   required
                 />
+              </div>
+
+              {!editingAdmin && (
+                <div className="space-y-2">
+                  <label className="text-xs font-medium text-muted-foreground uppercase ml-1">
+                    Parol
+                  </label>
+                  <input
+                    placeholder="Parol"
+                    type="password"
+                    value={formData.password}
+                    onChange={(e) =>
+                      setFormData({ ...formData, password: e.target.value })
+                    }
+                    className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    required
+                  />
+                </div>
               )}
-              <select
-                value={formData.status}
-                onChange={(e) =>
-                  setFormData({ ...formData, status: e.target.value })
-                }
-                className="w-full  border border-zinc-700 rounded-lg p-2.5  outline-none focus:border-white transition-all text-sm"
-              >
-                <option value="all">All</option>
-                <option value="faol" className="">
-                  Faol
-                </option>
-                <option value="nofaol" className="">
-                  Nofaol
-                </option>
-                <option value="ishdan bo'shatilgan" className="">
-                  Ishdan bo'shatilgan
-                </option>
-                <option value="ta'tilda" className="">
-                  Ta'tilda
-                </option>
-              </select>
-              <button
-                type="submit"
-                className="w-full bg-white text-black font-bold py-3 rounded-xl hover:bg-zinc-200 active:scale-95 transition-all text-sm"
-              >
-                Saqlash
-              </button>
+
+              <div className="flex gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(false)}
+                  className="flex-1 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+                >
+                  Bekor qilish
+                </button>
+                <button
+                  type="submit"
+                  className="flex-1 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                >
+                  Saqlash
+                </button>
+              </div>
             </form>
           </div>
         </div>

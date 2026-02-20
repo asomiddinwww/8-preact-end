@@ -16,9 +16,6 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
-// --- SEO VA METADATA ---
-// Eslatma: 'use client' bo'lgani uchun Metadata'ni alohida faylda yoki
-// Title orqali dinamik boshqaramiz.
 const SITE_CONFIG = {
   name: "CRM Edu Panel",
   description: "O'quv markazlari uchun professional boshqaruv tizimi",
@@ -35,9 +32,11 @@ export default function RootLayout({
   const [isOpen, setIsOpen] = useState(true);
   const [user, setUser] = useState<any>(null);
 
+  // Hydration xatoligini va miltillashni oldini olish uchun mount holati
+  const [mounted, setMounted] = useState(false);
+
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:7070";
 
-  // Sahifa nomini olish (useMemo samaradorlikni oshiradi)
   const pageTitle = useMemo(() => {
     const titles: { [key: string]: string } = {
       "/": "Boshqaruv Paneli",
@@ -54,8 +53,8 @@ export default function RootLayout({
     return titles[pathname] || "CRM Panel";
   }, [pathname]);
 
-  // Brauzer sarlavhasini SEO uchun yangilash
   useEffect(() => {
+    setMounted(true);
     document.title = `${pageTitle} | ${SITE_CONFIG.name}`;
   }, [pageTitle]);
 
@@ -86,13 +85,17 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <meta name="robots" content="noindex, nofollow" />{" "}
-        {/* CRM bo'lgani uchun qidiruv tizimlariga ko'rsatmaslik tavsiya etiladi */}
+        <meta name="robots" content="noindex, nofollow" />
       </head>
       <body
-        className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <div className="flex min-h-screen bg-background text-foreground">
             {!hideHeader && (
               <aside
@@ -169,7 +172,7 @@ export default function RootLayout({
                 </header>
               )}
 
-              <main className="flex-1 p-4 md:p-6 overflow-y-auto bg-muted/10">
+              <main className="flex-1 p-4 md:p-6 overflow-y-auto bg-background">
                 {children}
               </main>
             </div>

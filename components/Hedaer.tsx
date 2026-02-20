@@ -41,7 +41,7 @@ const Hedaer = ({ isOpen }: HedaerProps) => {
 
   return (
     <div
-      className={` w-[255px] top-0 px-4 transition-all duration-300 ease-in-out ${
+      className={`fixed left-0 h-screen overflow-y-auto w-[255px] top-0 px-4 transition-all duration-300 ease-in-out ${
         isOpen
           ? "w-[255px] px-4"
           : "w-0 px-0 overflow-hidden border-none opacity-0"

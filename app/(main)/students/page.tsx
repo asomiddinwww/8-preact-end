@@ -14,21 +14,21 @@ interface Student {
 }
 
 const SkeletonRow = () => (
-  <tr className="border-b animate-pulse">
+  <tr className="border-t border-zinc-200 dark:border-zinc-800 animate-pulse">
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-24"></div>
+      <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-3/4"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-28"></div>
+      <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-full"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-32"></div>
+      <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-12"></div>
     </td>
     <td className="p-4">
-      <div className="h-4 bg-zinc-800 rounded w-16"></div>
+      <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-16"></div>
     </td>
-    <td className="p-4 text-right flex justify-end">
-      <div className="h-4 bg-zinc-800 rounded w-6"></div>
+    <td className="p-4 text-right">
+      <div className="h-8 w-16 bg-zinc-200 dark:bg-zinc-800 rounded ml-auto"></div>
     </td>
   </tr>
 );
@@ -66,7 +66,6 @@ const Students = () => {
     } catch (err) {
       console.error("Xatolik");
     } finally {
-      // Skeletonni ko'rish uchun biroz vaqt (ixtiyoriy)
       setTimeout(() => setLoading(false), 600);
     }
   }, [BASE_URL, token, filterStatus]);
@@ -197,8 +196,7 @@ const Students = () => {
           </thead>
           <tbody className="text-sm">
             {loading
-              ? // Yuklanayotganda 5 ta skeleton qatori ko'rinadi
-                [...Array(5)].map((_, i) => <SkeletonRow key={i} />)
+              ? [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
               : data
                   .filter((s) =>
                     s.first_name
