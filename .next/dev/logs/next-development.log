@@ -1,0 +1,353 @@
+[00:00:00.501] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.546] Server  LOG     ✓ Ready in 386ms
+[00:00:04.606] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.741] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} ...>
+                        <RootLayout params={Promise}>
+                          <html lang="uz" suppressHydrationWarning={true}>
+>                           <head>
+                              <meta>
+                              <meta>
+                              <meta>
+>                             {" "}
+                            ...
+                  ...
+
+[00:00:04.741] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/teachers" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                          <SegmentTrieNode>
+                          <MainLayout>
+                            <html
++                             lang="en"
+-                             lang="uz"
+-                             className="dark"
+-                             style={{color-scheme:"dark"}}
+                            >
+                              <body
+-                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
+                              >
+                      ...
+          ...
+
+[00:00:07.054] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.187] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} ...>
+                        <RootLayout params={Promise}>
+                          <html lang="uz" suppressHydrationWarning={true}>
+>                           <head>
+                              <meta>
+                              <meta>
+                              <meta>
+>                             {" "}
+                            ...
+                  ...
+
+[00:00:07.187] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/teachers" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                          <SegmentTrieNode>
+                          <MainLayout>
+                            <html
++                             lang="en"
+-                             lang="uz"
+-                             className="dark"
+-                             style={{color-scheme:"dark"}}
+                            >
+                              <body
+-                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
+                              >
+                      ...
+          ...
+
+[00:00:47.109] Server  LOG     ✓ Compiled in 43ms
+[00:00:51.954] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:52.071] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} ...>
+                        <RootLayout params={Promise}>
+                          <html lang="uz" suppressHydrationWarning={true}>
+>                           <head>
+                              <meta>
+                              <meta>
+                              <meta>
+>                             {" "}
+                            ...
+                  ...
+
+[00:00:52.071] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <div className="flex-1 fle...">
+      ...
+        <MenuProvider scope={{Menu:[...], ...}} onClose={function Menu.useCallback} isUsingKeyboardRef={{current:false}} ...>
+          <DropdownMenuTrigger asChild={true}>
+            <DropdownMenuTrigger data-slot="dropdown-m..." asChild={true}>
+              <MenuAnchor asChild={true} __scopeMenu={{Menu:[...], ...}}>
+                <PopperAnchor __scopePopper={{Menu:[...], ...}} asChild={true} ref={null}>
+                  <Primitive.div asChild={true} ref={function}>
+                    <Primitive.div.Slot ref={function}>
+                      <Primitive.div.SlotClone ref={function}>
+                        <Primitive.button type="button" id="radix-_R_c..." aria-haspopup="menu" aria-expanded={false} ...>
+                          <Primitive.button.Slot type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
+                            <Primitive.button.SlotClone type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
+                              <Button variant="outline" size="icon" type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
+                                <button
+                                  data-slot="dropdown-menu-trigger"
+                                  data-variant="outline"
+                                  data-size="icon"
+                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
+                                  type="button"
++                                 id="radix-_R_cqlb_"
+-                                 id="radix-_R_1jalb_"
+                                  aria-haspopup="menu"
+                                  aria-expanded={false}
+                                  aria-controls={undefined}
+                                  data-state="closed"
+                                  data-disabled={undefined}
+                                  disabled={false}
+                                  onPointerDown={function handleEvent}
+                                  onKeyDown={function handleEvent}
+                                  ref={function}
+                                >
+          ...
+      ...
+        <ScrollAndFocusHandler segmentPath={[...]}>
+          <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+            <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+              <LoadingBoundary name="/" loading={null}>
+                <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                  <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<SegmentViewNode>} ...>
+                    <RedirectBoundary>
+                      <RedirectErrorBoundary router={{...}}>
+                        <InnerLayoutRouter url="/teachers" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                          <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                            <SegmentTrieNode>
+                            <MainLayout>
+                              <html
++                               lang="en"
+-                               lang="uz"
+-                               className="dark"
+-                               style={{color-scheme:"dark"}}
+                              >
+                                <body
+-                                 className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__va..."
+                                >
+                        ...
+            ...
+
+[00:01:14.326] Server  LOG     ✓ Compiled in 61ms
+[00:01:20.313] Server  LOG     ✓ Compiled in 60ms
+[00:01:45.365] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:45.485] Browser ERROR   In HTML, whitespace text nodes cannot be a child of <%s>. Make sure you don't have any extra whitespace between tags on each line of your source code.
+This will cause a hydration error.%s head 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <ClientSegmentRoot Component={function RootLayout} slots={{...}} ...>
+                        <RootLayout params={Promise}>
+                          <html lang="uz" suppressHydrationWarning={true}>
+>                           <head>
+                              <meta>
+                              <meta>
+                              <meta>
+>                             {" "}
+                            ...
+                  ...
+
+[00:01:45.485] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <div className="flex-1 fle...">
+      ...
+        <MenuProvider scope={{Menu:[...], ...}} onClose={function Menu.useCallback} isUsingKeyboardRef={{current:false}} ...>
+          <DropdownMenuTrigger asChild={true}>
+            <DropdownMenuTrigger data-slot="dropdown-m..." asChild={true}>
+              <MenuAnchor asChild={true} __scopeMenu={{Menu:[...], ...}}>
+                <PopperAnchor __scopePopper={{Menu:[...], ...}} asChild={true} ref={null}>
+                  <Primitive.div asChild={true} ref={function}>
+                    <Primitive.div.Slot ref={function}>
+                      <Primitive.div.SlotClone ref={function}>
+                        <Primitive.button type="button" id="radix-_R_c..." aria-haspopup="menu" aria-expanded={false} ...>
+                          <Primitive.button.Slot type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
+                            <Primitive.button.SlotClone type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
+                              <Button variant="outline" size="icon" type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
+                                <button
+                                  data-slot="dropdown-menu-trigger"
+                                  data-variant="outline"
+                                  data-size="icon"
+                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
+                                  type="button"
++                                 id="radix-_R_cqlb_"
+-                                 id="radix-_R_1jalb_"
+                                  aria-haspopup="menu"
+                                  aria-expanded={false}
+                                  aria-controls={undefined}
+                                  data-state="closed"
+                                  data-disabled={undefined}
+                                  disabled={false}
+                                  onPointerDown={function handleEvent}
+                                  onKeyDown={function handleEvent}
+                                  ref={function}
+                                >
+          ...
+      ...
+        <ScrollAndFocusHandler segmentPath={[...]}>
+          <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+            <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+              <LoadingBoundary name="/" loading={null}>
+                <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                  <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<SegmentViewNode>} ...>
+                    <RedirectBoundary>
+                      <RedirectErrorBoundary router={{...}}>
+                        <InnerLayoutRouter url="/teachers" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                          <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                            <SegmentTrieNode>
+                            <MainLayout>
+                              <html
++                               lang="en"
+-                               lang="uz"
+-                               className="light"
+-                               style={{color-scheme:"light"}}
+                              >
+                                <body
+-                                 className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__va..."
+                                >
+                        ...
+            ...
+
+[00:01:58.370] Server  LOG     ✓ Compiled in 44ms
+[00:02:29.901] Server  LOG     ✓ Compiled in 58ms
