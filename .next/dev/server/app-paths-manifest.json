@@ -5,5 +5,7 @@
   "/(main)/payment/page": "app/(main)/payment/page.js",
   "/(main)/profile/page": "app/(main)/profile/page.js",
   "/(main)/students/page": "app/(main)/students/page.js",
+  "/api/auth/sign-in/route": "app/api/auth/sign-in/route.js",
+  "/login/page": "app/login/page.js",
   "/page": "app/page.js"
 }

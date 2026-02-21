@@ -125,16 +125,22 @@ const Profile = ()=>{
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const savedUser = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("user") || localStorage.getItem("user");
         if (savedUser) {
-            const parsed = JSON.parse(savedUser);
-            setUser(parsed);
-            setFormData({
-                first_name: parsed.first_name || "",
-                last_name: parsed.last_name || "",
-                email: parsed.email || "",
-                role: parsed.role || "manager",
-                current_password: "",
-                new_password: ""
-            });
+            try {
+                const parsed = JSON.parse(savedUser);
+                // Backenddan kelgan strukturaga qarab user ma'lumotlarini o'qish
+                const userData = parsed.data ? parsed.data : parsed;
+                setUser(userData);
+                setFormData({
+                    first_name: userData.first_name || "",
+                    last_name: userData.last_name || "",
+                    email: userData.email || "",
+                    role: userData.role || "manager",
+                    current_password: "",
+                    new_password: ""
+                });
+            } catch (e) {
+                console.error("User parse error");
+            }
         }
         setLoading(false);
     }, []);
@@ -180,60 +186,69 @@ const Profile = ()=>{
         }
     };
     const handleImageUpload = async (file)=>{
+        if (!file) return;
         setImgLoading(true);
         const form = new FormData();
-        form.append("image", file);
+        form.append("image", file); // Postman dagi 'image' key bilan bir xil
         try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/auth/edit-profile-img`, form, {
+            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/auth/edit-profile-img`, form, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     "Content-Type": "multipart/form-data"
                 }
             });
+            // Backenddan qaytgan yangi rasm yo'lini olish (odatda response.data.image yoki response.data.data.image)
+            const newImagePath = response.data?.image || response.data?.data?.image;
+            // Agar backend yangi yo'lni qaytarmasa, vaqtinchalik ko'rsatish, lekin idealda backenddan kelishi kerak
             const updatedUser = {
                 ...user,
-                image: URL.createObjectURL(file)
+                image: newImagePath || user.image
             };
+            // State va Storage ni yangilash
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].set("user", JSON.stringify(updatedUser));
             localStorage.setItem("user", JSON.stringify(updatedUser));
             setUser(updatedUser);
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].success("Rasm muvaffaqiyatli yangilandi");
         } catch (error) {
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error("Rasmni yuklashda xatolik");
+            console.error("Image upload error:", error);
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toast"].error(error.response?.data?.message || "Rasmni yuklashda xatolik");
         } finally{
             setImgLoading(false);
+            // Inputni tozalash (bir xil rasmni qayta tanlasa ishlashi uchun)
+            if (fileInputRef.current) fileInputRef.current.value = "";
         }
     };
     const getProfileImg = ()=>{
         if (!user?.image) return null;
+        // Agar rasm to'liq URL bo'lmasa, BASE_URL ni qo'shish
         return user.image.startsWith("http") ? user.image : `${BASE_URL}/${user.image}`;
     };
     if (loading) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "h-screen flex items-center justify-center bg-black",
+        className: "h-screen flex items-center justify-center bg-background",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
-            className: "animate-spin text-white"
+            className: "animate-spin text-primary"
         }, void 0, false, {
             fileName: "[project]/app/(main)/profile/page.tsx",
-            lineNumber: 122,
+            lineNumber: 148,
             columnNumber: 9
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/app/(main)/profile/page.tsx",
-        lineNumber: 121,
+        lineNumber: 147,
         columnNumber: 7
     }, ("TURBOPACK compile-time value", void 0));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full p-4 md:p-8",
+        className: "w-full p-4 md:p-8 bg-background text-foreground",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Toaster"], {
                 position: "top-center"
             }, void 0, false, {
                 fileName: "[project]/app/(main)/profile/page.tsx",
-                lineNumber: 128,
+                lineNumber: 154,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-5xl",
+                className: "max-w-5xl mx-auto",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12",
@@ -245,7 +260,7 @@ const Profile = ()=>{
                                         className: "relative group",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-zinc-800 overflow-hidden bg-zinc-900",
+                                                className: "w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-border overflow-hidden bg-muted",
                                                 children: [
                                                     getProfileImg() ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                         src: getProfileImg(),
@@ -253,56 +268,58 @@ const Profile = ()=>{
                                                         className: "w-full h-full object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 136,
+                                                        lineNumber: 162,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "w-full h-full flex items-center justify-center text-zinc-600",
+                                                        className: "w-full h-full flex items-center justify-center text-muted-foreground",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
                                                             size: 40
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(main)/profile/page.tsx",
-                                                            lineNumber: 143,
+                                                            lineNumber: 169,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 168,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     imgLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "absolute inset-0 bg-black/50 flex items-center justify-center",
+                                                        className: "absolute inset-0 bg-background/60 flex items-center justify-center z-10",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
-                                                            className: "animate-spin",
-                                                            size: 20
+                                                            className: "animate-spin text-primary",
+                                                            size: 24
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(main)/profile/page.tsx",
-                                                            lineNumber: 148,
+                                                            lineNumber: 174,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 147,
+                                                        lineNumber: 173,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 134,
+                                                lineNumber: 160,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                type: "button",
+                                                disabled: imgLoading,
                                                 onClick: ()=>fileInputRef.current?.click(),
-                                                className: "absolute bottom-0 right-0 bg-white text-black p-1.5 rounded-full border-2 border-black hover:scale-110 transition-all",
+                                                className: "absolute bottom-0 right-0 bg-primary text-primary-foreground p-2 rounded-full border-2 border-background hover:scale-110 transition-all shadow-md disabled:opacity-50",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$camera$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Camera$3e$__["Camera"], {
                                                     size: 14
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/profile/page.tsx",
-                                                    lineNumber: 156,
+                                                    lineNumber: 184,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 178,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -315,13 +332,13 @@ const Profile = ()=>{
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 158,
+                                                lineNumber: 186,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 159,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -335,58 +352,60 @@ const Profile = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 170,
+                                                lineNumber: 198,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-zinc-500 text-sm",
+                                                className: "text-muted-foreground text-sm",
                                                 children: user?.email
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 173,
+                                                lineNumber: 201,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex items-center gap-2 text-zinc-500 text-xs mt-1",
+                                                className: "flex items-center gap-2 text-muted-foreground text-xs mt-1",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
                                                         size: 12
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 175,
+                                                        lineNumber: 203,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                    " Qo'shilgan: 2025-06-04"
+                                                    " Qo'shilgan:",
+                                                    " ",
+                                                    user?.createdAt?.split("T")[0] || "2025-06-04"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 202,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 197,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                lineNumber: 132,
+                                lineNumber: 158,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-red-600 text-white text-[10px] md:text-xs font-bold px-4 py-1.5 rounded-md uppercase tracking-widest",
+                                className: "bg-destructive text-destructive-foreground text-[10px] md:text-xs font-bold px-4 py-1.5 rounded-md uppercase tracking-widest shadow-sm",
                                 children: user?.role || "manager"
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                lineNumber: 180,
+                                lineNumber: 209,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(main)/profile/page.tsx",
-                        lineNumber: 131,
+                        lineNumber: 157,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -399,15 +418,15 @@ const Profile = ()=>{
                                         children: "Profil ma'lumotlari"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                        lineNumber: 187,
+                                        lineNumber: 216,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-zinc-500 text-sm mb-6",
+                                        className: "text-muted-foreground text-sm mb-6",
                                         children: "Shaxsiy ma'lumotlaringiz va parolni yangilashingiz mumkin."
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 217,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -417,15 +436,15 @@ const Profile = ()=>{
                                                 className: "space-y-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "text-sm font-medium text-zinc-300",
+                                                        className: "text-sm font-medium opacity-80",
                                                         children: "Ism"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 194,
+                                                        lineNumber: 223,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                        className: "w-full border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-zinc-500 outline-none transition-all",
+                                                        className: "w-full bg-muted border border-border rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all",
                                                         value: formData.first_name,
                                                         onChange: (e)=>setFormData({
                                                                 ...formData,
@@ -433,28 +452,28 @@ const Profile = ()=>{
                                                             })
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 195,
+                                                        lineNumber: 224,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 193,
+                                                lineNumber: 222,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "text-sm font-medium text-zinc-300",
+                                                        className: "text-sm font-medium opacity-80",
                                                         children: "Familiya"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 205,
+                                                        lineNumber: 234,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                        className: "w-full border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-zinc-500 outline-none transition-all",
+                                                        className: "w-full bg-muted border border-border rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all",
                                                         value: formData.last_name,
                                                         onChange: (e)=>setFormData({
                                                                 ...formData,
@@ -462,28 +481,28 @@ const Profile = ()=>{
                                                             })
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 208,
+                                                        lineNumber: 237,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 233,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "text-sm font-medium text-zinc-300",
+                                                        className: "text-sm font-medium opacity-80",
                                                         children: "Email"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 218,
+                                                        lineNumber: 247,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                        className: "w-full border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-zinc-500 outline-none transition-all",
+                                                        className: "w-full bg-muted border border-border rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all",
                                                         value: formData.email,
                                                         onChange: (e)=>setFormData({
                                                                 ...formData,
@@ -491,55 +510,56 @@ const Profile = ()=>{
                                                             })
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 221,
+                                                        lineNumber: 248,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 217,
+                                                lineNumber: 246,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "text-sm font-medium text-zinc-300",
+                                                        className: "text-sm font-medium opacity-80",
                                                         children: "Rol"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 231,
+                                                        lineNumber: 258,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                        className: "w-full border border-zinc-800 rounded-lg px-4 py-3 text-sm cursor-not-allowed outline-none",
+                                                        className: "w-full bg-muted border border-border rounded-lg px-4 py-3 text-sm cursor-not-allowed opacity-60 outline-none",
                                                         value: formData.role,
                                                         disabled: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 232,
+                                                        lineNumber: 259,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 230,
+                                                lineNumber: 257,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "text-sm font-medium text-zinc-300",
+                                                        className: "text-sm font-medium opacity-80",
                                                         children: "Joriy parol"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 240,
+                                                        lineNumber: 267,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                         type: "password",
-                                                        className: "w-full border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-zinc-500 outline-none transition-all",
+                                                        autoComplete: "current-password",
+                                                        className: "w-full bg-muted border border-border rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all",
                                                         value: formData.current_password,
                                                         onChange: (e)=>setFormData({
                                                                 ...formData,
@@ -547,29 +567,30 @@ const Profile = ()=>{
                                                             })
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 243,
+                                                        lineNumber: 270,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 239,
+                                                lineNumber: 266,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "text-sm font-medium text-zinc-300",
+                                                        className: "text-sm font-medium opacity-80",
                                                         children: "Yangi parol"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 257,
+                                                        lineNumber: 285,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                         type: "password",
-                                                        className: "w-full border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-zinc-500 outline-none transition-all",
+                                                        autoComplete: "new-password",
+                                                        className: "w-full bg-muted border border-border rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all",
                                                         value: formData.new_password,
                                                         onChange: (e)=>setFormData({
                                                                 ...formData,
@@ -577,25 +598,25 @@ const Profile = ()=>{
                                                             })
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                                        lineNumber: 260,
+                                                        lineNumber: 288,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                                lineNumber: 256,
+                                                lineNumber: 284,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/profile/page.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 221,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                lineNumber: 186,
+                                lineNumber: 215,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -603,44 +624,44 @@ const Profile = ()=>{
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: handleUpdate,
                                     disabled: btnLoading,
-                                    className: "px-10 py-2.5 bg-white text-black font-bold rounded-lg hover:bg-zinc-200 transition-all flex items-center justify-center gap-2",
+                                    className: "px-10 py-2.5 bg-primary text-primary-foreground font-bold rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 shadow-md active:scale-95 disabled:opacity-50",
                                     children: [
                                         btnLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
                                             size: 16,
                                             className: "animate-spin"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/profile/page.tsx",
-                                            lineNumber: 278,
+                                            lineNumber: 307,
                                             columnNumber: 30
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         "O'zgartirish"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/profile/page.tsx",
-                                    lineNumber: 273,
+                                    lineNumber: 302,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/profile/page.tsx",
-                                lineNumber: 272,
+                                lineNumber: 301,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(main)/profile/page.tsx",
-                        lineNumber: 185,
+                        lineNumber: 214,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(main)/profile/page.tsx",
-                lineNumber: 130,
+                lineNumber: 156,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/(main)/profile/page.tsx",
-        lineNumber: 127,
+        lineNumber: 153,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
