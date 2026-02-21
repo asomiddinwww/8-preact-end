@@ -25,6 +25,9 @@ import {
 } from "lucide-react";
 
 const Asosiy = () => {
+  // Dark mode muammosini hal qilish uchun mount holati
+  const [mounted, setMounted] = useState(false);
+
   const [stats, setStats] = useState({
     totalStudents: 0,
     activeGroups: 0,
@@ -37,6 +40,9 @@ const Asosiy = () => {
   const token = Cookies.get("token");
 
   useEffect(() => {
+    // Komponent brauzerda yuklanganda mounted'ni true qilamiz
+    setMounted(true);
+
     const fetchDashboardData = async () => {
       if (!token) return;
       try {
@@ -69,10 +75,16 @@ const Asosiy = () => {
     fetchDashboardData();
   }, [BASE_URL, token]);
 
+  // Agar komponent hali brauzerda to'liq yuklanmagan bo'lsa, hech narsa qaytarmaymiz
+  // Bu dark/light miltillashini 100% to'xtatadi
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    <div className="p-6 space-y-8 min-h-screen  text-foreground relative overflow-hidden transition-colors duration-500">
+    <div className="p-6 space-y-8 min-h-screen text-foreground relative overflow-hidden">
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/5 blur-[150px] rounded-full pointer-events-none animate-pulse" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px]  blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] blur-[120px] rounded-full pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -160,6 +172,7 @@ const Asosiy = () => {
           </motion.div>
         ))}
       </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
         <motion.div className="lg:col-span-2 p-6 bg-card border border-border rounded-3xl shadow-sm">
           <div className="flex items-center justify-between mb-8">

@@ -32,7 +32,6 @@ export default function RootLayout({
   const [isOpen, setIsOpen] = useState(true);
   const [user, setUser] = useState<any>(null);
 
-  // Hydration xatoligini va miltillashni oldini olish uchun mount holati
   const [mounted, setMounted] = useState(false);
 
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:7070";
@@ -55,7 +54,9 @@ export default function RootLayout({
 
   useEffect(() => {
     setMounted(true);
-    document.title = `${pageTitle} | ${SITE_CONFIG.name}`;
+    if (typeof document !== "undefined") {
+      document.title = `${pageTitle} | ${SITE_CONFIG.name}`;
+    }
   }, [pageTitle]);
 
   useEffect(() => {
@@ -141,6 +142,7 @@ export default function RootLayout({
                   </div>
 
                   <div className="flex gap-2 sm:gap-4 items-center">
+                    {/* Bu yerda dropdown bo'lmaydi, faqat bitta bosishda mavzu o'zgaradi */}
                     <ModeToggle />
 
                     <Link

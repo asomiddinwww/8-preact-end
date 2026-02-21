@@ -1,5 +1,3 @@
-import React from "react";
-
 const Asosiy = () => {
   return <div>Asosiy</div>;
 };
