@@ -1,442 +1,36 @@
-[00:00:00.778] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.863] Server  LOG     ✓ Ready in 658ms
-[00:00:04.926] Browser ERROR   Xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2MzM3NiwiZXhwIjoxNzcxNjY2OTc2fQ.RAMS0ywze_AlfHEkIouB4uEm3xzwpTbl16pgFiKCum0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.comxq/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_1764c576._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_1764c576._.js:4789:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js?id=%255Bproject%255D%252Fapp%252F%2528main%2529%252Fcourses%252Fpage.tsx+%255Bapp-client%255D+%2528ecmascript%2529:60:29)"}
-[00:00:05.181] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.349] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <div className="flex-1 fle...">
-      ...
-        <MenuProvider scope={{Menu:[...], ...}} onClose={function Menu.useCallback} isUsingKeyboardRef={{current:false}} ...>
-          <DropdownMenuTrigger asChild={true}>
-            <DropdownMenuTrigger data-slot="dropdown-m..." asChild={true}>
-              <MenuAnchor asChild={true} __scopeMenu={{Menu:[...], ...}}>
-                <PopperAnchor __scopePopper={{Menu:[...], ...}} asChild={true} ref={null}>
-                  <Primitive.div asChild={true} ref={function}>
-                    <Primitive.div.Slot ref={function}>
-                      <Primitive.div.SlotClone ref={function}>
-                        <Primitive.button type="button" id="radix-_R_c..." aria-haspopup="menu" aria-expanded={false} ...>
-                          <Primitive.button.Slot type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                            <Primitive.button.SlotClone type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                              <Button variant="outline" size="icon" type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                                <button
-                                  data-slot="dropdown-menu-trigger"
-                                  data-variant="outline"
-                                  data-size="icon"
-                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
-                                  type="button"
-+                                 id="radix-_R_cqlb_"
--                                 id="radix-_R_1jalb_"
-                                  aria-haspopup="menu"
-                                  aria-expanded={false}
-                                  aria-controls={undefined}
-                                  data-state="closed"
-                                  data-disabled={undefined}
-                                  disabled={false}
-                                  onPointerDown={function handleEvent}
-                                  onKeyDown={function handleEvent}
-                                  ref={function}
-                                >
-          ...
-      ...
-        <ScrollAndFocusHandler segmentPath={[...]}>
-          <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-            <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-              <LoadingBoundary name="/" loading={null}>
-                <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                  <HTTPAccessFallbackErrorBoundary pathname="/courses" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                    <RedirectBoundary>
-                      <RedirectErrorBoundary router={{...}}>
-                        <InnerLayoutRouter url="/courses" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                          <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                            <SegmentTrieNode>
-                            <MainLayout>
-                              <html
-+                               lang="en"
--                               lang="uz"
--                               className="dark"
--                               style={{color-scheme:"dark"}}
-                              >
-                                <body
--                                 className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__va..."
-                                >
-                        ...
-            ...
-
-[00:00:18.544] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:18.667] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/courses" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/courses" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:03:29.817] Server  LOG     ✓ Compiled in 196ms
-[00:04:17.563] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:17.759] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <div className="flex-1 fle...">
-      ...
-        <MenuProvider scope={{Menu:[...], ...}} onClose={function Menu.useCallback} isUsingKeyboardRef={{current:false}} ...>
-          <DropdownMenuTrigger asChild={true}>
-            <DropdownMenuTrigger data-slot="dropdown-m..." asChild={true}>
-              <MenuAnchor asChild={true} __scopeMenu={{Menu:[...], ...}}>
-                <PopperAnchor __scopePopper={{Menu:[...], ...}} asChild={true} ref={null}>
-                  <Primitive.div asChild={true} ref={function}>
-                    <Primitive.div.Slot ref={function}>
-                      <Primitive.div.SlotClone ref={function}>
-                        <Primitive.button type="button" id="radix-_R_c..." aria-haspopup="menu" aria-expanded={false} ...>
-                          <Primitive.button.Slot type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                            <Primitive.button.SlotClone type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                              <Button variant="outline" size="icon" type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                                <button
-                                  data-slot="dropdown-menu-trigger"
-                                  data-variant="outline"
-                                  data-size="icon"
-                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
-                                  type="button"
-+                                 id="radix-_R_cqlb_"
--                                 id="radix-_R_1jalb_"
-                                  aria-haspopup="menu"
-                                  aria-expanded={false}
-                                  aria-controls={undefined}
-                                  data-state="closed"
-                                  data-disabled={undefined}
-                                  disabled={false}
-                                  onPointerDown={function handleEvent}
-                                  onKeyDown={function handleEvent}
-                                  ref={function}
-                                >
-          ...
-      ...
-        <ScrollAndFocusHandler segmentPath={[...]}>
-          <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-            <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-              <LoadingBoundary name="/" loading={null}>
-                <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                  <HTTPAccessFallbackErrorBoundary pathname="/courses" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                    <RedirectBoundary>
-                      <RedirectErrorBoundary router={{...}}>
-                        <InnerLayoutRouter url="/courses" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                          <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                            <SegmentTrieNode>
-                            <MainLayout>
-                              <html
-+                               lang="en"
--                               lang="uz"
--                               className="dark"
--                               style={{color-scheme:"dark"}}
-                              >
-                                <body
--                                 className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__va..."
-                                >
-                        ...
-            ...
-
-[00:10:00.161] Server  LOG     ✓ Compiled in 77ms
-[00:14:22.694] Server  LOG     ✓ Compiled in 79ms
-[00:16:59.115] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:59.313] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <div className="flex-1 fle...">
-      ...
-        <MenuProvider scope={{Menu:[...], ...}} onClose={function Menu.useCallback} isUsingKeyboardRef={{current:false}} ...>
-          <DropdownMenuTrigger asChild={true}>
-            <DropdownMenuTrigger data-slot="dropdown-m..." asChild={true}>
-              <MenuAnchor asChild={true} __scopeMenu={{Menu:[...], ...}}>
-                <PopperAnchor __scopePopper={{Menu:[...], ...}} asChild={true} ref={null}>
-                  <Primitive.div asChild={true} ref={function}>
-                    <Primitive.div.Slot ref={function}>
-                      <Primitive.div.SlotClone ref={function}>
-                        <Primitive.button type="button" id="radix-_R_c..." aria-haspopup="menu" aria-expanded={false} ...>
-                          <Primitive.button.Slot type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                            <Primitive.button.SlotClone type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                              <Button variant="outline" size="icon" type="button" id="radix-_R_c..." aria-haspopup="menu" ...>
-                                <button
-                                  data-slot="dropdown-menu-trigger"
-                                  data-variant="outline"
-                                  data-size="icon"
-                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
-                                  type="button"
-+                                 id="radix-_R_cqlb_"
--                                 id="radix-_R_1jalb_"
-                                  aria-haspopup="menu"
-                                  aria-expanded={false}
-                                  aria-controls={undefined}
-                                  data-state="closed"
-                                  data-disabled={undefined}
-                                  disabled={false}
-                                  onPointerDown={function handleEvent}
-                                  onKeyDown={function handleEvent}
-                                  ref={function}
-                                >
-          ...
-      ...
-        <ScrollAndFocusHandler segmentPath={[...]}>
-          <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-            <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-              <LoadingBoundary name="/" loading={null}>
-                <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                  <HTTPAccessFallbackErrorBoundary pathname="/courses" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                    <RedirectBoundary>
-                      <RedirectErrorBoundary router={{...}}>
-                        <InnerLayoutRouter url="/courses" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                          <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                            <SegmentTrieNode>
-                            <MainLayout>
-                              <html
-+                               lang="en"
--                               lang="uz"
--                               className="dark"
--                               style={{color-scheme:"dark"}}
-                              >
-                                <body
--                                 className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__va..."
-                                >
-                        ...
-            ...
-
-[00:17:49.854] Server  LOG     ✓ Compiled in 41ms
-[00:17:58.272] Server  LOG     ✓ Compiled in 35ms
-[00:18:20.304] Server  LOG     ✓ Compiled in 38ms
-[00:20:46.462] Server  LOG     ✓ Compiled in 75ms
-[00:21:22.755] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:21:22.876] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/courses" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/courses" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:21:57.615] Browser LOG     Yuborilayotgan ma'lumot: {"amount":"1231231","date":"12123-03-12","group":"wefwefwef","method":"Naqd","month":"2312-12","student":"wefwef"}
-[00:24:28.720] Server  LOG     ✓ Compiled in 193ms
-[00:24:46.320] Server  LOG     ✓ Compiled in 175ms
-[00:24:46.412] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:24:46.729] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:24:57.611] Server  LOG     ✓ Compiled in 23ms
-[00:25:23.568] Server  LOG     ✓ Compiled in 99ms
-[00:25:23.659] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:25:24.727] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:25:37.344] Server  LOG     ✓ Compiled in 71ms
-[00:25:37.426] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:25:37.576] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:25:48.025] Server  LOG     ✓ Compiled in 17ms
-[00:25:54.777] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:00.791] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.870] Server  LOG     ✓ Ready in 695ms
+[00:00:02.272] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.344] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:25:54.777] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:03.344] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:25:55.593] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2MzM3NiwiZXhwIjoxNzcxNjY2OTc2fQ.RAMS0ywze_AlfHEkIouB4uEm3xzwpTbl16pgFiKCum0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
-[00:25:56.551] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2MzM3NiwiZXhwIjoxNzcxNjY2OTc2fQ.RAMS0ywze_AlfHEkIouB4uEm3xzwpTbl16pgFiKCum0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
-[00:25:59.116] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+[00:00:03.344] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student?month=2026-02","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2504:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 2)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
+[00:00:09.909] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.111] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:10.111] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:10.111] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student?month=2026-02","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2504:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 2)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
+[00:00:23.941] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:24.163] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:24.163] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:24.163] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2504:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
+[00:00:27.856] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
 This will cause a hydration error.%s <html> main  
 
   ...
@@ -471,304 +65,145 @@ This will cause a hydration error.%s <html> main
 >                                     <html lang="en">
         ...
 
-[00:25:59.116] Browser ERROR   <%s> cannot contain a nested %s.
+[00:00:27.856] Browser ERROR   <%s> cannot contain a nested %s.
 See this log for the ancestor stack trace. main <html>
-[00:26:11.169] Server  LOG     ✓ Compiled in 22ms
-[00:26:15.064] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2MzM3NiwiZXhwIjoxNzcxNjY2OTc2fQ.RAMS0ywze_AlfHEkIouB4uEm3xzwpTbl16pgFiKCum0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
-[00:26:17.007] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2MzM3NiwiZXhwIjoxNzcxNjY2OTc2fQ.RAMS0ywze_AlfHEkIouB4uEm3xzwpTbl16pgFiKCum0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
-[00:29:04.116] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:27.856] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:00:27.856] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:00:40.630] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:40.736] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                          <SegmentTrieNode>
+                          <MainLayout>
+                            <html
++                             lang="en"
+-                             lang="uz"
+-                             className="dark"
+-                             style={{color-scheme:"dark"}}
+                            >
+                              <body
+-                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
+                              >
+                      ...
+          ...
+
+[00:06:01.812] Browser ERROR   Xatolik
+[00:06:01.812] Browser ERROR   Xatolik
+[00:06:05.063] Browser ERROR   Yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Teachers.useCallback[fetchTeachers] (http://localhost:3000/_next/static/chunks/app_(main)_teachers_page_tsx_d6b36410._.js:191:29)"}
+[00:06:05.063] Browser ERROR   Yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Teachers.useCallback[fetchTeachers] (http://localhost:3000/_next/static/chunks/app_(main)_teachers_page_tsx_d6b36410._.js:191:29)"}
+[00:06:07.670] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:07.827] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/teachers" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/teachers" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                          <SegmentTrieNode>
+                          <MainLayout>
+                            <html
++                             lang="en"
+-                             lang="uz"
+-                             className="dark"
+-                             style={{color-scheme:"dark"}}
+                            >
+                              <body
+-                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
+                              >
+                      ...
+          ...
+
+[00:06:07.827] Browser ERROR   Yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Teachers.useCallback[fetchTeachers] (http://localhost:3000/_next/static/chunks/app_(main)_teachers_page_tsx_d6b36410._.js:191:29)"}
+[00:06:14.212] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:29:04.116] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:06:14.212] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:29:04.947] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2MzM3NiwiZXhwIjoxNzcxNjY2OTc2fQ.RAMS0ywze_AlfHEkIouB4uEm3xzwpTbl16pgFiKCum0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
-[00:29:05.736] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2MzM3NiwiZXhwIjoxNzcxNjY2OTc2fQ.RAMS0ywze_AlfHEkIouB4uEm3xzwpTbl16pgFiKCum0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
-[00:29:32.288] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:29:32.288] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:29:33.239] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2NjI1MCwiZXhwIjoxNzcxNjY5ODUwfQ.Auapo1F-Jb3tD2j-F-ifzYEl3zE-F7L_l254tojZ-x4"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
-[00:29:33.800] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTY2NjI1MCwiZXhwIjoxNzcxNjY5ODUwfQ.Auapo1F-Jb3tD2j-F-ifzYEl3zE-F7L_l254tojZ-x4"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
-[00:29:57.869] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:29:57.978] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
+[00:06:14.212] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
+[00:06:14.212] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
+[00:06:19.976] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> main  
 
   ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <Head>
+        <__next_root_layout_boundary__>
+          <SegmentViewNode type="layout" pagePath="layout.tsx">
+            <SegmentTrieNode>
+            <link>
+            <script>
+            <script>
+            <script>
+            <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={{params:{}, ...}}>
+              <RootLayout params={Promise}>
+                <html lang="uz" suppressHydrationWarning={true}>
+                  <head>
+                  <body className="inter_5901...">
+                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} ...>
+                      <J attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
+                        <V attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
+                          <script>
+                          <div className="flex min-h...">
+                            <aside>
+                            <div className="flex-1 fle...">
+                              <header>
+>                             <main className="flex-1 p-4 md:p-6 overflow-y-auto bg-background">
+                                ...
+                                  <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                                    <SegmentTrieNode>
+                                    <MainLayout>
+>                                     <html lang="en">
+        ...
 
-[00:29:58.711] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:29:58.815] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:29:59.178] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:29:59.255] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:29:59.359] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:29:59.464] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:30:48.329] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:30:48.436] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:33:09.142] Server  LOG     ✓ Compiled in 64ms
-[00:33:26.301] Server  LOG     ✓ Compiled in 43ms
-[00:34:40.667] Server  LOG     ✓ Compiled in 42ms
-[00:34:55.075] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:34:55.191] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
-[00:35:33.354] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:35:33.458] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RenderFromTemplateContext>
-      <ScrollAndFocusHandler segmentPath={[...]}>
-        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
-          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
-            <LoadingBoundary name="/" loading={null}>
-              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-                  <RedirectBoundary>
-                    <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
-                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                          <SegmentTrieNode>
-                          <MainLayout>
-                            <html
-+                             lang="en"
--                             lang="uz"
--                             className="dark"
--                             style={{color-scheme:"dark"}}
-                            >
-                              <body
--                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
-                              >
-                      ...
-          ...
-
+[00:06:19.976] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. main <html>
+[00:06:20.116] Browser ERROR   Guruhlarni yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Groups.useCallback[fetchGroups] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:229:32)"}
+[00:06:20.253] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)"}
+[00:06:20.253] Browser ERROR   Guruhlarni yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Groups.useCallback[fetchGroups] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:229:32)"}
+[00:06:20.253] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)"}
+[00:06:25.179] Browser ERROR   Qarzdorlarni yuklashda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{"month":"2025-05"},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Payment.useCallback[fetchDebtors] (http://localhost:3000/_next/static/chunks/app_(main)_payment_page_tsx_e7ba2a87._.js:47:34)"}
+[00:06:25.179] Browser ERROR   Qarzdorlarni yuklashda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{"month":"2025-05"},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Payment.useCallback[fetchDebtors] (http://localhost:3000/_next/static/chunks/app_(main)_payment_page_tsx_e7ba2a87._.js:47:34)"}
+[00:06:25.782] Browser ERROR   Xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js:75:29)"}
+[00:06:25.782] Browser ERROR   Xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js:75:29)"}
