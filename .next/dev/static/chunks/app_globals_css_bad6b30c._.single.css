@@ -1820,6 +1820,10 @@
     padding-block: calc(var(--spacing) * 3);
   }
 
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }

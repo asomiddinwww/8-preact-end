@@ -94,6 +94,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/js-cookie/dist/js.cookie.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useMutation.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pencil$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Pencil$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/pencil.js [app-ssr] (ecmascript) <export default as Pencil>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.js [app-ssr] (ecmascript) <export default as Trash2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2d$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__UserPlus$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/user-plus.js [app-ssr] (ecmascript) <export default as UserPlus>");
@@ -102,6 +105,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-down.js [app-ssr] (ecmascript) <export default as ChevronDown>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/rotate-ccw.js [app-ssr] (ecmascript) <export default as RotateCcw>");
 "use client";
+;
 ;
 ;
 ;
@@ -116,12 +120,12 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-3/4"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                    lineNumber: 29,
+                    lineNumber: 30,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -130,12 +134,12 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-full"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                    lineNumber: 32,
+                    lineNumber: 33,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -144,12 +148,12 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-12"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                    lineNumber: 35,
+                    lineNumber: 36,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -158,12 +162,12 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-16"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                    lineNumber: 38,
+                    lineNumber: 39,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                lineNumber: 37,
+                lineNumber: 38,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -172,23 +176,22 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-8 w-16 bg-zinc-200 dark:bg-zinc-800 rounded ml-auto"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                    lineNumber: 41,
+                    lineNumber: 42,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                lineNumber: 40,
+                lineNumber: 41,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/(main)/adminss/page.tsx",
-        lineNumber: 27,
+        lineNumber: 28,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 const AdminPanel = ()=>{
-    const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQueryClient"])();
     const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [filterStatus, setFilterStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -203,44 +206,29 @@ const AdminPanel = ()=>{
     });
     const BASE_URL = ("TURBOPACK compile-time value", "https://admin-crm.onrender.com");
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
-    const fetchAdmins = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async ()=>{
-        if (!token) return;
-        try {
-            setLoading(true);
+    // --- 1. FETCHING (GET) ---
+    const { data: admins = [], isLoading: loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQuery"])({
+        queryKey: [
+            "admins",
+            filterStatus
+        ],
+        queryFn: async ()=>{
+            if (!token) return [];
             const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(`${BASE_URL}/api/staff/all-admins?status=${filterStatus}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
             });
-            setData(res.data?.data || []);
-        } catch (err) {
-            setData([]);
-        } finally{
-            setLoading(false);
-        }
-    }, [
-        BASE_URL,
-        token,
-        filterStatus
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        fetchAdmins();
-    }, [
-        fetchAdmins
-    ]);
-    const filteredData = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
-        return data.filter((admin)=>`${admin.first_name} ${admin.last_name} ${admin.email}`.toLowerCase().includes(searchTerm.toLowerCase()));
-    }, [
-        searchTerm,
-        data
-    ]);
-    const handleStatusToggle = async (admin)=>{
-        if (!token) return;
-        const isRestoring = admin.status === "ishdan bo'shatilgan";
-        if (!confirm(isRestoring ? "Ishga qaytarmoqchimisiz?" : "Ishdan bo'shatmoqchimisiz?")) return;
-        try {
+            return res.data?.data || [];
+        },
+        enabled: !!token
+    });
+    // --- 2. STATUS TOGGLE MUTATION ---
+    const statusMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: async (admin)=>{
+            const isRestoring = admin.status === "ishdan bo'shatilgan";
             const newStatus = isRestoring ? "faol" : "ishdan bo'shatilgan";
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/staff/edited-admin`, {
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/staff/edited-admin`, {
                 _id: admin._id,
                 first_name: admin.first_name,
                 last_name: admin.last_name,
@@ -251,15 +239,20 @@ const AdminPanel = ()=>{
                     Authorization: `Bearer ${token}`
                 }
             });
-            fetchAdmins();
-        } catch (err) {
-            alert("Xatolik yuz berdi");
-        }
-    };
-    const handleDelete = async (id)=>{
-        if (!confirm("Haqiqatan ham ushbu adminni bazadan butunlay o'chirmoqchimisiz?")) return;
-        try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`${BASE_URL}/api/staff/deleted-admin`, {
+        },
+        onSuccess: ()=>{
+            queryClient.invalidateQueries({
+                queryKey: [
+                    "admins"
+                ]
+            });
+        },
+        onError: ()=>alert("Xatolik yuz berdi")
+    });
+    // --- 3. DELETE MUTATION ---
+    const deleteMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: async (id)=>{
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`${BASE_URL}/api/staff/deleted-admin`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 },
@@ -267,10 +260,57 @@ const AdminPanel = ()=>{
                     _id: id
                 }
             });
-            fetchAdmins();
+        },
+        onSuccess: ()=>{
+            queryClient.invalidateQueries({
+                queryKey: [
+                    "admins"
+                ]
+            });
             alert("Muvaffaqiyatli o'chirildi");
-        } catch (err) {
+        },
+        onError: (err)=>{
             alert(err.response?.status === 403 ? "Huquqingiz yetarli emas!" : "Xatolik yuz berdi");
+        }
+    });
+    // --- 4. SAVE (CREATE/EDIT) MUTATION ---
+    const saveMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: async (payload)=>{
+            const endpoint = editingAdmin ? "/api/staff/edited-admin" : "/api/staff/create-admin";
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}${endpoint}`, payload, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+        },
+        onSuccess: ()=>{
+            queryClient.invalidateQueries({
+                queryKey: [
+                    "admins"
+                ]
+            });
+            setIsModalOpen(false);
+            alert("Muvaffaqiyatli saqlandi!");
+        },
+        onError: (err)=>{
+            alert(err.response?.data?.message || "Xatolik yuz berdi");
+        }
+    });
+    const filteredData = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        return admins.filter((admin)=>`${admin.first_name} ${admin.last_name} ${admin.email}`.toLowerCase().includes(searchTerm.toLowerCase()));
+    }, [
+        searchTerm,
+        admins
+    ]);
+    const handleStatusToggle = (admin)=>{
+        const isRestoring = admin.status === "ishdan bo'shatilgan";
+        if (confirm(isRestoring ? "Ishga qaytarmoqchimisiz?" : "Ishdan bo'shatmoqchimisiz?")) {
+            statusMutation.mutate(admin);
+        }
+    };
+    const handleDelete = (id)=>{
+        if (confirm("Haqiqatan ham ushbu adminni bazadan butunlay o'chirmoqchimisiz?")) {
+            deleteMutation.mutate(id);
         }
     };
     const openModal = (admin = null)=>{
@@ -297,46 +337,21 @@ const AdminPanel = ()=>{
         }
         setIsModalOpen(true);
     };
-    const handleSave = async (e)=>{
+    const handleSave = (e)=>{
         e.preventDefault();
         if (!token) return;
-        try {
-            if (editingAdmin) {
-                const updatePayload = {
-                    _id: editingAdmin._id,
-                    first_name: formData.first_name,
-                    last_name: formData.last_name,
-                    email: formData.email,
-                    status: formData.status
-                };
-                await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/staff/edited-admin`, updatePayload, {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-            } else {
-                const createPayload = {
-                    first_name: formData.first_name,
-                    last_name: formData.last_name,
-                    email: formData.email,
-                    password: formData.password,
-                    role: formData.role.toLowerCase(),
-                    status: formData.status,
-                    work_date: new Date().toISOString().split("T")[0]
-                };
-                await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/staff/create-admin`, createPayload, {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-            }
-            await fetchAdmins();
-            setIsModalOpen(false);
-            alert("Muvaffaqiyatli saqlandi!");
-        } catch (err) {
-            console.error("API Error:", err.response?.data);
-            alert(err.response?.data?.message || "Xatolik yuz berdi");
-        }
+        const payload = editingAdmin ? {
+            _id: editingAdmin._id,
+            first_name: formData.first_name,
+            last_name: formData.last_name,
+            email: formData.email,
+            status: formData.status
+        } : {
+            ...formData,
+            role: formData.role.toLowerCase(),
+            work_date: new Date().toISOString().split("T")[0]
+        };
+        saveMutation.mutate(payload);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full p-2 sm:p-4 md:p-6 min-h-screen overflow-x-hidden",
@@ -352,7 +367,7 @@ const AdminPanel = ()=>{
                                 children: "Adminlar boshqaruvi"
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                lineNumber: 219,
+                                lineNumber: 221,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -366,7 +381,7 @@ const AdminPanel = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 224,
+                                                lineNumber: 226,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -377,13 +392,13 @@ const AdminPanel = ()=>{
                                                 className: "w-full bg-background border border-zinc-800 rounded-lg py-1.5 pl-8 pr-2 text-xs md:text-sm outline-none focus:ring-1 focus:ring-zinc-700"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 228,
+                                                lineNumber: 230,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                        lineNumber: 223,
+                                        lineNumber: 225,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -394,7 +409,7 @@ const AdminPanel = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 241,
+                                                lineNumber: 243,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             " ",
@@ -403,7 +418,7 @@ const AdminPanel = ()=>{
                                                 children: "Qo'shish"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 242,
+                                                lineNumber: 244,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -411,13 +426,13 @@ const AdminPanel = ()=>{
                                                 children: "+"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 243,
+                                                lineNumber: 245,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                        lineNumber: 237,
+                                        lineNumber: 239,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -433,7 +448,7 @@ const AdminPanel = ()=>{
                                                         children: "All"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                        lineNumber: 252,
+                                                        lineNumber: 254,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -441,7 +456,7 @@ const AdminPanel = ()=>{
                                                         children: "Faol"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                        lineNumber: 253,
+                                                        lineNumber: 255,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -449,7 +464,7 @@ const AdminPanel = ()=>{
                                                         children: "Tatilda"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                        lineNumber: 254,
+                                                        lineNumber: 256,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -457,13 +472,13 @@ const AdminPanel = ()=>{
                                                         children: "Nofaol"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                        lineNumber: 255,
+                                                        lineNumber: 257,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 247,
+                                                lineNumber: 249,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
@@ -471,25 +486,25 @@ const AdminPanel = ()=>{
                                                 size: 12
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 257,
+                                                lineNumber: 259,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                        lineNumber: 246,
+                                        lineNumber: 248,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                lineNumber: 222,
+                                lineNumber: 224,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                        lineNumber: 218,
+                        lineNumber: 220,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -506,7 +521,7 @@ const AdminPanel = ()=>{
                                                 children: "Ism Familiya"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 269,
+                                                lineNumber: 271,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -514,7 +529,7 @@ const AdminPanel = ()=>{
                                                 children: "Email"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 270,
+                                                lineNumber: 272,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -522,7 +537,7 @@ const AdminPanel = ()=>{
                                                 children: "Rol"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 271,
+                                                lineNumber: 273,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -530,7 +545,7 @@ const AdminPanel = ()=>{
                                                 children: "Holat"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 272,
+                                                lineNumber: 274,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -538,18 +553,18 @@ const AdminPanel = ()=>{
                                                 children: "Amallar"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                lineNumber: 273,
+                                                lineNumber: 275,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                        lineNumber: 268,
+                                        lineNumber: 270,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                    lineNumber: 267,
+                                    lineNumber: 269,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -558,7 +573,7 @@ const AdminPanel = ()=>{
                                         ...Array(10)
                                     ].map((_, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SkeletonRow, {}, `skeleton-${index}`, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 279,
+                                            lineNumber: 281,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))) : filteredData.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                             className: "hover:bg-zinc-800/30 transition-colors group",
@@ -572,7 +587,7 @@ const AdminPanel = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 286,
+                                                    lineNumber: 288,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -580,7 +595,7 @@ const AdminPanel = ()=>{
                                                     children: item.email
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 289,
+                                                    lineNumber: 291,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -590,12 +605,12 @@ const AdminPanel = ()=>{
                                                         children: item.role
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                        lineNumber: 293,
+                                                        lineNumber: 295,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 292,
+                                                    lineNumber: 294,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -605,12 +620,12 @@ const AdminPanel = ()=>{
                                                         children: item.status
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                        lineNumber: 298,
+                                                        lineNumber: 300,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 297,
+                                                    lineNumber: 299,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -626,12 +641,12 @@ const AdminPanel = ()=>{
                                                                     size: 14
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                                    lineNumber: 317,
+                                                                    lineNumber: 319,
                                                                     columnNumber: 29
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                                lineNumber: 312,
+                                                                lineNumber: 314,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             item.status === "ishdan bo'shatilgan" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -642,12 +657,12 @@ const AdminPanel = ()=>{
                                                                     size: 14
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                                    lineNumber: 326,
+                                                                    lineNumber: 328,
                                                                     columnNumber: 31
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                                lineNumber: 321,
+                                                                lineNumber: 323,
                                                                 columnNumber: 29
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -658,51 +673,51 @@ const AdminPanel = ()=>{
                                                                     size: 14
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                                    lineNumber: 335,
+                                                                    lineNumber: 337,
                                                                     columnNumber: 29
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                                lineNumber: 330,
+                                                                lineNumber: 332,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                        lineNumber: 311,
+                                                        lineNumber: 313,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 310,
+                                                    lineNumber: 312,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, item._id, true, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 282,
+                                            lineNumber: 284,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                    lineNumber: 276,
+                                    lineNumber: 278,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                            lineNumber: 266,
+                            lineNumber: 268,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/(main)/adminss/page.tsx",
-                        lineNumber: 265,
+                        lineNumber: 267,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                lineNumber: 217,
+                lineNumber: 219,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             isModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -718,7 +733,7 @@ const AdminPanel = ()=>{
                                     children: editingAdmin ? "Tahrirlash" : "Yangi admin"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                    lineNumber: 350,
+                                    lineNumber: 352,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -730,7 +745,7 @@ const AdminPanel = ()=>{
                                             className: "text-muted-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 357,
+                                            lineNumber: 359,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -738,19 +753,19 @@ const AdminPanel = ()=>{
                                             children: "Yopish"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 358,
+                                            lineNumber: 360,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                    lineNumber: 353,
+                                    lineNumber: 355,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                            lineNumber: 349,
+                            lineNumber: 351,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -768,7 +783,7 @@ const AdminPanel = ()=>{
                                                     children: "Ism"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 368,
+                                                    lineNumber: 370,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -782,13 +797,13 @@ const AdminPanel = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 371,
+                                                    lineNumber: 373,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 367,
+                                            lineNumber: 369,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -799,7 +814,7 @@ const AdminPanel = ()=>{
                                                     children: "Familiya"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 382,
+                                                    lineNumber: 384,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -813,19 +828,19 @@ const AdminPanel = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                                    lineNumber: 385,
+                                                    lineNumber: 387,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 381,
+                                            lineNumber: 383,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                    lineNumber: 366,
+                                    lineNumber: 368,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -836,7 +851,7 @@ const AdminPanel = ()=>{
                                             children: "Email"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 398,
+                                            lineNumber: 400,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -851,13 +866,13 @@ const AdminPanel = ()=>{
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 401,
+                                            lineNumber: 403,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                    lineNumber: 397,
+                                    lineNumber: 399,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 !editingAdmin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -868,7 +883,7 @@ const AdminPanel = ()=>{
                                             children: "Parol"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 415,
+                                            lineNumber: 417,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -883,13 +898,13 @@ const AdminPanel = ()=>{
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 418,
+                                            lineNumber: 420,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                    lineNumber: 414,
+                                    lineNumber: 416,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -902,45 +917,46 @@ const AdminPanel = ()=>{
                                             children: "Bekor qilish"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 432,
+                                            lineNumber: 434,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             type: "submit",
+                                            disabled: saveMutation.isPending,
                                             className: "order-1 xs:order-2 flex-1 inline-flex items-center justify-center rounded-md text-xs md:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 h-9 md:h-10 px-4 py-2",
-                                            children: "Saqlash"
+                                            children: saveMutation.isPending ? "Saqlanmoqda..." : "Saqlash"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                                            lineNumber: 439,
+                                            lineNumber: 441,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                                    lineNumber: 431,
+                                    lineNumber: 433,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/adminss/page.tsx",
-                            lineNumber: 362,
+                            lineNumber: 364,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/adminss/page.tsx",
-                    lineNumber: 348,
+                    lineNumber: 350,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/adminss/page.tsx",
-                lineNumber: 347,
+                lineNumber: 349,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/(main)/adminss/page.tsx",
-        lineNumber: 216,
+        lineNumber: 218,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

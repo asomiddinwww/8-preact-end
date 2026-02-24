@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useState, useMemo } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
@@ -12,7 +12,9 @@ import {
   MoreHorizontal,
   RotateCcw,
   Info,
+  Loader2,
 } from "lucide-react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 interface Teacher {
   _id: string;
@@ -50,8 +52,7 @@ const SkeletonRow = () => (
 
 const Teachers = () => {
   const router = useRouter();
-  const [data, setData] = useState<Teacher[]>([]);
-  const [loading, setLoading] = useState(true);
+  const queryClient = useQueryClient();
   const [searchTerm, setSearchTerm] = useState("");
   const [filterStatus, setFilterStatus] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -69,10 +70,9 @@ const Teachers = () => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const token = Cookies.get("token");
 
-  const fetchTeachers = useCallback(async () => {
-    if (!token) return;
-    try {
-      setLoading(true);
+  const { data: teachers = [], isLoading: loading } = useQuery({
+    queryKey: ["teachers", filterStatus],
+    queryFn: async () => {
       const url = filterStatus
         ? `${BASE_URL}/api/teacher/get-all-teachers?status=${filterStatus}`
         : `${BASE_URL}/api/teacher/get-all-teachers`;
@@ -80,67 +80,19 @@ const Teachers = () => {
       const res = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      setData(Array.isArray(res.data) ? res.data : res.data?.data || []);
-    } catch (err) {
-      console.error("Yuklashda xatolik:", err);
-    } finally {
-      setLoading(false);
-    }
-  }, [BASE_URL, token, filterStatus]);
+      return Array.isArray(res.data) ? res.data : res.data?.data || [];
+    },
+    enabled: !!token,
+  });
 
-  useEffect(() => {
-    fetchTeachers();
-  }, [fetchTeachers]);
-
-  const filteredData = useMemo(() => {
-    if (!Array.isArray(data)) return [];
-    return data.filter((t) =>
-      `${t.first_name} ${t.last_name} ${t.email}`
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase()),
-    );
-  }, [searchTerm, data]);
-
-  const handleFireTeacher = async (id: string) => {
-    if (!token || !confirm("Ustozni ishdan bo'shatmoqchimisiz?")) return;
-    try {
-      const res = await axios.delete(`${BASE_URL}/api/teacher/fire-teacher`, {
-        headers: { Authorization: `Bearer ${token}` },
-        data: { _id: id },
-      });
-      if (res.status === 200 || res.data.status === 200) {
-        alert("Ustoz ishdan bo'shatildi");
-        fetchTeachers();
-        setActiveMenu(null);
-      }
-    } catch (err: any) {
-      alert(err.response?.data?.message || "O'chirishda xatolik yuz berdi");
-    }
-  };
-
-  const handleReturnTeacher = async (id: string) => {
-    if (!token) return;
-    try {
-      await axios.post(
-        `${BASE_URL}/api/teacher/return-teacher`,
-        { _id: id },
-        { headers: { Authorization: `Bearer ${token}` } },
-      );
-      alert("Ustoz faoliyatga qaytarildi");
-      fetchTeachers();
-      setActiveMenu(null);
-    } catch (err: any) {
-      alert(err.response?.data?.message || "Xatolik yuz berdi!");
-    }
-  };
-
-  const handleCreate = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!token) return;
-    try {
-      await axios.post(`${BASE_URL}/api/teacher/create-teacher`, formData, {
+  const createMutation = useMutation({
+    mutationFn: async (newTeacher: typeof formData) => {
+      return axios.post(`${BASE_URL}/api/teacher/create-teacher`, newTeacher, {
         headers: { Authorization: `Bearer ${token}` },
       });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["teachers"] });
       setIsModalOpen(false);
       setFormData({
         first_name: "",
@@ -150,14 +102,73 @@ const Teachers = () => {
         password: "",
         course_id: STATIC_COURSES[0].id,
       });
-      fetchTeachers();
-    } catch (err: any) {
+    },
+    onError: (err: any) => {
       alert(err.response?.data?.message || "Xatolik!");
+    },
+  });
+
+  const fireMutation = useMutation({
+    mutationFn: async (id: string) => {
+      return axios.delete(`${BASE_URL}/api/teacher/fire-teacher`, {
+        headers: { Authorization: `Bearer ${token}` },
+        data: { _id: id },
+      });
+    },
+    onSuccess: () => {
+      alert("Ustoz ishdan bo'shatildi");
+      queryClient.invalidateQueries({ queryKey: ["teachers"] });
+      setActiveMenu(null);
+    },
+    onError: (err: any) => {
+      alert(err.response?.data?.message || "O'chirishda xatolik yuz berdi");
+    },
+  });
+
+  const returnMutation = useMutation({
+    mutationFn: async (id: string) => {
+      return axios.post(
+        `${BASE_URL}/api/teacher/return-teacher`,
+        { _id: id },
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+    },
+    onSuccess: () => {
+      alert("Ustoz faoliyatga qaytarildi");
+      queryClient.invalidateQueries({ queryKey: ["teachers"] });
+      setActiveMenu(null);
+    },
+    onError: (err: any) => {
+      alert(err.response?.data?.message || "Xatolik yuz berdi!");
+    },
+  });
+
+  const filteredData = useMemo(() => {
+    if (!Array.isArray(teachers)) return [];
+    return teachers.filter((t: Teacher) =>
+      `${t.first_name} ${t.last_name} ${t.email}`
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()),
+    );
+  }, [searchTerm, teachers]);
+
+  const handleCreate = (e: React.FormEvent) => {
+    e.preventDefault();
+    createMutation.mutate(formData);
+  };
+
+  const handleFireTeacher = (id: string) => {
+    if (confirm("Ustozni ishdan bo'shatmoqchimisiz?")) {
+      fireMutation.mutate(id);
     }
   };
 
+  const handleReturnTeacher = (id: string) => {
+    returnMutation.mutate(id);
+  };
+
   return (
-    <div className="w-full p-3 sm:p-6 min-h-screen  text-foreground transition-colors duration-300">
+    <div className="w-full p-3 sm:p-6 min-h-screen text-foreground transition-colors duration-300">
       <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4 mb-6">
         <h1 className="text-xl sm:text-2xl font-bold tracking-tight">
           Ustozlar ro'yxati
@@ -198,7 +209,7 @@ const Teachers = () => {
         </div>
       </div>
 
-      <div className="w-full overflow-x-auto border border-border rounded-xl  shadow-sm scrollbar-hide">
+      <div className="w-full overflow-x-auto border border-border rounded-xl shadow-sm scrollbar-hide">
         <table className="w-full text-left min-w-[500px]">
           <thead className="text-[10px] sm:text-xs uppercase text-muted-foreground border-b border-border">
             <tr>
@@ -212,7 +223,7 @@ const Teachers = () => {
           <tbody className="text-xs sm:text-sm">
             {loading
               ? [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
-              : filteredData.map((t) => (
+              : filteredData.map((t: Teacher) => (
                   <tr
                     key={t._id}
                     className="border-t border-border hover:bg-muted/30 transition-colors"
@@ -255,17 +266,29 @@ const Teachers = () => {
                           <div className="absolute right-4 mt-1 w-32 sm:w-40 bg-popover border border-border rounded-lg z-[100] shadow-xl py-1 animate-in fade-in zoom-in duration-150">
                             {t.status === "faol" ? (
                               <button
+                                disabled={fireMutation.isPending}
                                 onClick={() => handleFireTeacher(t._id)}
                                 className="w-full flex items-center gap-2 px-3 py-2 text-[10px] sm:text-xs text-destructive hover:bg-destructive/10 transition-colors"
                               >
-                                <Trash2 size={14} /> O'chirish
+                                {fireMutation.isPending ? (
+                                  <Loader2 size={14} className="animate-spin" />
+                                ) : (
+                                  <Trash2 size={14} />
+                                )}
+                                O'chirish
                               </button>
                             ) : (
                               <button
+                                disabled={returnMutation.isPending}
                                 onClick={() => handleReturnTeacher(t._id)}
                                 className="w-full flex items-center gap-2 px-3 py-2 text-[10px] sm:text-xs text-emerald-500 hover:bg-emerald-500/10 transition-colors"
                               >
-                                <RotateCcw size={14} /> Qaytarish
+                                {returnMutation.isPending ? (
+                                  <Loader2 size={14} className="animate-spin" />
+                                ) : (
+                                  <RotateCcw size={14} />
+                                )}
+                                Qaytarish
                               </button>
                             )}
                             <button
@@ -285,8 +308,8 @@ const Teachers = () => {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 /80 backdrop-blur-sm flex items-center justify-center z-[200] p-2 sm:p-4">
-          <div className=" border border-border w-full max-w-[450px] max-h-[95vh] overflow-y-auto rounded-xl p-5 sm:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200">
+        <div className="fixed inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center z-[200] p-2 sm:p-4">
+          <div className="bg-background border border-border w-full max-w-[450px] max-h-[95vh] overflow-y-auto rounded-xl p-5 sm:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200">
             <button
               onClick={() => setIsModalOpen(false)}
               className="absolute right-4 top-4 text-muted-foreground hover:text-foreground transition-colors"
@@ -346,7 +369,7 @@ const Teachers = () => {
                           [input.key]: e.target.value,
                         })
                       }
-                      className="w-full  border border-input rounded-lg px-3 py-2.5 text-xs sm:text-sm outline-none focus:ring-1 focus:ring-ring transition-all"
+                      className="w-full bg-background border border-input rounded-lg px-3 py-2.5 text-xs sm:text-sm outline-none focus:ring-1 focus:ring-ring transition-all"
                       required
                     />
                   </div>
@@ -362,7 +385,7 @@ const Teachers = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, course_id: e.target.value })
                       }
-                      className="w-full  border border-input rounded-lg px-3 py-2.5 text-xs sm:text-sm outline-none focus:ring-1 focus:ring-ring appearance-none"
+                      className="w-full bg-background border border-input rounded-lg px-3 py-2.5 text-xs sm:text-sm outline-none focus:ring-1 focus:ring-ring appearance-none"
                     >
                       {STATIC_COURSES.map((c) => (
                         <option key={c.id} value={c.id}>
@@ -387,8 +410,12 @@ const Teachers = () => {
                 </button>
                 <button
                   type="submit"
-                  className="bg-primary text-primary-foreground px-6 py-2 rounded-lg text-xs sm:text-sm font-bold hover:opacity-90 transition-all active:scale-95"
+                  disabled={createMutation.isPending}
+                  className="bg-primary text-primary-foreground px-6 py-2 rounded-lg text-xs sm:text-sm font-bold hover:opacity-90 transition-all active:scale-95 flex items-center gap-2"
                 >
+                  {createMutation.isPending && (
+                    <Loader2 size={14} className="animate-spin" />
+                  )}
                   Saqlash
                 </button>
               </div>

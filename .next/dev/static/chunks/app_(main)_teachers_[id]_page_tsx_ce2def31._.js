@@ -9,7 +9,6 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/js-cookie/dist/js.cookie.mjs [app-client] (ecmascript)");
@@ -21,6 +20,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/mail.js [app-client] (ecmascript) <export default as Mail>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$briefcase$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Briefcase$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/briefcase.js [app-client] (ecmascript) <export default as Briefcase>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$LoadingOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__LoadingOutlined$3e$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/icons/LoadingOutlined.js [app-client] (ecmascript) <export default as LoadingOutlined>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -35,61 +35,50 @@ const TeacherInfo = ()=>{
     _s();
     const { id } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    const [teacher, setTeacher] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     const BASE_URL = ("TURBOPACK compile-time value", "https://admin-crm.onrender.com");
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("token");
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "TeacherInfo.useEffect": ()=>{
-            const fetchTeacher = {
-                "TeacherInfo.useEffect.fetchTeacher": async ()=>{
-                    if (!token || !id) return;
-                    try {
-                        setLoading(true);
-                        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`${BASE_URL}/api/teacher/get-teacher-by-id/${id}`, {
-                            headers: {
-                                Authorization: `Bearer ${token}`
-                            }
-                        });
-                        setTeacher(res.data?.data || res.data);
-                    } catch (err) {
-                        try {
-                            const allRes = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`${BASE_URL}/api/teacher/get-all-teachers`, {
-                                headers: {
-                                    Authorization: `Bearer ${token}`
-                                }
-                            });
-                            const found = (allRes.data?.data || allRes.data).find({
-                                "TeacherInfo.useEffect.fetchTeacher.found": (t)=>t._id === id
-                            }["TeacherInfo.useEffect.fetchTeacher.found"]);
-                            setTeacher(found);
-                        } catch (innerErr) {
-                            console.error("Ma'lumot topilmadi");
+    const { data: teacher, isLoading: loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
+        queryKey: [
+            "teacher",
+            id
+        ],
+        queryFn: {
+            "TeacherInfo.useQuery": async ()=>{
+                if (!token || !id) return null;
+                try {
+                    const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`${BASE_URL}/api/teacher/get-teacher-by-id/${id}`, {
+                        headers: {
+                            Authorization: `Bearer ${token}`
                         }
-                    } finally{
-                        setLoading(false);
-                    }
+                    });
+                    return res.data?.data || res.data;
+                } catch (err) {
+                    const allRes = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`${BASE_URL}/api/teacher/get-all-teachers`, {
+                        headers: {
+                            Authorization: `Bearer ${token}`
+                        }
+                    });
+                    const found = (allRes.data?.data || allRes.data).find({
+                        "TeacherInfo.useQuery.found": (t)=>t._id === id
+                    }["TeacherInfo.useQuery.found"]);
+                    return found || null;
                 }
-            }["TeacherInfo.useEffect.fetchTeacher"];
-            fetchTeacher();
-        }
-    }["TeacherInfo.useEffect"], [
-        id,
-        token,
-        BASE_URL
-    ]);
+            }
+        }["TeacherInfo.useQuery"],
+        enabled: !!id && !!token
+    });
     if (loading) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen  flex items-center justify-center text-foreground transition-colors duration-300",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$LoadingOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__LoadingOutlined$3e$__["LoadingOutlined"], {
             className: "text-3xl text-primary"
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 64,
+            lineNumber: 59,
             columnNumber: 9
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-        lineNumber: 63,
+        lineNumber: 58,
         columnNumber: 23
     }, ("TURBOPACK compile-time value", void 0));
     if (!teacher) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -102,7 +91,7 @@ const TeacherInfo = ()=>{
                     children: "Ma'lumot topilmadi yoki xatolik yuz berdi."
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                    lineNumber: 68,
+                    lineNumber: 63,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -111,18 +100,18 @@ const TeacherInfo = ()=>{
                     children: "Orqaga qaytish"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                    lineNumber: 71,
+                    lineNumber: 66,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 67,
+            lineNumber: 62,
             columnNumber: 9
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-        lineNumber: 66,
+        lineNumber: 61,
         columnNumber: 24
     }, ("TURBOPACK compile-time value", void 0));
     const groupsCount = teacher.groups?.length || 0;
@@ -146,7 +135,7 @@ const TeacherInfo = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -162,12 +151,12 @@ const TeacherInfo = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                                lineNumber: 88,
+                                                lineNumber: 83,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                            lineNumber: 87,
+                                            lineNumber: 82,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -175,7 +164,7 @@ const TeacherInfo = ()=>{
                                             children: "O'qituvchi"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 87,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -183,19 +172,19 @@ const TeacherInfo = ()=>{
                                             children: teacher.email
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                            lineNumber: 95,
+                                            lineNumber: 90,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 81,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                            lineNumber: 81,
+                            lineNumber: 76,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -206,14 +195,14 @@ const TeacherInfo = ()=>{
                                         size: 14
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 97,
                                         columnNumber: 29
                                     }, void 0),
                                     label: "Email",
                                     value: teacher.email
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 97,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(InfoItem, {
@@ -221,14 +210,14 @@ const TeacherInfo = ()=>{
                                         size: 14
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 98,
                                         columnNumber: 29
                                     }, void 0),
                                     label: "Telefon",
                                     value: teacher.phone
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(InfoItem, {
@@ -236,14 +225,14 @@ const TeacherInfo = ()=>{
                                         size: 14
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 99,
                                         columnNumber: 29
                                     }, void 0),
                                     label: "Mutaxassislik",
                                     value: teacher.field || "Noma'lum"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(InfoItem, {
@@ -251,7 +240,7 @@ const TeacherInfo = ()=>{
                                         className: `w-2 h-2 rounded-full ${teacher.status === "faol" ? "bg-emerald-500" : "bg-destructive"}`
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 100,
                                         columnNumber: 29
                                     }, void 0),
                                     label: "Holat",
@@ -259,7 +248,7 @@ const TeacherInfo = ()=>{
                                     isStatus: true
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                    lineNumber: 105,
+                                    lineNumber: 100,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -270,14 +259,14 @@ const TeacherInfo = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 102,
                                                 columnNumber: 31
                                             }, void 0),
                                             label: "Ish boshlagan",
                                             value: formatDate(teacher.work_date)
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                            lineNumber: 107,
+                                            lineNumber: 102,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(InfoItem, {
@@ -285,32 +274,32 @@ const TeacherInfo = ()=>{
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 103,
                                                 columnNumber: 31
                                             }, void 0),
                                             label: "Ro'yxatdan o'tgan",
                                             value: formatDate(teacher.createdAt)
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                            lineNumber: 108,
+                                            lineNumber: 103,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                    lineNumber: 106,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                            lineNumber: 101,
+                            lineNumber: 96,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                    lineNumber: 80,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -321,7 +310,7 @@ const TeacherInfo = ()=>{
                                 className: "text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                lineNumber: 114,
+                                lineNumber: 109,
                                 columnNumber: 27
                             }, void 0),
                             label: "Oylik maosh",
@@ -329,7 +318,7 @@ const TeacherInfo = ()=>{
                             trend: "+0%"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                            lineNumber: 114,
+                            lineNumber: 109,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -337,7 +326,7 @@ const TeacherInfo = ()=>{
                                 className: "text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                lineNumber: 115,
+                                lineNumber: 110,
                                 columnNumber: 27
                             }, void 0),
                             label: "Guruhlar soni",
@@ -345,7 +334,7 @@ const TeacherInfo = ()=>{
                             trend: "0"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                            lineNumber: 115,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -353,7 +342,7 @@ const TeacherInfo = ()=>{
                                 className: "text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                lineNumber: 116,
+                                lineNumber: 111,
                                 columnNumber: 27
                             }, void 0),
                             label: "Jami o'quvchilar",
@@ -361,7 +350,7 @@ const TeacherInfo = ()=>{
                             trend: "+0"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                            lineNumber: 116,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -369,7 +358,7 @@ const TeacherInfo = ()=>{
                                 className: "text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                                lineNumber: 117,
+                                lineNumber: 112,
                                 columnNumber: 27
                             }, void 0),
                             label: "Aktiv o'quvchilar",
@@ -377,41 +366,42 @@ const TeacherInfo = ()=>{
                             trend: "0"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                            lineNumber: 117,
+                            lineNumber: 112,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-                    lineNumber: 113,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 79,
+            lineNumber: 74,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-        lineNumber: 78,
+        lineNumber: 73,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(TeacherInfo, "zJENsmr/CTOwD0Cnqs7HCEcYY+A=", false, function() {
+_s(TeacherInfo, "E4CaFVvJnluGV9/QJbhyLg2oXeU=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"],
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"]
     ];
 });
 _c = TeacherInfo;
 const InfoItem = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(14);
-    if ($[0] !== "fbdde1149480429fc3c6b0d907eac7530f0657045a4b4a5df4c4bf6fb4a1a4ca") {
+    if ($[0] !== "a6a38ad383d4a8ecc7b89d718ce2925b2ba52cef4f774108a3b13457d841e083") {
         for(let $i = 0; $i < 14; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "fbdde1149480429fc3c6b0d907eac7530f0657045a4b4a5df4c4bf6fb4a1a4ca";
+        $[0] = "a6a38ad383d4a8ecc7b89d718ce2925b2ba52cef4f774108a3b13457d841e083";
     }
     const { label, value, isStatus: t1, icon } = t0;
     const isStatus = t1 === undefined ? false : t1;
@@ -422,7 +412,7 @@ const InfoItem = (t0)=>{
             children: icon
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 139,
+            lineNumber: 134,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[1] = icon;
@@ -437,7 +427,7 @@ const InfoItem = (t0)=>{
             children: label
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 147,
+            lineNumber: 142,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[3] = label;
@@ -455,7 +445,7 @@ const InfoItem = (t0)=>{
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 155,
+            lineNumber: 150,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[5] = t2;
@@ -473,7 +463,7 @@ const InfoItem = (t0)=>{
             children: t6
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 166,
+            lineNumber: 161,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[8] = t5;
@@ -492,7 +482,7 @@ const InfoItem = (t0)=>{
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 175,
+            lineNumber: 170,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[11] = t4;
@@ -506,11 +496,11 @@ const InfoItem = (t0)=>{
 _c1 = InfoItem;
 const StatCard = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(22);
-    if ($[0] !== "fbdde1149480429fc3c6b0d907eac7530f0657045a4b4a5df4c4bf6fb4a1a4ca") {
+    if ($[0] !== "a6a38ad383d4a8ecc7b89d718ce2925b2ba52cef4f774108a3b13457d841e083") {
         for(let $i = 0; $i < 22; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "fbdde1149480429fc3c6b0d907eac7530f0657045a4b4a5df4c4bf6fb4a1a4ca";
+        $[0] = "a6a38ad383d4a8ecc7b89d718ce2925b2ba52cef4f774108a3b13457d841e083";
     }
     const { icon, label, value, trend } = t0;
     let t1;
@@ -520,7 +510,7 @@ const StatCard = (t0)=>{
             children: icon
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 200,
+            lineNumber: 195,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[1] = icon;
@@ -535,7 +525,7 @@ const StatCard = (t0)=>{
             children: label
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 208,
+            lineNumber: 203,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[3] = label;
@@ -550,7 +540,7 @@ const StatCard = (t0)=>{
             children: value
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 216,
+            lineNumber: 211,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[5] = value;
@@ -568,7 +558,7 @@ const StatCard = (t0)=>{
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 224,
+            lineNumber: 219,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[7] = t2;
@@ -587,7 +577,7 @@ const StatCard = (t0)=>{
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 233,
+            lineNumber: 228,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[10] = t1;
@@ -602,7 +592,7 @@ const StatCard = (t0)=>{
             size: 12
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 242,
+            lineNumber: 237,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[13] = t6;
@@ -620,7 +610,7 @@ const StatCard = (t0)=>{
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 249,
+            lineNumber: 244,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[14] = trend;
@@ -635,7 +625,7 @@ const StatCard = (t0)=>{
             children: "Hozirgi holat"
         }, void 0, false, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 257,
+            lineNumber: 252,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[16] = t8;
@@ -652,7 +642,7 @@ const StatCard = (t0)=>{
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 264,
+            lineNumber: 259,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[17] = t7;
@@ -670,7 +660,7 @@ const StatCard = (t0)=>{
             ]
         }, void 0, true, {
             fileName: "[project]/app/(main)/teachers/[id]/page.tsx",
-            lineNumber: 272,
+            lineNumber: 267,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
         $[19] = t5;

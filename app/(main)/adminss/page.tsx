@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   Pencil,
   Trash2,
@@ -44,8 +45,7 @@ const SkeletonRow = () => (
 );
 
 const AdminPanel = () => {
-  const [data, setData] = useState<AdminUser[]>([]);
-  const [loading, setLoading] = useState(true);
+  const queryClient = useQueryClient();
   const [searchTerm, setSearchTerm] = useState("");
   const [filterStatus, setFilterStatus] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -63,49 +63,26 @@ const AdminPanel = () => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const token = Cookies.get("token");
 
-  const fetchAdmins = useCallback(async () => {
-    if (!token) return;
-    try {
-      setLoading(true);
+  // --- 1. FETCHING (GET) ---
+  const { data: admins = [], isLoading: loading } = useQuery({
+    queryKey: ["admins", filterStatus],
+    queryFn: async () => {
+      if (!token) return [];
       const res = await axios.get(
         `${BASE_URL}/api/staff/all-admins?status=${filterStatus}`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        },
+        { headers: { Authorization: `Bearer ${token}` } },
       );
-      setData(res.data?.data || []);
-    } catch (err) {
-      setData([]);
-    } finally {
-      setLoading(false);
-    }
-  }, [BASE_URL, token, filterStatus]);
+      return res.data?.data || [];
+    },
+    enabled: !!token,
+  });
 
-  useEffect(() => {
-    fetchAdmins();
-  }, [fetchAdmins]);
-
-  const filteredData = useMemo(() => {
-    return data.filter((admin) =>
-      `${admin.first_name} ${admin.last_name} ${admin.email}`
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase()),
-    );
-  }, [searchTerm, data]);
-
-  const handleStatusToggle = async (admin: AdminUser) => {
-    if (!token) return;
-    const isRestoring = admin.status === "ishdan bo'shatilgan";
-    if (
-      !confirm(
-        isRestoring ? "Ishga qaytarmoqchimisiz?" : "Ishdan bo'shatmoqchimisiz?",
-      )
-    )
-      return;
-
-    try {
+  // --- 2. STATUS TOGGLE MUTATION ---
+  const statusMutation = useMutation({
+    mutationFn: async (admin: AdminUser) => {
+      const isRestoring = admin.status === "ishdan bo'shatilgan";
       const newStatus = isRestoring ? "faol" : "ishdan bo'shatilgan";
-      await axios.post(
+      return axios.post(
         `${BASE_URL}/api/staff/edited-admin`,
         {
           _id: admin._id,
@@ -116,32 +93,78 @@ const AdminPanel = () => {
         },
         { headers: { Authorization: `Bearer ${token}` } },
       );
-      fetchAdmins();
-    } catch (err) {
-      alert("Xatolik yuz berdi");
-    }
-  };
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["admins"] });
+    },
+    onError: () => alert("Xatolik yuz berdi"),
+  });
 
-  const handleDelete = async (id: string) => {
-    if (
-      !confirm(
-        "Haqiqatan ham ushbu adminni bazadan butunlay o'chirmoqchimisiz?",
-      )
-    )
-      return;
-    try {
-      await axios.delete(`${BASE_URL}/api/staff/deleted-admin`, {
+  // --- 3. DELETE MUTATION ---
+  const deleteMutation = useMutation({
+    mutationFn: async (id: string) => {
+      return axios.delete(`${BASE_URL}/api/staff/deleted-admin`, {
         headers: { Authorization: `Bearer ${token}` },
         data: { _id: id },
       });
-      fetchAdmins();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["admins"] });
       alert("Muvaffaqiyatli o'chirildi");
-    } catch (err: any) {
+    },
+    onError: (err: any) => {
       alert(
         err.response?.status === 403
           ? "Huquqingiz yetarli emas!"
           : "Xatolik yuz berdi",
       );
+    },
+  });
+
+  // --- 4. SAVE (CREATE/EDIT) MUTATION ---
+  const saveMutation = useMutation({
+    mutationFn: async (payload: any) => {
+      const endpoint = editingAdmin
+        ? "/api/staff/edited-admin"
+        : "/api/staff/create-admin";
+      return axios.post(`${BASE_URL}${endpoint}`, payload, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["admins"] });
+      setIsModalOpen(false);
+      alert("Muvaffaqiyatli saqlandi!");
+    },
+    onError: (err: any) => {
+      alert(err.response?.data?.message || "Xatolik yuz berdi");
+    },
+  });
+
+  const filteredData = useMemo(() => {
+    return admins.filter((admin: AdminUser) =>
+      `${admin.first_name} ${admin.last_name} ${admin.email}`
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()),
+    );
+  }, [searchTerm, admins]);
+
+  const handleStatusToggle = (admin: AdminUser) => {
+    const isRestoring = admin.status === "ishdan bo'shatilgan";
+    if (
+      confirm(
+        isRestoring ? "Ishga qaytarmoqchimisiz?" : "Ishdan bo'shatmoqchimisiz?",
+      )
+    ) {
+      statusMutation.mutate(admin);
+    }
+  };
+
+  const handleDelete = (id: string) => {
+    if (
+      confirm("Haqiqatan ham ushbu adminni bazadan butunlay o'chirmoqchimisiz?")
+    ) {
+      deleteMutation.mutate(id);
     }
   };
 
@@ -170,46 +193,25 @@ const AdminPanel = () => {
     setIsModalOpen(true);
   };
 
-  const handleSave = async (e: React.FormEvent) => {
+  const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
     if (!token) return;
 
-    try {
-      if (editingAdmin) {
-        const updatePayload = {
+    const payload = editingAdmin
+      ? {
           _id: editingAdmin._id,
           first_name: formData.first_name,
           last_name: formData.last_name,
           email: formData.email,
           status: formData.status,
-        };
-
-        await axios.post(`${BASE_URL}/api/staff/edited-admin`, updatePayload, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-      } else {
-        const createPayload = {
-          first_name: formData.first_name,
-          last_name: formData.last_name,
-          email: formData.email,
-          password: formData.password,
+        }
+      : {
+          ...formData,
           role: formData.role.toLowerCase(),
-          status: formData.status,
           work_date: new Date().toISOString().split("T")[0],
         };
 
-        await axios.post(`${BASE_URL}/api/staff/create-admin`, createPayload, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-      }
-
-      await fetchAdmins();
-      setIsModalOpen(false);
-      alert("Muvaffaqiyatli saqlandi!");
-    } catch (err: any) {
-      console.error("API Error:", err.response?.data);
-      alert(err.response?.data?.message || "Xatolik yuz berdi");
-    }
+    saveMutation.mutate(payload);
   };
 
   return (
@@ -278,7 +280,7 @@ const AdminPanel = () => {
                 ? [...Array(10)].map((_, index) => (
                     <SkeletonRow key={`skeleton-${index}`} />
                   ))
-                : filteredData.map((item) => (
+                : filteredData.map((item: AdminUser) => (
                     <tr
                       key={item._id}
                       className="hover:bg-zinc-800/30 transition-colors group"
@@ -438,9 +440,10 @@ const AdminPanel = () => {
                 </button>
                 <button
                   type="submit"
+                  disabled={saveMutation.isPending}
                   className="order-1 xs:order-2 flex-1 inline-flex items-center justify-center rounded-md text-xs md:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 h-9 md:h-10 px-4 py-2"
                 >
-                  Saqlash
+                  {saveMutation.isPending ? "Saqlanmoqda..." : "Saqlash"}
                 </button>
               </div>
             </form>

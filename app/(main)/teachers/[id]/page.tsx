@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -14,6 +13,7 @@ import {
   Briefcase,
 } from "lucide-react";
 import { LoadingOutlined } from "@ant-design/icons";
+import { useQuery } from "@tanstack/react-query";
 
 interface TeacherDetail {
   _id: string;
@@ -34,45 +34,37 @@ interface TeacherDetail {
 const TeacherInfo = () => {
   const { id } = useParams();
   const router = useRouter();
-  const [teacher, setTeacher] = useState<TeacherDetail | null>(null);
-  const [loading, setLoading] = useState(true);
 
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const token = Cookies.get("token");
 
-  useEffect(() => {
-    const fetchTeacher = async () => {
-      if (!token || !id) return;
+  const { data: teacher, isLoading: loading } = useQuery({
+    queryKey: ["teacher", id],
+    queryFn: async () => {
+      if (!token || !id) return null;
       try {
-        setLoading(true);
         const res = await axios.get(
           `${BASE_URL}/api/teacher/get-teacher-by-id/${id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           },
         );
-        setTeacher(res.data?.data || res.data);
+        return res.data?.data || res.data;
       } catch (err) {
-        try {
-          const allRes = await axios.get(
-            `${BASE_URL}/api/teacher/get-all-teachers`,
-            {
-              headers: { Authorization: `Bearer ${token}` },
-            },
-          );
-          const found = (allRes.data?.data || allRes.data).find(
-            (t: any) => t._id === id,
-          );
-          setTeacher(found);
-        } catch (innerErr) {
-          console.error("Ma'lumot topilmadi");
-        }
-      } finally {
-        setLoading(false);
+        const allRes = await axios.get(
+          `${BASE_URL}/api/teacher/get-all-teachers`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          },
+        );
+        const found = (allRes.data?.data || allRes.data).find(
+          (t: any) => t._id === id,
+        );
+        return found || null;
       }
-    };
-    fetchTeacher();
-  }, [id, token, BASE_URL]);
+    },
+    enabled: !!id && !!token,
+  });
 
   if (loading)
     return (
@@ -101,7 +93,7 @@ const TeacherInfo = () => {
   const groupsCount = teacher.groups?.length || 0;
   const studentsCount =
     teacher.groups?.reduce(
-      (acc, group) => acc + (group.students?.length || 0),
+      (acc: number, group: any) => acc + (group.students?.length || 0),
       0,
     ) || 0;
 

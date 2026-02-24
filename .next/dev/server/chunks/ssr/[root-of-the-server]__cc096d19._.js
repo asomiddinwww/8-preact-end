@@ -94,6 +94,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/js-cookie/dist/js.cookie.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useMutation.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/plus.js [app-ssr] (ecmascript) <export default as Plus>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$snowflake$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Snowflake$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/snowflake.js [app-ssr] (ecmascript) <export default as Snowflake>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$flame$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Flame$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/flame.js [app-ssr] (ecmascript) <export default as Flame>");
@@ -109,6 +112,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 ;
 ;
+;
+// --- Yordamchi funksiya ---
 const safeStr = (value)=>{
     if (value === null || value === undefined) return "";
     if (typeof value === "string") return value;
@@ -116,8 +121,7 @@ const safeStr = (value)=>{
     return value.name || value.title || "";
 };
 function Courses() {
-    const [courses, setCourses] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQueryClient"])();
     const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [filterFreeze, setFilterFreeze] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("all");
     // --- MODAL STATES ---
@@ -127,10 +131,8 @@ function Courses() {
         duration: "",
         price: ""
     });
-    const [isUpdating, setIsUpdating] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isAddModalOpen, setIsAddModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [addStep, setAddStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
-    const [isCreating, setIsCreating] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [showToast, setShowToast] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [newCourse, setNewCourse] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
         _id: "",
@@ -140,10 +142,15 @@ function Courses() {
         price: "0"
     });
     const BASE_URL = ("TURBOPACK compile-time value", "https://admin-crm.onrender.com") || "http://localhost:7070";
-    const fetchCourses = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async ()=>{
-        const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
-        try {
-            setLoading(true);
+    const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
+    // --- 1. GET COURSES (Query) ---
+    const { data: courses = [], isLoading: loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQuery"])({
+        queryKey: [
+            "courses",
+            searchTerm,
+            filterFreeze
+        ],
+        queryFn: async ()=>{
             const queryParams = {
                 ...searchTerm && {
                     search: searchTerm
@@ -159,7 +166,7 @@ function Courses() {
                 params: queryParams
             });
             const rawData = Array.isArray(res.data?.data) ? res.data.data : [];
-            const cleanedData = rawData.map((c)=>({
+            return rawData.map((c)=>({
                     ...c,
                     _id: safeStr(c._id),
                     name: safeStr(c.name),
@@ -169,23 +176,122 @@ function Courses() {
                     students_count: Number(c.students_count) || 0,
                     is_freeze: Boolean(c.is_freeze)
                 }));
-            setCourses(cleanedData);
-        } catch (err) {
-            console.error("Xatolik:", err);
-            setCourses([]);
-        } finally{
-            setLoading(false);
+        },
+        enabled: !!token
+    });
+    // --- 2. CREATE CATEGORY (Mutation) ---
+    const createCategoryMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: (name)=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/course/create-category`, {
+                name
+            }, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }),
+        onSuccess: (res)=>{
+            const createdId = res.data?.data?._id || res.data?._id;
+            setNewCourse((prev)=>({
+                    ...prev,
+                    _id: createdId
+                }));
+            setShowToast(true);
+            setTimeout(()=>setShowToast(false), 3000);
+            setAddStep(2);
+        },
+        onError: (err)=>{
+            alert(err.response?.data?.message || "Bunday nomli kategoriya mavjud!");
         }
-    }, [
-        filterFreeze,
-        searchTerm,
-        BASE_URL
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        fetchCourses();
-    }, [
-        fetchCourses
-    ]);
+    });
+    // --- 3. SAVE / EDIT COURSE (Mutation) ---
+    const saveCourseMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: (payload)=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/course/edit-course`, payload, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }),
+        onSuccess: ()=>{
+            queryClient.invalidateQueries({
+                queryKey: [
+                    "courses"
+                ]
+            });
+            setIsAddModalOpen(false);
+            setIsEditModalOpen(false);
+            setSelectedCourse(null); // State-ni tozalash
+        },
+        onError: ()=>alert("Xatolik yuz berdi!")
+    });
+    // --- 4. TOGGLE FREEZE (Mutation) ---
+    const toggleFreezeMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: (course)=>{
+            const endpoint = course.is_freeze ? "unfreeze-course" : "freeze-course";
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].put(`${BASE_URL}/api/course/${endpoint}`, {
+                course_id: course._id
+            }, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+        },
+        onSuccess: ()=>queryClient.invalidateQueries({
+                queryKey: [
+                    "courses"
+                ]
+            })
+    });
+    // --- 5. DELETE COURSE (Mutation) ---
+    const deleteMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: (id)=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`${BASE_URL}/api/course/delete-course`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                },
+                data: {
+                    course_id: id
+                }
+            }),
+        onSuccess: ()=>queryClient.invalidateQueries({
+                queryKey: [
+                    "courses"
+                ]
+            }),
+        onError: ()=>alert("O'chirishda xatolik!")
+    });
+    // --- HANDLERS ---
+    const handleNextStep = ()=>{
+        if (newCourse.name.trim()) {
+            createCategoryMutation.mutate(newCourse.name);
+        }
+    };
+    const handleCreateFinal = ()=>{
+        saveCourseMutation.mutate({
+            course_id: newCourse._id,
+            name: newCourse.name,
+            duration: newCourse.duration,
+            price: Number(newCourse.price),
+            description: newCourse.description
+        });
+    };
+    // BU YERDA ASOSIY HATOLIK TUZATILDI
+    const handleUpdate = ()=>{
+        // selectedCourse null emasligini tekshirish (TypeError oldini olish)
+        if (!selectedCourse?._id) {
+            alert("Kurs ma'lumotlari yuklanmadi!");
+            return;
+        }
+        saveCourseMutation.mutate({
+            course_id: selectedCourse._id,
+            duration: editData.duration,
+            price: Number(editData.price)
+        });
+    };
+    const openEditModal = (course)=>{
+        setSelectedCourse(course);
+        setEditData({
+            duration: course.duration,
+            price: String(course.price)
+        });
+        setIsEditModalOpen(true);
+    };
     const handleOpenAddModal = ()=>{
         setNewCourse({
             _id: "",
@@ -196,119 +302,6 @@ function Courses() {
         });
         setAddStep(1);
         setIsAddModalOpen(true);
-    };
-    const handleNextStep = async ()=>{
-        if (!newCourse.name.trim()) return;
-        const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
-        setIsCreating(true);
-        try {
-            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/course/create-category`, {
-                name: newCourse.name
-            }, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            if (res.status === 201 || res.status === 200) {
-                const createdId = res.data?.data?._id || res.data?._id;
-                setNewCourse((prev)=>({
-                        ...prev,
-                        _id: createdId
-                    }));
-                setShowToast(true);
-                setTimeout(()=>setShowToast(false), 3000);
-                setAddStep(2);
-            }
-        } catch (err) {
-            alert(err.response?.data?.message || "Bunday nomli kategoriya mavjud!");
-        } finally{
-            setIsCreating(false);
-        }
-    };
-    const handleCreateCourse = async ()=>{
-        const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
-        setIsCreating(true);
-        try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/course/edit-course`, {
-                course_id: newCourse._id,
-                name: newCourse.name,
-                duration: newCourse.duration,
-                price: Number(newCourse.price),
-                description: newCourse.description
-            }, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            setIsAddModalOpen(false);
-            fetchCourses();
-        } catch (err) {
-            alert("Ma'lumotlarni saqlashda xatolik yuz berdi!");
-        } finally{
-            setIsCreating(false);
-        }
-    };
-    const openEditModal = (course)=>{
-        setSelectedCourse(course);
-        setEditData({
-            duration: course.duration,
-            price: String(course.price)
-        });
-        setIsEditModalOpen(true);
-    };
-    const handleUpdate = async ()=>{
-        const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
-        setIsUpdating(true);
-        try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/course/edit-course`, {
-                course_id: selectedCourse._id,
-                duration: editData.duration,
-                price: Number(editData.price)
-            }, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            setIsEditModalOpen(false);
-            fetchCourses();
-        } catch (err) {
-            alert("Tahrirlashda xatolik!");
-        } finally{
-            setIsUpdating(false);
-        }
-    };
-    const handleToggleFreeze = async (course)=>{
-        const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
-        const endpoint = course.is_freeze ? "unfreeze-course" : "freeze-course";
-        try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].put(`${BASE_URL}/api/course/${endpoint}`, {
-                course_id: course._id
-            }, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            fetchCourses();
-        } catch (err) {
-            alert("Xatolik!");
-        }
-    };
-    const handleDelete = async (id)=>{
-        if (!confirm("O'chirmoqchimisiz?")) return;
-        const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
-        try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`${BASE_URL}/api/course/delete-course`, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                },
-                data: {
-                    course_id: id
-                }
-            });
-            fetchCourses();
-        } catch (err) {
-            alert("O'chirishda xatolik!");
-        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full p-3 sm:p-6 min-h-screen bg-background text-foreground relative",
@@ -321,7 +314,7 @@ function Courses() {
                         size: 20
                     }, void 0, false, {
                         fileName: "[project]/app/(main)/courses/page.tsx",
-                        lineNumber: 219,
+                        lineNumber: 195,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -329,13 +322,13 @@ function Courses() {
                         children: "Kategoriya muvaffaqiyatli qo'shildi"
                     }, void 0, false, {
                         fileName: "[project]/app/(main)/courses/page.tsx",
-                        lineNumber: 220,
+                        lineNumber: 196,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(main)/courses/page.tsx",
-                lineNumber: 218,
+                lineNumber: 194,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -346,7 +339,7 @@ function Courses() {
                         children: "Kurslar"
                     }, void 0, false, {
                         fileName: "[project]/app/(main)/courses/page.tsx",
-                        lineNumber: 228,
+                        lineNumber: 204,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -360,24 +353,24 @@ function Courses() {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 233,
+                                        lineNumber: 209,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         type: "text",
                                         placeholder: "Kurs qidirish...",
-                                        className: "bg-transparent border border-input rounded-xl py-2 pl-10 pr-4 text-sm outline-none w-full focus:ring-1 focus:ring-ring transition-all",
+                                        className: "bg-transparent border border-input rounded-xl py-2 pl-10 pr-4 text-sm outline-none w-full focus:ring-1 focus:ring-ring",
                                         value: searchTerm,
                                         onChange: (e)=>setSearchTerm(e.target.value)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 237,
+                                        lineNumber: 213,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                lineNumber: 232,
+                                lineNumber: 208,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -388,7 +381,7 @@ function Courses() {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 249,
+                                        lineNumber: 225,
                                         columnNumber: 13
                                     }, this),
                                     " ",
@@ -396,25 +389,25 @@ function Courses() {
                                         children: "Kurs Qo'shish"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 249,
+                                        lineNumber: 225,
                                         columnNumber: 32
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                lineNumber: 245,
+                                lineNumber: 221,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(main)/courses/page.tsx",
-                        lineNumber: 231,
+                        lineNumber: 207,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(main)/courses/page.tsx",
-                lineNumber: 227,
+                lineNumber: 203,
                 columnNumber: 7
             }, this),
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -424,12 +417,12 @@ function Courses() {
                     size: 40
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/courses/page.tsx",
-                    lineNumber: 256,
+                    lineNumber: 232,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(main)/courses/page.tsx",
-                lineNumber: 255,
+                lineNumber: 231,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 md:grid-cols-3 gap-6",
@@ -444,7 +437,7 @@ function Courses() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                lineNumber: 265,
+                                lineNumber: 241,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -452,7 +445,7 @@ function Courses() {
                                 children: course.name
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                lineNumber: 268,
+                                lineNumber: 244,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -465,7 +458,7 @@ function Courses() {
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                                lineNumber: 271,
+                                                lineNumber: 247,
                                                 columnNumber: 19
                                             }, this),
                                             " ",
@@ -473,13 +466,13 @@ function Courses() {
                                                 children: course.duration
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                                lineNumber: 271,
+                                                lineNumber: 247,
                                                 columnNumber: 39
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 270,
+                                        lineNumber: 246,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -489,7 +482,7 @@ function Courses() {
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                                lineNumber: 274,
+                                                lineNumber: 250,
                                                 columnNumber: 19
                                             }, this),
                                             " ",
@@ -500,19 +493,19 @@ function Courses() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                                lineNumber: 275,
+                                                lineNumber: 251,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 273,
+                                        lineNumber: 249,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                lineNumber: 269,
+                                lineNumber: 245,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -527,42 +520,58 @@ function Courses() {
                                                 children: "Edit"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                                lineNumber: 280,
+                                                lineNumber: 256,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                onClick: ()=>handleDelete(course._id),
+                                                onClick: ()=>{
+                                                    if (confirm("O'chirmoqchimisiz?")) deleteMutation.mutate(course._id);
+                                                },
                                                 className: "flex-1 bg-destructive text-destructive-foreground py-2 rounded-xl text-xs font-bold transition-all hover:bg-destructive/90",
-                                                children: "O'chirish"
+                                                children: deleteMutation.isPending && deleteMutation.variables === course._id ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                                    className: "animate-spin mx-auto",
+                                                    size: 14
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/(main)/courses/page.tsx",
+                                                    lineNumber: 271,
+                                                    columnNumber: 23
+                                                }, this) : "O'chirish"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                                lineNumber: 286,
+                                                lineNumber: 262,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 279,
+                                        lineNumber: 255,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>handleToggleFreeze(course),
+                                        onClick: ()=>toggleFreezeMutation.mutate(course),
                                         className: `w-full py-2 rounded-xl text-xs font-bold transition-all ${course.is_freeze ? "border border-input hover:bg-accent" : "bg-orange-600 text-white hover:bg-orange-700"}`,
-                                        children: course.is_freeze ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: toggleFreezeMutation.isPending && toggleFreezeMutation.variables?._id === course._id ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                            className: "animate-spin mx-auto",
+                                            size: 14
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/courses/page.tsx",
+                                            lineNumber: 287,
+                                            columnNumber: 21
+                                        }, this) : course.is_freeze ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center justify-center gap-1",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$flame$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Flame$3e$__["Flame"], {
                                                     size: 12
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                                    lineNumber: 303,
+                                                    lineNumber: 290,
                                                     columnNumber: 23
                                                 }, this),
                                                 " Eritish"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 302,
+                                            lineNumber: 289,
                                             columnNumber: 21
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center justify-center gap-1",
@@ -571,36 +580,36 @@ function Courses() {
                                                     size: 12
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                                    lineNumber: 307,
+                                                    lineNumber: 294,
                                                     columnNumber: 23
                                                 }, this),
                                                 " Muzlatish"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 306,
+                                            lineNumber: 293,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 293,
+                                        lineNumber: 277,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                lineNumber: 278,
+                                lineNumber: 254,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, course._id, true, {
                         fileName: "[project]/app/(main)/courses/page.tsx",
-                        lineNumber: 261,
+                        lineNumber: 237,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/courses/page.tsx",
-                lineNumber: 259,
+                lineNumber: 235,
                 columnNumber: 9
             }, this),
             isAddModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -610,17 +619,17 @@ function Courses() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>setIsAddModalOpen(false),
-                            className: "absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors",
+                            className: "absolute top-6 right-6 text-muted-foreground hover:text-foreground",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                lineNumber: 325,
+                                lineNumber: 312,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/courses/page.tsx",
-                            lineNumber: 321,
+                            lineNumber: 308,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -628,7 +637,7 @@ function Courses() {
                             children: addStep === 1 ? "Yangi Kurs Qo'shish" : "Kurs Yaratish"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/courses/page.tsx",
-                            lineNumber: 327,
+                            lineNumber: 314,
                             columnNumber: 13
                         }, this),
                         addStep === 1 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -642,7 +651,7 @@ function Courses() {
                                             children: "Kurs nomi"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 334,
+                                            lineNumber: 321,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -653,11 +662,11 @@ function Courses() {
                                                     ...newCourse,
                                                     name: e.target.value
                                                 }),
-                                            className: "w-full bg-muted border border-input rounded-xl px-4 py-3 text-foreground focus:ring-1 focus:ring-destructive outline-none transition-all",
+                                            className: "w-full bg-muted border border-input rounded-xl px-4 py-3 text-foreground outline-none focus:ring-1 focus:ring-destructive",
                                             placeholder: "Frontend Dasturlash"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 337,
+                                            lineNumber: 324,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -665,43 +674,43 @@ function Courses() {
                                             children: "Nom majburiy"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 347,
+                                            lineNumber: 334,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 333,
+                                    lineNumber: 320,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex justify-end",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: handleNextStep,
-                                        disabled: isCreating || !newCourse.name.trim(),
-                                        className: "bg-primary text-primary-foreground px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-primary/90 disabled:opacity-50 transition-all",
-                                        children: isCreating ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                        disabled: createCategoryMutation.isPending || !newCourse.name.trim(),
+                                        className: "bg-primary text-primary-foreground px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-primary/90 transition-all",
+                                        children: createCategoryMutation.isPending ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
                                             className: "animate-spin",
                                             size: 18
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 358,
+                                            lineNumber: 347,
                                             columnNumber: 23
                                         }, this) : "Yaratish"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/courses/page.tsx",
-                                        lineNumber: 352,
+                                        lineNumber: 339,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 338,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/courses/page.tsx",
-                            lineNumber: 332,
+                            lineNumber: 319,
                             columnNumber: 15
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "space-y-5",
@@ -714,23 +723,23 @@ function Courses() {
                                             children: "Kurs nomi"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 368,
+                                            lineNumber: 357,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             type: "text",
                                             value: newCourse.name,
                                             readOnly: true,
-                                            className: "w-full bg-muted/50 border border-input rounded-xl px-4 py-2 text-muted-foreground outline-none cursor-not-allowed"
+                                            className: "w-full bg-muted/50 border border-input rounded-xl px-4 py-2 text-muted-foreground cursor-not-allowed outline-none"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 371,
+                                            lineNumber: 360,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 367,
+                                    lineNumber: 356,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -741,7 +750,7 @@ function Courses() {
                                             children: "Course Details"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 379,
+                                            lineNumber: 368,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -749,7 +758,7 @@ function Courses() {
                                             children: "Description"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 382,
+                                            lineNumber: 371,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -759,16 +768,16 @@ function Courses() {
                                                     ...newCourse,
                                                     description: e.target.value
                                                 }),
-                                            className: "w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none resize-none focus:ring-1 focus:ring-ring transition-all"
+                                            className: "w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none resize-none focus:ring-1 focus:ring-ring"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 385,
+                                            lineNumber: 374,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 378,
+                                    lineNumber: 367,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -782,7 +791,7 @@ function Courses() {
                                                     children: "Duration"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                                    lineNumber: 399,
+                                                    lineNumber: 388,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -792,16 +801,16 @@ function Courses() {
                                                             ...newCourse,
                                                             duration: e.target.value
                                                         }),
-                                                    className: "w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none focus:ring-1 focus:ring-ring transition-all"
+                                                    className: "w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none focus:ring-1 focus:ring-ring"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                                    lineNumber: 402,
+                                                    lineNumber: 391,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 398,
+                                            lineNumber: 387,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -812,7 +821,7 @@ function Courses() {
                                                     children: "Price (UZS)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                                    lineNumber: 412,
+                                                    lineNumber: 401,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -822,22 +831,22 @@ function Courses() {
                                                             ...newCourse,
                                                             price: e.target.value
                                                         }),
-                                                    className: "w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none focus:ring-1 focus:ring-ring transition-all"
+                                                    className: "w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none focus:ring-1 focus:ring-ring"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                                    lineNumber: 415,
+                                                    lineNumber: 404,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 411,
+                                            lineNumber: 400,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 397,
+                                    lineNumber: 386,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -849,47 +858,47 @@ function Courses() {
                                             children: "Cancel"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 426,
+                                            lineNumber: 415,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: handleCreateCourse,
-                                            disabled: isCreating,
+                                            onClick: handleCreateFinal,
+                                            disabled: saveCourseMutation.isPending,
                                             className: "flex-1 bg-primary text-primary-foreground hover:bg-primary/90 py-2.5 rounded-xl font-bold text-sm flex justify-center items-center transition-all",
-                                            children: isCreating ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                            children: saveCourseMutation.isPending ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
                                                 className: "animate-spin",
                                                 size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                                lineNumber: 438,
+                                                lineNumber: 427,
                                                 columnNumber: 23
                                             }, this) : "Save Changes"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 432,
+                                            lineNumber: 421,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 425,
+                                    lineNumber: 414,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/courses/page.tsx",
-                            lineNumber: 366,
+                            lineNumber: 355,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/courses/page.tsx",
-                    lineNumber: 320,
+                    lineNumber: 307,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(main)/courses/page.tsx",
-                lineNumber: 319,
+                lineNumber: 306,
                 columnNumber: 9
             }, this),
             isEditModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -898,18 +907,21 @@ function Courses() {
                     className: "bg-card border border-border w-full max-w-[400px] rounded-[32px] p-8 shadow-2xl relative",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            onClick: ()=>setIsEditModalOpen(false),
-                            className: "absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors",
+                            onClick: ()=>{
+                                setIsEditModalOpen(false);
+                                setSelectedCourse(null);
+                            },
+                            className: "absolute top-6 right-6 text-muted-foreground hover:text-foreground",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                lineNumber: 458,
+                                lineNumber: 450,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/courses/page.tsx",
-                            lineNumber: 454,
+                            lineNumber: 443,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -917,7 +929,7 @@ function Courses() {
                             children: "Kursni Tahrirlash"
                         }, void 0, false, {
                             fileName: "[project]/app/(main)/courses/page.tsx",
-                            lineNumber: 460,
+                            lineNumber: 452,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -931,7 +943,7 @@ function Courses() {
                                             children: "Davomiylik"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 463,
+                                            lineNumber: 455,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -944,13 +956,13 @@ function Courses() {
                                             className: "w-full bg-muted border border-input rounded-xl px-4 py-3 text-foreground outline-none focus:ring-1 focus:ring-ring"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 466,
+                                            lineNumber: 458,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 462,
+                                    lineNumber: 454,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -961,7 +973,7 @@ function Courses() {
                                             children: "Narx (UZS)"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 476,
+                                            lineNumber: 468,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -974,71 +986,74 @@ function Courses() {
                                             className: "w-full bg-muted border border-input rounded-xl px-4 py-3 text-foreground outline-none focus:ring-1 focus:ring-ring"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 479,
+                                            lineNumber: 471,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 475,
+                                    lineNumber: 467,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex gap-3 pt-2",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: ()=>setIsEditModalOpen(false),
+                                            onClick: ()=>{
+                                                setIsEditModalOpen(false);
+                                                setSelectedCourse(null);
+                                            },
                                             className: "flex-1 bg-secondary text-secondary-foreground py-3 rounded-xl font-bold text-sm hover:bg-secondary/80",
                                             children: "Bekor qilish"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 489,
+                                            lineNumber: 481,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: handleUpdate,
-                                            disabled: isUpdating,
+                                            disabled: saveCourseMutation.isPending || !selectedCourse,
                                             className: "flex-1 bg-primary text-primary-foreground py-3 rounded-xl font-bold text-sm flex justify-center items-center hover:bg-primary/90 transition-all",
-                                            children: isUpdating ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                            children: saveCourseMutation.isPending ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
                                                 className: "animate-spin",
                                                 size: 20
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/courses/page.tsx",
-                                                lineNumber: 501,
+                                                lineNumber: 496,
                                                 columnNumber: 21
                                             }, this) : "Saqlash"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/courses/page.tsx",
-                                            lineNumber: 495,
+                                            lineNumber: 490,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/courses/page.tsx",
-                                    lineNumber: 488,
+                                    lineNumber: 480,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/courses/page.tsx",
-                            lineNumber: 461,
+                            lineNumber: 453,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/courses/page.tsx",
-                    lineNumber: 453,
+                    lineNumber: 442,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/(main)/courses/page.tsx",
-                lineNumber: 452,
+                lineNumber: 441,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(main)/courses/page.tsx",
-        lineNumber: 215,
+        lineNumber: 191,
         columnNumber: 5
     }, this);
 }

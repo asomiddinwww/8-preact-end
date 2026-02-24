@@ -5,13 +5,10 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { Camera, User, Loader2, Calendar } from "lucide-react";
 import { toast, Toaster } from "react-hot-toast";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 const Profile = () => {
-  const [user, setUser] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-  const [btnLoading, setBtnLoading] = useState(false);
-  const [imgLoading, setImgLoading] = useState(false);
-
+  const queryClient = useQueryClient();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [formData, setFormData] = useState({
@@ -26,78 +23,79 @@ const Profile = () => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:7070";
   const token = Cookies.get("token");
 
-  useEffect(() => {
-    const savedUser = Cookies.get("user") || localStorage.getItem("user");
-    if (savedUser) {
-      try {
+  const { data: user, isLoading: loading } = useQuery({
+    queryKey: ["profile"],
+    queryFn: () => {
+      const savedUser = Cookies.get("user") || localStorage.getItem("user");
+      if (savedUser) {
         const parsed = JSON.parse(savedUser);
-        // Backenddan kelgan strukturaga qarab user ma'lumotlarini o'qish
-        const userData = parsed.data ? parsed.data : parsed;
-        setUser(userData);
-        setFormData({
-          first_name: userData.first_name || "",
-          last_name: userData.last_name || "",
-          email: userData.email || "",
-          role: userData.role || "manager",
-          current_password: "",
-          new_password: "",
-        });
-      } catch (e) {
-        console.error("User parse error");
+        return parsed.data ? parsed.data : parsed;
       }
-    }
-    setLoading(false);
-  }, []);
+      return null;
+    },
+    staleTime: Infinity,
+  });
 
-  const handleUpdate = async () => {
-    setBtnLoading(true);
-    try {
+  useEffect(() => {
+    if (user) {
+      setFormData((prev) => ({
+        ...prev,
+        first_name: user.first_name || "",
+        last_name: user.last_name || "",
+        email: user.email || "",
+        role: user.role || "manager",
+      }));
+    }
+  }, [user]);
+
+  const updateProfileMutation = useMutation({
+    mutationFn: async (data: typeof formData) => {
       await axios.post(
         `${BASE_URL}/api/auth/edit-profile`,
         {
-          first_name: formData.first_name,
-          last_name: formData.last_name,
-          email: formData.email,
+          first_name: data.first_name,
+          last_name: data.last_name,
+          email: data.email,
         },
         {
           headers: { Authorization: `Bearer ${token}` },
         },
       );
-      if (formData.current_password && formData.new_password) {
+
+      if (data.current_password && data.new_password) {
         await axios.post(
           `${BASE_URL}/api/auth/edit-password`,
           {
-            current_password: formData.current_password,
-            new_password: formData.new_password,
+            current_password: data.current_password,
+            new_password: data.new_password,
           },
           {
             headers: { Authorization: `Bearer ${token}` },
           },
         );
       }
-
+    },
+    onSuccess: () => {
       const updatedUser = { ...user, ...formData };
       Cookies.set("user", JSON.stringify(updatedUser));
       localStorage.setItem("user", JSON.stringify(updatedUser));
-      setUser(updatedUser);
-
+      queryClient.setQueryData(["profile"], updatedUser);
       toast.success("Muvaffaqiyatli yangilandi");
-      setFormData({ ...formData, current_password: "", new_password: "" });
-    } catch (error) {
+      setFormData((prev) => ({
+        ...prev,
+        current_password: "",
+        new_password: "",
+      }));
+    },
+    onError: () => {
       toast.error("Yangilashda xatolik");
-    } finally {
-      setBtnLoading(false);
-    }
-  };
+    },
+  });
 
-  const handleImageUpload = async (file: File) => {
-    if (!file) return;
-
-    setImgLoading(true);
-    const form = new FormData();
-    form.append("image", file); // Postman dagi 'image' key bilan bir xil
-
-    try {
+  const uploadImageMutation = useMutation({
+    mutationFn: async (file: File) => {
+      const form = new FormData();
+      form.append("image", file);
       const response = await axios.post(
         `${BASE_URL}/api/auth/edit-profile-img`,
         form,
@@ -108,35 +106,26 @@ const Profile = () => {
           },
         },
       );
-
-      // Backenddan qaytgan yangi rasm yo'lini olish (odatda response.data.image yoki response.data.data.image)
-      const newImagePath = response.data?.image || response.data?.data?.image;
-
-      // Agar backend yangi yo'lni qaytarmasa, vaqtinchalik ko'rsatish, lekin idealda backenddan kelishi kerak
+      return response.data?.image || response.data?.data?.image;
+    },
+    onSuccess: (newImagePath) => {
       const updatedUser = {
         ...user,
-        image: newImagePath || user.image,
+        image: newImagePath || user?.image,
       };
-
-      // State va Storage ni yangilash
       Cookies.set("user", JSON.stringify(updatedUser));
       localStorage.setItem("user", JSON.stringify(updatedUser));
-      setUser(updatedUser);
-
+      queryClient.setQueryData(["profile"], updatedUser);
       toast.success("Rasm muvaffaqiyatli yangilandi");
-    } catch (error: any) {
-      console.error("Image upload error:", error);
-      toast.error(error.response?.data?.message || "Rasmni yuklashda xatolik");
-    } finally {
-      setImgLoading(false);
-      // Inputni tozalash (bir xil rasmni qayta tanlasa ishlashi uchun)
       if (fileInputRef.current) fileInputRef.current.value = "";
-    }
-  };
+    },
+    onError: (error: any) => {
+      toast.error(error.response?.data?.message || "Rasmni yuklashda xatolik");
+    },
+  });
 
   const getProfileImg = () => {
     if (!user?.image) return null;
-    // Agar rasm to'liq URL bo'lmasa, BASE_URL ni qo'shish
     return user.image.startsWith("http")
       ? user.image
       : `${BASE_URL}/${user.image}`;
@@ -169,7 +158,7 @@ const Profile = () => {
                     <User size={40} />
                   </div>
                 )}
-                {imgLoading && (
+                {uploadImageMutation.isPending && (
                   <div className="absolute inset-0 bg-background/60 flex items-center justify-center z-10">
                     <Loader2 className="animate-spin text-primary" size={24} />
                   </div>
@@ -177,7 +166,7 @@ const Profile = () => {
               </div>
               <button
                 type="button"
-                disabled={imgLoading}
+                disabled={uploadImageMutation.isPending}
                 onClick={() => fileInputRef.current?.click()}
                 className="absolute bottom-0 right-0 bg-primary text-primary-foreground p-2 rounded-full border-2 border-background hover:scale-110 transition-all shadow-md disabled:opacity-50"
               >
@@ -189,7 +178,8 @@ const Profile = () => {
                 ref={fileInputRef}
                 accept="image/*"
                 onChange={(e) => {
-                  if (e.target.files?.[0]) handleImageUpload(e.target.files[0]);
+                  if (e.target.files?.[0])
+                    uploadImageMutation.mutate(e.target.files[0]);
                 }}
               />
             </div>
@@ -300,11 +290,13 @@ const Profile = () => {
 
           <div className="flex justify-end mt-4">
             <button
-              onClick={handleUpdate}
-              disabled={btnLoading}
+              onClick={() => updateProfileMutation.mutate(formData)}
+              disabled={updateProfileMutation.isPending}
               className="px-10 py-2.5 bg-primary text-primary-foreground font-bold rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 shadow-md active:scale-95 disabled:opacity-50"
             >
-              {btnLoading && <Loader2 size={16} className="animate-spin" />}
+              {updateProfileMutation.isPending && (
+                <Loader2 size={16} className="animate-spin" />
+              )}
               O'zgartirish
             </button>
           </div>

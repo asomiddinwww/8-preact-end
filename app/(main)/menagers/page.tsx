@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { Pencil, Trash2, MoreHorizontal, X } from "lucide-react";
+import { Pencil, Trash2, MoreHorizontal, X, Loader2 } from "lucide-react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 interface Manager {
   _id: string;
@@ -34,12 +35,9 @@ const SkeletonRow = () => (
   </tr>
 );
 
-const Managers = () => {
-  const [data, setData] = useState<Manager[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+const Menagers = () => {
+  const queryClient = useQueryClient();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
   const [editFormData, setEditFormData] = useState({
@@ -49,29 +47,55 @@ const Managers = () => {
   });
 
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+  const token = Cookies.get("token");
 
-  const fetchManagers = useCallback(async () => {
-    if (!BASE_URL) return;
-    const token = Cookies.get("token");
-    if (!token) return;
-
-    try {
-      setLoading(true);
+  const { data: managers = [], isLoading } = useQuery({
+    queryKey: ["managers"],
+    queryFn: async () => {
+      if (!BASE_URL || !token) return [];
       const response = await axios.get(`${BASE_URL}/api/staff/all-managers`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const resData = response.data;
-      setData(Array.isArray(resData) ? resData : resData?.data || []);
-    } catch (error: any) {
-      setErrorMsg("Ma'lumotlarni yuklashda xatolik");
-    } finally {
-      setTimeout(() => setLoading(false), 600);
-    }
-  }, [BASE_URL]);
+      return Array.isArray(resData) ? resData : resData?.data || [];
+    },
+    enabled: !!token && !!BASE_URL,
+  });
 
-  useEffect(() => {
-    fetchManagers();
-  }, [fetchManagers]);
+  const updateMutation = useMutation({
+    mutationFn: async (payload: any) => {
+      return axios.post(`${BASE_URL}/api/staff/edited-manager`, payload, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["managers"] });
+      setIsEditModalOpen(false);
+      alert("Muvaffaqiyatli saqlandi!");
+    },
+    onError: (err: any) => {
+      alert(err.response?.data?.message || "Tahrirlashda xatolik");
+    },
+  });
+
+  const deleteMutation = useMutation({
+    mutationFn: async (id: string) => {
+      return axios.delete(`${BASE_URL}/api/staff/deleted-admin`, {
+        headers: { Authorization: `Bearer ${token}` },
+        data: { _id: id },
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["managers"] });
+      setActiveMenu(null);
+    },
+    onError: () => {
+      alert("Xatolik yuz berdi");
+    },
+  });
 
   const handleEditClick = (manager: Manager) => {
     setSelectedManager(manager);
@@ -84,51 +108,22 @@ const Managers = () => {
     setActiveMenu(null);
   };
 
-  const handleUpdateManager = async (e: React.FormEvent) => {
+  const handleUpdateManager = (e: React.FormEvent) => {
     e.preventDefault();
-    const token = Cookies.get("token");
-    if (!token || !selectedManager) return;
+    if (!selectedManager) return;
 
-    try {
-      await axios.post(
-        `${BASE_URL}/api/staff/edited-manager`,
-        {
-          _id: selectedManager._id,
-          first_name: editFormData.first_name,
-          last_name: editFormData.last_name,
-          email: editFormData.email,
-          status: selectedManager.status,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        },
-      );
-
-      setIsEditModalOpen(false);
-      fetchManagers();
-      alert("Muvaffaqiyatli saqlandi!");
-    } catch (err: any) {
-      alert(err.response?.data?.message || "Tahrirlashda xatolik");
-    }
+    updateMutation.mutate({
+      _id: selectedManager._id,
+      first_name: editFormData.first_name,
+      last_name: editFormData.last_name,
+      email: editFormData.email,
+      status: selectedManager.status,
+    });
   };
 
-  const handleDelete = async (id: string) => {
-    if (!BASE_URL) return;
-    const token = Cookies.get("token");
-    if (!token || !confirm("O'chirmoqchimisiz?")) return;
-
-    try {
-      await axios.delete(`${BASE_URL}/api/staff/deleted-admin`, {
-        headers: { Authorization: `Bearer ${token}` },
-        data: { _id: id },
-      });
-      setData((prev) => prev.filter((item) => item._id !== id));
-      setActiveMenu(null);
-    } catch (err: any) {
-      alert("Xatolik yuz berdi");
+  const handleDelete = (id: string) => {
+    if (confirm("O'chirmoqchimisiz?")) {
+      deleteMutation.mutate(id);
     }
   };
 
@@ -152,9 +147,9 @@ const Managers = () => {
           </thead>
 
           <tbody className="text-xs sm:text-sm">
-            {loading
+            {isLoading
               ? [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
-              : data.map((item) => (
+              : managers.map((item: Manager) => (
                   <tr
                     key={item._id}
                     className="border-t border-zinc-800 hover:bg-muted/50 transition-colors"
@@ -206,7 +201,7 @@ const Managers = () => {
       </div>
 
       {isEditModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-[200]  backdrop-blur-sm p-4">
+        <div className="fixed inset-0 flex items-center justify-center z-[200] backdrop-blur-sm p-4">
           <div className="bg-background text-foreground p-5 sm:p-6 rounded-lg w-full max-w-[280px] xs:max-w-md border border-zinc-800 shadow-xl animate-in fade-in zoom-in duration-200">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-base sm:text-lg font-semibold tracking-tight">
@@ -281,8 +276,12 @@ const Managers = () => {
                 </button>
                 <button
                   type="submit"
-                  className="order-1 sm:order-2 flex-1 bg-primary text-primary-foreground hover:bg-primary/90 py-2 sm:py-2.5 rounded-md text-sm font-medium transition-colors shadow-sm"
+                  disabled={updateMutation.isPending}
+                  className="order-1 sm:order-2 flex-1 bg-primary text-primary-foreground hover:bg-primary/90 py-2 sm:py-2.5 rounded-md text-sm font-medium transition-colors shadow-sm flex items-center justify-center gap-2"
                 >
+                  {updateMutation.isPending && (
+                    <Loader2 size={16} className="animate-spin" />
+                  )}
                   Saqlash
                 </button>
               </div>
@@ -294,4 +293,4 @@ const Managers = () => {
   );
 };
 
-export default Managers;
+export default Menagers;

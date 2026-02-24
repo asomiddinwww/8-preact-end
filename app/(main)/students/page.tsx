@@ -1,9 +1,17 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { Search, Plus, MoreHorizontal, X, ChevronDown } from "lucide-react";
+import {
+  Search,
+  Plus,
+  MoreHorizontal,
+  X,
+  ChevronDown,
+  Loader2,
+} from "lucide-react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 interface Student {
   _id: string;
@@ -34,12 +42,10 @@ const SkeletonRow = () => (
 );
 
 const Students = () => {
-  const [data, setData] = useState<Student[]>([]);
-  const [loading, setLoading] = useState(true);
+  const queryClient = useQueryClient();
   const [searchTerm, setSearchTerm] = useState("");
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [filterStatus, setFilterStatus] = useState("");
 
   const [formData, setFormData] = useState({
@@ -51,10 +57,10 @@ const Students = () => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:7070";
   const token = Cookies.get("token");
 
-  const fetchStudents = useCallback(async () => {
-    if (!token) return;
-    try {
-      setLoading(true);
+  // Fetch Students Query
+  const { data: students = [], isLoading } = useQuery({
+    queryKey: ["students", filterStatus],
+    queryFn: async () => {
       const url = filterStatus
         ? `${BASE_URL}/api/student/get-all-students?status=${filterStatus}`
         : `${BASE_URL}/api/student/get-all-students`;
@@ -62,83 +68,90 @@ const Students = () => {
       const res = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      setData(Array.isArray(res.data) ? res.data : res.data?.data || []);
-    } catch (err) {
-      console.error("Xatolik");
-    } finally {
-      setTimeout(() => setLoading(false), 600);
-    }
-  }, [BASE_URL, token, filterStatus]);
+      return Array.isArray(res.data) ? res.data : res.data?.data || [];
+    },
+    enabled: !!token,
+  });
 
-  useEffect(() => {
-    fetchStudents();
-  }, [fetchStudents]);
-
-  const handleAddStudent = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!token) return;
-    try {
-      await axios.post(`${BASE_URL}/api/student/create-student`, formData, {
+  // Create Student Mutation
+  const createMutation = useMutation({
+    mutationFn: async (newStudent: typeof formData) => {
+      return axios.post(`${BASE_URL}/api/student/create-student`, newStudent, {
         headers: { Authorization: `Bearer ${token}` },
       });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["students"] });
       setIsModalOpen(false);
       setFormData({ first_name: "", last_name: "", phone: "" });
-      fetchStudents();
-    } catch (err) {
-      alert("Qo'shishda xatolik");
-    }
-  };
+    },
+    onError: () => alert("Qo'shishda xatolik"),
+  });
 
-  const handleDelete = async (id: string) => {
-    if (!token || !confirm("Tasdiqlaysizmi?")) return;
-    try {
-      await axios.delete(`${BASE_URL}/api/student/delete-student`, {
+  // Delete Student Mutation
+  const deleteMutation = useMutation({
+    mutationFn: async (id: string) => {
+      return axios.delete(`${BASE_URL}/api/student/delete-student`, {
         headers: { Authorization: `Bearer ${token}` },
         data: { _id: id },
       });
-      fetchStudents();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["students"] });
       setActiveMenu(null);
-    } catch (err) {
-      alert("Xatolik");
+    },
+    onError: () => alert("Xatolik"),
+  });
+
+  // Leave/Return Student Mutation
+  const statusMutation = useMutation({
+    mutationFn: async ({ student, action, payload }: any) => {
+      const endpoint = action === "return" ? "return-student" : "leave-student";
+      return axios.post(`${BASE_URL}/api/student/${endpoint}`, payload, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["students"] });
+      setActiveMenu(null);
+      alert("Muvaffaqiyatli bajarildi!");
+    },
+    onError: (err: any) => {
+      alert(err.response?.data?.message || "Amalda xatolik yuz berdi");
+    },
+  });
+
+  const handleAddStudent = (e: React.FormEvent) => {
+    e.preventDefault();
+    createMutation.mutate(formData);
+  };
+
+  const handleDelete = (id: string) => {
+    if (confirm("Tasdiqlaysizmi?")) {
+      deleteMutation.mutate(id);
     }
   };
 
-  const handleLeaveReturn = async (student: Student) => {
-    if (!token) return;
-
-    try {
-      if (student.status === "ta'tilda" || student.status === "yakunladi") {
-        if (!confirm(`O'quvchini faol holatga qaytarishni tasdiqlaysizmi?`))
-          return;
-
-        await axios.post(
-          `${BASE_URL}/api/student/return-student`,
-          { _id: student._id },
-          { headers: { Authorization: `Bearer ${token}` } },
-        );
-      } else if (student.status === "faol") {
-        const days = prompt("Necha kunlik ta'til? (Masalan: 4)", "4");
-        const reason = prompt("Sababi?", "Tobi yo'q");
-
-        if (!days || !reason) return;
-
-        await axios.post(
-          `${BASE_URL}/api/student/leave-student`,
-          {
-            student_id: student._id,
-            leave_days: days,
-            reason: reason,
-          },
-          { headers: { Authorization: `Bearer ${token}` } },
-        );
-      }
-
-      fetchStudents();
-      setActiveMenu(null);
-      alert("Muvaffaqiyatli bajarildi!");
-    } catch (err: any) {
-      console.error("Xato:", err.response?.data);
-      alert(err.response?.data?.message || "Amalda xatolik yuz berdi");
+  const handleLeaveReturn = (student: Student) => {
+    if (student.status === "ta'tilda" || student.status === "yakunladi") {
+      if (!confirm(`O'quvchini faol holatga qaytarishni tasdiqlaysizmi?`))
+        return;
+      statusMutation.mutate({
+        action: "return",
+        payload: { _id: student._id },
+      });
+    } else if (student.status === "faol") {
+      const days = prompt("Necha kunlik ta'til? (Masalan: 4)", "4");
+      const reason = prompt("Sababi?", "Tobi yo'q");
+      if (!days || !reason) return;
+      statusMutation.mutate({
+        action: "leave",
+        payload: {
+          student_id: student._id,
+          leave_days: days,
+          reason: reason,
+        },
+      });
     }
   };
 
@@ -182,6 +195,7 @@ const Students = () => {
               type="text"
               placeholder="Qidiruv..."
               className="w-full border rounded-lg py-2 pl-10 pr-4 text-sm outline-none"
+              value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
@@ -208,15 +222,15 @@ const Students = () => {
               </tr>
             </thead>
             <tbody className="text-sm">
-              {loading
+              {isLoading
                 ? [...Array(10)].map((_, i) => <SkeletonRow key={i} />)
-                : data
-                    .filter((s) =>
+                : students
+                    .filter((s: Student) =>
                       s.first_name
                         .toLowerCase()
                         .includes(searchTerm.toLowerCase()),
                     )
-                    .map((student) => (
+                    .map((student: Student) => (
                       <tr
                         key={student._id}
                         className="border-b last:border-0 hover:bg-gray-50/50 transition-colors"
@@ -249,18 +263,36 @@ const Students = () => {
                               />
                               <div className="absolute right-4 mt-2 w-48 border rounded-lg z-[100] text-black border-black shadow-lg bg-white">
                                 <button
+                                  disabled={statusMutation.isPending}
                                   onClick={() => handleLeaveReturn(student)}
-                                  className="w-full text-left px-4 py-2 text-xs border-b hover:bg-gray-50"
+                                  className="w-full text-left px-4 py-2 text-xs border-b hover:bg-gray-50 flex items-center justify-between"
                                 >
                                   {student.status === "ta'tilda"
                                     ? "Markazga qaytarish"
                                     : "Ta'tilga chiqarish"}
+                                  {statusMutation.isPending &&
+                                    statusMutation.variables?.payload?._id ===
+                                      student._id && (
+                                      <Loader2
+                                        size={12}
+                                        className="animate-spin"
+                                      />
+                                    )}
                                 </button>
                                 <button
+                                  disabled={deleteMutation.isPending}
                                   onClick={() => handleDelete(student._id)}
-                                  className="w-full text-left px-4 py-2 text-xs hover:bg-gray-50"
+                                  className="w-full text-left px-4 py-2 text-xs hover:bg-gray-50 flex items-center justify-between"
                                 >
                                   O'chirish
+                                  {deleteMutation.isPending &&
+                                    deleteMutation.variables ===
+                                      student._id && (
+                                      <Loader2
+                                        size={12}
+                                        className="animate-spin"
+                                      />
+                                    )}
                                 </button>
                               </div>
                             </>
@@ -314,8 +346,12 @@ const Students = () => {
               />
               <button
                 type="submit"
-                className="border bg-black text-white py-2 rounded font-bold transition-opacity hover:opacity-90 text-sm"
+                disabled={createMutation.isPending}
+                className="border bg-black text-white py-2 rounded font-bold transition-opacity hover:opacity-90 text-sm flex items-center justify-center gap-2"
               >
+                {createMutation.isPending && (
+                  <Loader2 size={16} className="animate-spin" />
+                )}
                 Saqlash
               </button>
             </form>

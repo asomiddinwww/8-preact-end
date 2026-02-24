@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useState, useMemo } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   Plus,
   Pencil,
@@ -17,6 +18,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+// --- Yordamchi funksiya ---
 const safeStr = (value: any): string => {
   if (value === null || value === undefined) return "";
   if (typeof value === "string") return value;
@@ -25,8 +27,7 @@ const safeStr = (value: any): string => {
 };
 
 export default function Courses() {
-  const [courses, setCourses] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const queryClient = useQueryClient();
   const [searchTerm, setSearchTerm] = useState("");
   const [filterFreeze, setFilterFreeze] = useState<string>("all");
 
@@ -34,11 +35,9 @@ export default function Courses() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<any>(null);
   const [editData, setEditData] = useState({ duration: "", price: "" });
-  const [isUpdating, setIsUpdating] = useState(false);
 
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [addStep, setAddStep] = useState(1);
-  const [isCreating, setIsCreating] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [newCourse, setNewCourse] = useState({
     _id: "",
@@ -49,23 +48,23 @@ export default function Courses() {
   });
 
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:7070";
+  const token = Cookies.get("token");
 
-  const fetchCourses = useCallback(async () => {
-    const token = Cookies.get("token");
-    try {
-      setLoading(true);
+  // --- 1. GET COURSES (Query) ---
+  const { data: courses = [], isLoading: loading } = useQuery({
+    queryKey: ["courses", searchTerm, filterFreeze],
+    queryFn: async () => {
       const queryParams: any = {
         ...(searchTerm && { search: searchTerm }),
         ...(filterFreeze !== "all" && { is_freeze: filterFreeze === "true" }),
       };
-
       const res = await axios.get(`${BASE_URL}/api/course/get-courses`, {
         headers: { Authorization: `Bearer ${token}` },
         params: queryParams,
       });
 
       const rawData = Array.isArray(res.data?.data) ? res.data.data : [];
-      const cleanedData = rawData.map((c: any) => ({
+      return rawData.map((c: any) => ({
         ...c,
         _id: safeStr(c._id),
         name: safeStr(c.name),
@@ -75,19 +74,106 @@ export default function Courses() {
         students_count: Number(c.students_count) || 0,
         is_freeze: Boolean(c.is_freeze),
       }));
+    },
+    enabled: !!token,
+  });
 
-      setCourses(cleanedData);
-    } catch (err) {
-      console.error("Xatolik:", err);
-      setCourses([]);
-    } finally {
-      setLoading(false);
+  // --- 2. CREATE CATEGORY (Mutation) ---
+  const createCategoryMutation = useMutation({
+    mutationFn: (name: string) =>
+      axios.post(
+        `${BASE_URL}/api/course/create-category`,
+        { name },
+        { headers: { Authorization: `Bearer ${token}` } },
+      ),
+    onSuccess: (res) => {
+      const createdId = res.data?.data?._id || res.data?._id;
+      setNewCourse((prev) => ({ ...prev, _id: createdId }));
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+      setAddStep(2);
+    },
+    onError: (err: any) => {
+      alert(err.response?.data?.message || "Bunday nomli kategoriya mavjud!");
+    },
+  });
+
+  // --- 3. SAVE / EDIT COURSE (Mutation) ---
+  const saveCourseMutation = useMutation({
+    mutationFn: (payload: any) =>
+      axios.post(`${BASE_URL}/api/course/edit-course`, payload, {
+        headers: { Authorization: `Bearer ${token}` },
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["courses"] });
+      setIsAddModalOpen(false);
+      setIsEditModalOpen(false);
+      setSelectedCourse(null); // State-ni tozalash
+    },
+    onError: () => alert("Xatolik yuz berdi!"),
+  });
+
+  // --- 4. TOGGLE FREEZE (Mutation) ---
+  const toggleFreezeMutation = useMutation({
+    mutationFn: (course: any) => {
+      const endpoint = course.is_freeze ? "unfreeze-course" : "freeze-course";
+      return axios.put(
+        `${BASE_URL}/api/course/${endpoint}`,
+        { course_id: course._id },
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+    },
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["courses"] }),
+  });
+
+  // --- 5. DELETE COURSE (Mutation) ---
+  const deleteMutation = useMutation({
+    mutationFn: (id: string) =>
+      axios.delete(`${BASE_URL}/api/course/delete-course`, {
+        headers: { Authorization: `Bearer ${token}` },
+        data: { course_id: id },
+      }),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["courses"] }),
+    onError: () => alert("O'chirishda xatolik!"),
+  });
+
+  // --- HANDLERS ---
+  const handleNextStep = () => {
+    if (newCourse.name.trim()) {
+      createCategoryMutation.mutate(newCourse.name);
     }
-  }, [filterFreeze, searchTerm, BASE_URL]);
+  };
 
-  useEffect(() => {
-    fetchCourses();
-  }, [fetchCourses]);
+  const handleCreateFinal = () => {
+    saveCourseMutation.mutate({
+      course_id: newCourse._id,
+      name: newCourse.name,
+      duration: newCourse.duration,
+      price: Number(newCourse.price),
+      description: newCourse.description,
+    });
+  };
+
+  // BU YERDA ASOSIY HATOLIK TUZATILDI
+  const handleUpdate = () => {
+    // selectedCourse null emasligini tekshirish (TypeError oldini olish)
+    if (!selectedCourse?._id) {
+      alert("Kurs ma'lumotlari yuklanmadi!");
+      return;
+    }
+
+    saveCourseMutation.mutate({
+      course_id: selectedCourse._id,
+      duration: editData.duration,
+      price: Number(editData.price),
+    });
+  };
+
+  const openEditModal = (course: any) => {
+    setSelectedCourse(course);
+    setEditData({ duration: course.duration, price: String(course.price) });
+    setIsEditModalOpen(true);
+  };
 
   const handleOpenAddModal = () => {
     setNewCourse({
@@ -99,116 +185,6 @@ export default function Courses() {
     });
     setAddStep(1);
     setIsAddModalOpen(true);
-  };
-
-  const handleNextStep = async () => {
-    if (!newCourse.name.trim()) return;
-
-    const token = Cookies.get("token");
-    setIsCreating(true);
-
-    try {
-      const res = await axios.post(
-        `${BASE_URL}/api/course/create-category`,
-        { name: newCourse.name },
-        { headers: { Authorization: `Bearer ${token}` } },
-      );
-
-      if (res.status === 201 || res.status === 200) {
-        const createdId = res.data?.data?._id || res.data?._id;
-        setNewCourse((prev) => ({ ...prev, _id: createdId }));
-
-        setShowToast(true);
-        setTimeout(() => setShowToast(false), 3000);
-        setAddStep(2);
-      }
-    } catch (err: any) {
-      alert(err.response?.data?.message || "Bunday nomli kategoriya mavjud!");
-    } finally {
-      setIsCreating(false);
-    }
-  };
-
-  const handleCreateCourse = async () => {
-    const token = Cookies.get("token");
-    setIsCreating(true);
-    try {
-      await axios.post(
-        `${BASE_URL}/api/course/edit-course`,
-        {
-          course_id: newCourse._id,
-          name: newCourse.name,
-          duration: newCourse.duration,
-          price: Number(newCourse.price),
-          description: newCourse.description,
-        },
-        { headers: { Authorization: `Bearer ${token}` } },
-      );
-
-      setIsAddModalOpen(false);
-      fetchCourses();
-    } catch (err) {
-      alert("Ma'lumotlarni saqlashda xatolik yuz berdi!");
-    } finally {
-      setIsCreating(false);
-    }
-  };
-
-  const openEditModal = (course: any) => {
-    setSelectedCourse(course);
-    setEditData({ duration: course.duration, price: String(course.price) });
-    setIsEditModalOpen(true);
-  };
-
-  const handleUpdate = async () => {
-    const token = Cookies.get("token");
-    setIsUpdating(true);
-    try {
-      await axios.post(
-        `${BASE_URL}/api/course/edit-course`,
-        {
-          course_id: selectedCourse._id,
-          duration: editData.duration,
-          price: Number(editData.price),
-        },
-        { headers: { Authorization: `Bearer ${token}` } },
-      );
-      setIsEditModalOpen(false);
-      fetchCourses();
-    } catch (err) {
-      alert("Tahrirlashda xatolik!");
-    } finally {
-      setIsUpdating(false);
-    }
-  };
-
-  const handleToggleFreeze = async (course: any) => {
-    const token = Cookies.get("token");
-    const endpoint = course.is_freeze ? "unfreeze-course" : "freeze-course";
-    try {
-      await axios.put(
-        `${BASE_URL}/api/course/${endpoint}`,
-        { course_id: course._id },
-        { headers: { Authorization: `Bearer ${token}` } },
-      );
-      fetchCourses();
-    } catch (err) {
-      alert("Xatolik!");
-    }
-  };
-
-  const handleDelete = async (id: string) => {
-    if (!confirm("O'chirmoqchimisiz?")) return;
-    const token = Cookies.get("token");
-    try {
-      await axios.delete(`${BASE_URL}/api/course/delete-course`, {
-        headers: { Authorization: `Bearer ${token}` },
-        data: { course_id: id },
-      });
-      fetchCourses();
-    } catch (err) {
-      alert("O'chirishda xatolik!");
-    }
   };
 
   return (
@@ -237,7 +213,7 @@ export default function Courses() {
             <input
               type="text"
               placeholder="Kurs qidirish..."
-              className="bg-transparent border border-input rounded-xl py-2 pl-10 pr-4 text-sm outline-none w-full focus:ring-1 focus:ring-ring transition-all"
+              className="bg-transparent border border-input rounded-xl py-2 pl-10 pr-4 text-sm outline-none w-full focus:ring-1 focus:ring-ring"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -257,7 +233,7 @@ export default function Courses() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {courses.map((course) => (
+          {courses.map((course: any) => (
             <div
               key={course._id}
               className="bg-card border border-border rounded-[2rem] p-6 hover:shadow-md transition-all relative"
@@ -284,21 +260,32 @@ export default function Courses() {
                     Edit
                   </button>
                   <button
-                    onClick={() => handleDelete(course._id)}
+                    onClick={() => {
+                      if (confirm("O'chirmoqchimisiz?"))
+                        deleteMutation.mutate(course._id);
+                    }}
                     className="flex-1 bg-destructive text-destructive-foreground py-2 rounded-xl text-xs font-bold transition-all hover:bg-destructive/90"
                   >
-                    O'chirish
+                    {deleteMutation.isPending &&
+                    deleteMutation.variables === course._id ? (
+                      <Loader2 className="animate-spin mx-auto" size={14} />
+                    ) : (
+                      "O'chirish"
+                    )}
                   </button>
                 </div>
                 <button
-                  onClick={() => handleToggleFreeze(course)}
+                  onClick={() => toggleFreezeMutation.mutate(course)}
                   className={`w-full py-2 rounded-xl text-xs font-bold transition-all ${
                     course.is_freeze
                       ? "border border-input hover:bg-accent"
                       : "bg-orange-600 text-white hover:bg-orange-700"
                   }`}
                 >
-                  {course.is_freeze ? (
+                  {toggleFreezeMutation.isPending &&
+                  toggleFreezeMutation.variables?._id === course._id ? (
+                    <Loader2 className="animate-spin mx-auto" size={14} />
+                  ) : course.is_freeze ? (
                     <span className="flex items-center justify-center gap-1">
                       <Flame size={12} /> Eritish
                     </span>
@@ -320,7 +307,7 @@ export default function Courses() {
           <div className="bg-card border border-border w-full max-w-[500px] rounded-[32px] p-8 shadow-2xl relative">
             <button
               onClick={() => setIsAddModalOpen(false)}
-              className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
+              className="absolute top-6 right-6 text-muted-foreground hover:text-foreground"
             >
               <X size={20} />
             </button>
@@ -341,7 +328,7 @@ export default function Courses() {
                     onChange={(e) =>
                       setNewCourse({ ...newCourse, name: e.target.value })
                     }
-                    className="w-full bg-muted border border-input rounded-xl px-4 py-3 text-foreground focus:ring-1 focus:ring-destructive outline-none transition-all"
+                    className="w-full bg-muted border border-input rounded-xl px-4 py-3 text-foreground outline-none focus:ring-1 focus:ring-destructive"
                     placeholder="Frontend Dasturlash"
                   />
                   <p className="text-[10px] text-destructive italic">
@@ -351,10 +338,12 @@ export default function Courses() {
                 <div className="flex justify-end">
                   <button
                     onClick={handleNextStep}
-                    disabled={isCreating || !newCourse.name.trim()}
-                    className="bg-primary text-primary-foreground px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-primary/90 disabled:opacity-50 transition-all"
+                    disabled={
+                      createCategoryMutation.isPending || !newCourse.name.trim()
+                    }
+                    className="bg-primary text-primary-foreground px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-primary/90 transition-all"
                   >
-                    {isCreating ? (
+                    {createCategoryMutation.isPending ? (
                       <Loader2 className="animate-spin" size={18} />
                     ) : (
                       "Yaratish"
@@ -372,7 +361,7 @@ export default function Courses() {
                     type="text"
                     value={newCourse.name}
                     readOnly
-                    className="w-full bg-muted/50 border border-input rounded-xl px-4 py-2 text-muted-foreground outline-none cursor-not-allowed"
+                    className="w-full bg-muted/50 border border-input rounded-xl px-4 py-2 text-muted-foreground cursor-not-allowed outline-none"
                   />
                 </div>
                 <div className="space-y-2">
@@ -391,7 +380,7 @@ export default function Courses() {
                         description: e.target.value,
                       })
                     }
-                    className="w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none resize-none focus:ring-1 focus:ring-ring transition-all"
+                    className="w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none resize-none focus:ring-1 focus:ring-ring"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -405,7 +394,7 @@ export default function Courses() {
                       onChange={(e) =>
                         setNewCourse({ ...newCourse, duration: e.target.value })
                       }
-                      className="w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none focus:ring-1 focus:ring-ring transition-all"
+                      className="w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none focus:ring-1 focus:ring-ring"
                     />
                   </div>
                   <div className="space-y-1">
@@ -418,7 +407,7 @@ export default function Courses() {
                       onChange={(e) =>
                         setNewCourse({ ...newCourse, price: e.target.value })
                       }
-                      className="w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none focus:ring-1 focus:ring-ring transition-all"
+                      className="w-full bg-muted border border-input rounded-xl px-4 py-2 text-foreground outline-none focus:ring-1 focus:ring-ring"
                     />
                   </div>
                 </div>
@@ -430,11 +419,11 @@ export default function Courses() {
                     Cancel
                   </button>
                   <button
-                    onClick={handleCreateCourse}
-                    disabled={isCreating}
+                    onClick={handleCreateFinal}
+                    disabled={saveCourseMutation.isPending}
                     className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 py-2.5 rounded-xl font-bold text-sm flex justify-center items-center transition-all"
                   >
-                    {isCreating ? (
+                    {saveCourseMutation.isPending ? (
                       <Loader2 className="animate-spin" size={18} />
                     ) : (
                       "Save Changes"
@@ -452,8 +441,11 @@ export default function Courses() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-4">
           <div className="bg-card border border-border w-full max-w-[400px] rounded-[32px] p-8 shadow-2xl relative">
             <button
-              onClick={() => setIsEditModalOpen(false)}
-              className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => {
+                setIsEditModalOpen(false);
+                setSelectedCourse(null);
+              }}
+              className="absolute top-6 right-6 text-muted-foreground hover:text-foreground"
             >
               <X size={20} />
             </button>
@@ -487,17 +479,20 @@ export default function Courses() {
               </div>
               <div className="flex gap-3 pt-2">
                 <button
-                  onClick={() => setIsEditModalOpen(false)}
+                  onClick={() => {
+                    setIsEditModalOpen(false);
+                    setSelectedCourse(null);
+                  }}
                   className="flex-1 bg-secondary text-secondary-foreground py-3 rounded-xl font-bold text-sm hover:bg-secondary/80"
                 >
                   Bekor qilish
                 </button>
                 <button
                   onClick={handleUpdate}
-                  disabled={isUpdating}
+                  disabled={saveCourseMutation.isPending || !selectedCourse}
                   className="flex-1 bg-primary text-primary-foreground py-3 rounded-xl font-bold text-sm flex justify-center items-center hover:bg-primary/90 transition-all"
                 >
-                  {isUpdating ? (
+                  {saveCourseMutation.isPending ? (
                     <Loader2 className="animate-spin" size={20} />
                   ) : (
                     "Saqlash"

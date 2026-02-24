@@ -1,36 +1,16 @@
-[00:00:00.791] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.870] Server  LOG     ✓ Ready in 695ms
-[00:00:02.272] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.344] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:01.024] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.103] Server  LOG     ✓ Ready in 868ms
+[00:00:05.447] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:00:03.344] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:05.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:00:03.344] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student?month=2026-02","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2504:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 2)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
-[00:00:09.909] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:10.111] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:00:10.111] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:00:10.111] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student?month=2026-02","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2504:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 2)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
-[00:00:23.941] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:24.163] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:00:24.163] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:00:24.163] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2504:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
-[00:00:27.856] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+[00:00:06.591] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgzMDU5NSwiZXhwIjoxNzcxODM0MTk1fQ.JW6AEuj5IUAPCntbuUIogEic9qrUmwcM-E9pkh8bnPE"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student?month=2026-02","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 403","name":"AxiosError","stack":"AxiosError: Request failed with status code 403\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 2)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":403}
+[00:00:07.812] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
 This will cause a hydration error.%s <html> main  
 
   ...
@@ -65,12 +45,24 @@ This will cause a hydration error.%s <html> main
 >                                     <html lang="en">
         ...
 
-[00:00:27.856] Browser ERROR   <%s> cannot contain a nested %s.
+[00:00:07.812] Browser ERROR   <%s> cannot contain a nested %s.
 See this log for the ancestor stack trace. main <html>
-[00:00:27.856] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
-[00:00:27.856] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
-[00:00:40.630] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:40.736] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:07.812] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:00:07.812] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:00:08.422] Browser ERROR   Xatolik: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgzMDU5NSwiZXhwIjoxNzcxODM0MTk1fQ.JW6AEuj5IUAPCntbuUIogEic9qrUmwcM-E9pkh8bnPE"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 403","name":"AxiosError","stack":"AxiosError: Request failed with status code 403\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js:75:29)","status":403}
+[00:00:08.728] Browser ERROR   Xatolik: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgzMDU5NSwiZXhwIjoxNzcxODM0MTk1fQ.JW6AEuj5IUAPCntbuUIogEic9qrUmwcM-E9pkh8bnPE"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 403","name":"AxiosError","stack":"AxiosError: Request failed with status code 403\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js:75:29)","status":403}
+[00:00:18.310] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:18.310] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:19.304] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0MzQ1NCwiZXhwIjoxNzcxODQ3MDU0fQ.btMu2R7es0FESfpCRmom5RwPb_s1rYZ7ibH5IwLJExI"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[00:00:19.901] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0MzQ1NCwiZXhwIjoxNzcxODQ3MDU0fQ.btMu2R7es0FESfpCRmom5RwPb_s1rYZ7ibH5IwLJExI"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[00:01:23.819] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:23.928] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -89,10 +81,10 @@ It can also happen if the client has a browser extension installed which messes 
           <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
             <LoadingBoundary name="/" loading={null}>
               <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-                <HTTPAccessFallbackErrorBoundary pathname="/profile" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                <HTTPAccessFallbackErrorBoundary pathname="/menagers" notFound={<SegmentViewNode>} forbidden={undefined} ...>
                   <RedirectBoundary>
                     <RedirectErrorBoundary router={{...}}>
-                      <InnerLayoutRouter url="/profile" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                      <InnerLayoutRouter url="/menagers" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
                         <SegmentViewNode type="layout" pagePath="(main)/lay...">
                           <SegmentTrieNode>
                           <MainLayout>
@@ -108,12 +100,134 @@ It can also happen if the client has a browser extension installed which messes 
                       ...
           ...
 
-[00:06:01.812] Browser ERROR   Xatolik
-[00:06:01.812] Browser ERROR   Xatolik
-[00:06:05.063] Browser ERROR   Yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Teachers.useCallback[fetchTeachers] (http://localhost:3000/_next/static/chunks/app_(main)_teachers_page_tsx_d6b36410._.js:191:29)"}
-[00:06:05.063] Browser ERROR   Yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f7dc992b._.js:4789:49)\n    at async Teachers.useCallback[fetchTeachers] (http://localhost:3000/_next/static/chunks/app_(main)_teachers_page_tsx_d6b36410._.js:191:29)"}
-[00:06:07.670] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:07.827] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:02:01.274] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0MzQ1NCwiZXhwIjoxNzcxODQ3MDU0fQ.btMu2R7es0FESfpCRmom5RwPb_s1rYZ7ibH5IwLJExI"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[00:02:01.919] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0MzQ1NCwiZXhwIjoxNzcxODQ3MDU0fQ.btMu2R7es0FESfpCRmom5RwPb_s1rYZ7ibH5IwLJExI"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[00:06:15.914] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:15.914] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:16.974] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0MzgxMiwiZXhwIjoxNzcxODQ3NDEyfQ.AUgLkpWluXoHc3CrSFC6G2KfJ1kluna9oCYuHfvwOdg"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[00:06:17.534] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0MzgxMiwiZXhwIjoxNzcxODQ3NDEyfQ.AUgLkpWluXoHc3CrSFC6G2KfJ1kluna9oCYuHfvwOdg"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_f65fda33._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[00:09:22.064] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> main  
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <Head>
+        <__next_root_layout_boundary__>
+          <SegmentViewNode type="layout" pagePath="layout.tsx">
+            <SegmentTrieNode>
+            <link>
+            <script>
+            <script>
+            <script>
+            <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={{params:{}, ...}}>
+              <RootLayout params={Promise}>
+                <html lang="uz" suppressHydrationWarning={true}>
+                  <head>
+                  <body className="inter_5901...">
+                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} ...>
+                      <J attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
+                        <V attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
+                          <script>
+                          <div className="flex min-h...">
+                            <aside>
+                            <div className="flex-1 fle...">
+                              <header>
+>                             <main className="flex-1 p-4 md:p-6 overflow-y-auto bg-background">
+                                ...
+                                  <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                                    <SegmentTrieNode>
+                                    <MainLayout>
+>                                     <html lang="en">
+        ...
+
+[00:09:22.064] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. main <html>
+[00:09:29.607] Server  ERROR   Login Error: TypeError: fetch failed
+[00:09:30.805] Server  ERROR   Login Error: TypeError: fetch failed
+[00:09:34.142] Server  ERROR   Login Error: TypeError: fetch failed
+[00:09:34.785] Server  ERROR   Login Error: TypeError: fetch failed
+[00:09:34.965] Server  ERROR   Login Error: TypeError: fetch failed
+[00:09:35.152] Server  ERROR   Login Error: TypeError: fetch failed
+[00:09:48.735] Server  ERROR   Login Error: TypeError: fetch failed
+[00:09:49.411] Server  ERROR   Login Error: TypeError: fetch failed
+[00:09:49.554] Server  ERROR   Login Error: TypeError: fetch failed
+[00:11:20.891] Server  ERROR   Login Error: TypeError: fetch failed
+[00:11:29.890] Server  ERROR   Login Error: TypeError: fetch failed
+[00:11:30.725] Server  ERROR   Login Error: TypeError: fetch failed
+[00:11:30.930] Server  ERROR   Login Error: TypeError: fetch failed
+[00:11:31.131] Server  ERROR   Login Error: TypeError: fetch failed
+[00:11:31.436] Server  ERROR   Login Error: TypeError: fetch failed
+[00:11:34.692] Server  ERROR   Login Error: TypeError: fetch failed
+[00:11:38.707] Server  ERROR   Login Error: TypeError: fetch failed
+[00:12:14.330] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:20.917] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:20.917] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:21.948] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDE3NywiZXhwIjoxNzcxODQ3Nzc3fQ.f-lesmTJC1tHq3e3XMNpP2YZ8EbVFHqK4dWwrOPb7g8"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[00:12:22.529] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDE3NywiZXhwIjoxNzcxODQ3Nzc3fQ.f-lesmTJC1tHq3e3XMNpP2YZ8EbVFHqK4dWwrOPb7g8"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[00:12:22.720] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <html> main  
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <Head>
+        <__next_root_layout_boundary__>
+          <SegmentViewNode type="layout" pagePath="layout.tsx">
+            <SegmentTrieNode>
+            <link>
+            <script>
+            <script>
+            <script>
+            <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={{params:{}, ...}}>
+              <RootLayout params={Promise}>
+                <html lang="uz" suppressHydrationWarning={true}>
+                  <head>
+                  <body className="inter_5901...">
+                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} ...>
+                      <J attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
+                        <V attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
+                          <script>
+                          <div className="flex min-h...">
+                            <aside>
+                            <div className="flex-1 fle...">
+                              <header>
+>                             <main className="flex-1 p-4 md:p-6 overflow-y-auto bg-background">
+                                ...
+                                  <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                                    <SegmentTrieNode>
+                                    <MainLayout>
+>                                     <html lang="en">
+        ...
+
+[00:12:22.720] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. main <html>
+[00:12:22.720] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. html html html
+[00:12:22.720] Browser ERROR   You are mounting a new %s component when a previous one has not first unmounted. It is an error to render more than one %s component at a time and attributes and children of these components will likely fail in unpredictable ways. Please only render a single instance of <%s> and if you need to mount a new one, ensure any previous ones have unmounted first. body body body
+[00:12:49.923] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:49.923] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:50.783] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[00:12:51.807] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:1940:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:2458:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_axios_lib_99e19c7d._.js:3264:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[00:20:53.269] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:53.388] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -151,59 +265,1213 @@ It can also happen if the client has a browser extension installed which messes 
                       ...
           ...
 
-[00:06:07.827] Browser ERROR   Yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Teachers.useCallback[fetchTeachers] (http://localhost:3000/_next/static/chunks/app_(main)_teachers_page_tsx_d6b36410._.js:191:29)"}
-[00:06:14.212] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:14.212] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:14.212] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
-[00:06:14.212] Browser ERROR   Dashboard xatosi: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)"}
-[00:06:19.976] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
-This will cause a hydration error.%s <html> main  
+[00:21:03.562] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[00:21:04.117] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[00:29:46.933] Server  LOG     ✓ Compiled in 219ms
+[00:31:01.519] Browser ERROR   Qarzdorlarni yuklashda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{"month":"2025-05"},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Payment.useCallback[fetchDebtors] (http://localhost:3000/_next/static/chunks/app_(main)_payment_page_tsx_e7ba2a87._.js:47:34)"}
+[00:31:01.519] Browser ERROR   Qarzdorlarni yuklashda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{"month":"2025-05"},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Payment.useCallback[fetchDebtors] (http://localhost:3000/_next/static/chunks/app_(main)_payment_page_tsx_e7ba2a87._.js:47:34)"}
+[00:37:01.852] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[00:37:02.418] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[23:29:44.104] Server  LOG     ✓ Compiled in 646ms
+[23:29:44.207] Browser ERROR   ./app/(main)/adminss/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useMemo } from "react";
+    |          ^^^^^^^^
+  2 | import axios from "axios";
+  3 | import Cookies from "js-cookie";
+  4 | import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:30:30.116] Browser ERROR   ./app/(main)/adminss/page.tsx:13:19
+Ecmascript file had an error
+  11 |   RotateCcw,
+  12 | } from "lucide-react";
+> 13 | import { useMemo, useState } from "react";
+     |                   ^^^^^^^^
+  14 |
+  15 | interface AdminUser {
+  16 |   _id: string;
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:30:30.810] Browser ERROR   ./app/(main)/adminss/page.tsx:13:19
+Ecmascript file had an error
+  11 |   RotateCcw,
+  12 | } from "lucide-react";
+> 13 | import { useMemo, useState } from "react";
+     |                   ^^^^^^^^
+  14 |
+  15 | interface AdminUser {
+  16 |   _id: string;
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:30:31.147] Browser ERROR   uncaughtError: Error: ./app/(main)/adminss/page.tsx:13:19
+Ecmascript file had an error
+  11 |   RotateCcw,
+  12 | } from "lucide-react";
+> 13 | import { useMemo, useState } from "react";
+     |                   ^^^^^^^^
+  14 |
+  15 | interface AdminUser {
+  16 |   _id: string;
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[23:30:31.308] Browser ERROR   ./app/(main)/adminss/page.tsx:13:19
+Ecmascript file had an error
+  11 |   RotateCcw,
+  12 | } from "lucide-react";
+> 13 | import { useMemo, useState } from "react";
+     |                   ^^^^^^^^
+  14 |
+  15 | interface AdminUser {
+  16 |   _id: string;
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:30:31.308] Browser ERROR   ./app/(main)/adminss/page.tsx:13:19
+Ecmascript file had an error
+  11 |   RotateCcw,
+  12 | } from "lucide-react";
+> 13 | import { useMemo, useState } from "react";
+     |                   ^^^^^^^^
+  14 |
+  15 | interface AdminUser {
+  16 |   _id: string;
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:31:09.140] Browser ERROR   ./app/(main)/adminss/page.tsx:13:19
+Ecmascript file had an error
+  11 |   RotateCcw,
+  12 | } from "lucide-react";
+> 13 | import { useMemo, useState } from "react";
+     |                   ^^^^^^^^
+  14 |
+  15 | interface AdminUser {
+  16 |   _id: string;
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:31:30.792] Server  LOG     ✓ Compiled in 198ms
+[23:31:30.921] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:31:31.139] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <RedirectBoundary>
-      <RedirectErrorBoundary router={{...}}>
-        <Head>
-        <__next_root_layout_boundary__>
-          <SegmentViewNode type="layout" pagePath="layout.tsx">
-            <SegmentTrieNode>
-            <link>
-            <script>
-            <script>
-            <script>
-            <ClientSegmentRoot Component={function RootLayout} slots={{...}} serverProvidedParams={{params:{}, ...}}>
-              <RootLayout params={Promise}>
-                <html lang="uz" suppressHydrationWarning={true}>
-                  <head>
-                  <body className="inter_5901...">
-                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} ...>
-                      <J attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
-                        <V attribute="class" defaultTheme="system" enableSystem={true} disableTransitionOnChange={true}>
-                          <script>
-                          <div className="flex min-h...">
-                            <aside>
-                            <div className="flex-1 fle...">
-                              <header>
->                             <main className="flex-1 p-4 md:p-6 overflow-y-auto bg-background">
-                                ...
-                                  <SegmentViewNode type="layout" pagePath="(main)/lay...">
-                                    <SegmentTrieNode>
-                                    <MainLayout>
->                                     <html lang="en">
-        ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/courses" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/courses" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                          <SegmentTrieNode>
+                          <MainLayout>
+                            <html
++                             lang="en"
+-                             lang="uz"
+-                             className="dark"
+-                             style={{color-scheme:"dark"}}
+                            >
+                              <body
+-                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
+                              >
+                      ...
+          ...
 
-[00:06:19.976] Browser ERROR   <%s> cannot contain a nested %s.
-See this log for the ancestor stack trace. main <html>
-[00:06:20.116] Browser ERROR   Guruhlarni yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Groups.useCallback[fetchGroups] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:229:32)"}
-[00:06:20.253] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)"}
-[00:06:20.253] Browser ERROR   Guruhlarni yuklashda xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Groups.useCallback[fetchGroups] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:229:32)"}
-[00:06:20.253] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/teacher/get-all-teachers","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)"}
-[00:06:25.179] Browser ERROR   Qarzdorlarni yuklashda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{"month":"2025-05"},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Payment.useCallback[fetchDebtors] (http://localhost:3000/_next/static/chunks/app_(main)_payment_page_tsx_e7ba2a87._.js:47:34)"}
-[00:06:25.179] Browser ERROR   Qarzdorlarni yuklashda xato: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{"month":"2025-05"},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/payment/get-debtors-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Payment.useCallback[fetchDebtors] (http://localhost:3000/_next/static/chunks/app_(main)_payment_page_tsx_e7ba2a87._.js:47:34)"}
-[00:06:25.782] Browser ERROR   Xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js:75:29)"}
-[00:06:25.782] Browser ERROR   Xatolik: {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTgyMjgwNSwiZXhwIjoxNzcxODI2NDA1fQ.5C69XcxYD-koH6eXvCAprkvWBTyjUmNWcHCFDAAu-9g"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4029:25)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4a8e3acd._.js:4789:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js:75:29)"}
+[23:31:31.775] Browser ERROR   Xatolik: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 403","name":"AxiosError","stack":"AxiosError: Request failed with status code 403\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_7325e8f5._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_7325e8f5._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_7325e8f5._.js:4789:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js:75:29)","status":403}
+[23:31:32.686] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:31:32.790] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/courses" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/courses" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                          <SegmentTrieNode>
+                          <MainLayout>
+                            <html
++                             lang="en"
+-                             lang="uz"
+-                             className="dark"
+-                             style={{color-scheme:"dark"}}
+                            >
+                              <body
+-                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
+                              >
+                      ...
+          ...
+
+[23:31:33.482] Browser ERROR   Xatolik: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","params":{},"timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 403","name":"AxiosError","stack":"AxiosError: Request failed with status code 403\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_7325e8f5._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_7325e8f5._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_7325e8f5._.js:4789:49)\n    at async Courses.useCallback[fetchCourses] (http://localhost:3000/_next/static/chunks/app_(main)_courses_page_tsx_6d082d3e._.js:75:29)","status":403}
+[23:31:34.604] Browser ERROR   uncaughtError: Error: No QueryClient set, use QueryClientProvider to set one
+[23:33:01.619] Server  ERROR   ⨯ Error: No QueryClient set, use QueryClientProvider to set one
+[23:33:01.723] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:33:01.855] Browser ERROR   uncaughtError: Error: No QueryClient set, use QueryClientProvider to set one
+[23:34:25.002] Server  LOG     ✓ Compiled in 155ms
+[23:34:25.002] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[23:34:25.546] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:34:26.137] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/adminss" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/adminss" tree={[...]} params={{}} cacheNode={{...}} segmentPath={[...]} ...>
+                        <SegmentViewNode type="layout" pagePath="(main)/lay...">
+                          <SegmentTrieNode>
+                          <MainLayout>
+                            <html
++                             lang="en"
+-                             lang="uz"
+-                             className="dark"
+-                             style={{color-scheme:"dark"}}
+                            >
+                              <body
+-                               className="inter_5901b7c6-module__ec5Qua__variable geist_a71539c9-module__T19VSG__vari..."
+                              >
+                      ...
+          ...
+
+[23:35:28.364] Server  LOG     ✓ Compiled in 151ms
+[23:35:28.467] Browser ERROR   uncaughtError: Error: No QueryClient set, use QueryClientProvider to set one
+[23:35:29.382] Server  ERROR   ⨯ Error: No QueryClient set, use QueryClientProvider to set one
+[23:35:29.473] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:35:29.607] Browser ERROR   uncaughtError: Error: No QueryClient set, use QueryClientProvider to set one
+[23:35:54.146] Server  ERROR   ⨯ Error: No QueryClient set, use QueryClientProvider to set one
+[23:35:54.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:35:54.353] Browser ERROR   uncaughtError: Error: No QueryClient set, use QueryClientProvider to set one
+[23:35:55.375] Server  ERROR   ⨯ Error: No QueryClient set, use QueryClientProvider to set one
+[23:35:55.450] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:35:55.581] Browser ERROR   uncaughtError: Error: No QueryClient set, use QueryClientProvider to set one
+[23:36:54.880] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[23:36:55.115] Server  ERROR   ⨯ Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server". Or maybe you meant to call this function rather than return it.
+  <... client={function QueryClient} children=...>
+              ^^^^^^^^^^^^^^^^^^^^^^
+[23:36:55.300] Server  ERROR   ⨯ Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server". Or maybe you meant to call this function rather than return it.
+  <... client={function QueryClient} children=...>
+              ^^^^^^^^^^^^^^^^^^^^^^
+[23:36:55.395] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:36:56.137] Browser ERROR   uncaughtError: Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server". Or maybe you meant to call this function rather than return it.
+  <... client={function QueryClient} children=...>
+              ^^^^^^^^^^^^^^^^^^^^^^
+[23:37:48.695] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.401] Server  ERROR   ⨯ ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[23:37:49.505] Browser ERROR   uncaughtError: Error: ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:49.647] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:50.936] Server  ERROR   ⨯ ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[23:37:51.026] Browser ERROR   uncaughtError: Error: ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[23:37:51.163] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.163] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.163] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.163] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.164] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.164] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.164] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.164] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.164] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:37:51.164] Browser ERROR   ./app/(main)/layout.tsx:3:10
+Ecmascript file had an error
+  1 | import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+  2 | import type { Metadata } from "next";
+> 3 | import { useState } from "react";
+    |          ^^^^^^^^
+  4 |
+  5 | export const metadata: Metadata = {
+  6 |   title: "Admin CRM System",
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[23:38:41.395] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.238] Server  ERROR   ⨯ ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+
+
+[23:38:42.315] Browser ERROR   uncaughtError: Error: ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+
+
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:42.453] Browser ERROR   ./app/(main)/layout.tsx:6:14
+Ecmascript file had an error
+  4 | import { useState } from "react";
+  5 |
+> 6 | export const metadata: Metadata = {
+    |              ^^^^^^^^
+  7 |   title: "Admin CRM System",
+  8 |   description: "Admin panel for managing users and staff",
+  9 |   keywords: ["admin", "crm", "dashboard", "management"],
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/(main)/layout.tsx [Client Component Browser]
+    ./app/(main)/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(main)/layout.tsx [Client Component SSR]
+    ./app/(main)/layout.tsx [Server Component]
+[23:38:53.031] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:38:53.161] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="adminss/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/adminss" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="(main)/adm...">
+                  <SegmentTrieNode>
+                  <ClientPageRoot Component={function AdminPanel} serverProvidedParams={{...}}>
+                    <AdminPanel params={Promise} searchParams={Promise}>
+                      <div className="w-full p-6...">
+                        <h1>
+                        <table className="w-full border">
+                          <thead>
+                          <tbody>
+                            <SkeletonRow>
++                             <tr className="border-t border-zinc-200 dark:border-zinc-800 animate-pulse">
+                            ...
+                ...
+              ...
+
+[23:38:53.723] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:38:53.834] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="adminss/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/adminss" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="(main)/adm...">
+                  <SegmentTrieNode>
+                  <ClientPageRoot Component={function AdminPanel} serverProvidedParams={{...}}>
+                    <AdminPanel params={Promise} searchParams={Promise}>
+                      <div className="w-full p-6...">
+                        <h1>
+                        <table className="w-full border">
+                          <thead>
+                          <tbody>
+                            <SkeletonRow>
++                             <tr className="border-t border-zinc-200 dark:border-zinc-800 animate-pulse">
+                            ...
+                ...
+              ...
+
+[23:38:54.722] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[23:38:54.722] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[23:38:55.342] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 403","name":"AxiosError","stack":"AxiosError: Request failed with status code 403\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":403}
+[23:38:55.342] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTg0NDIwNiwiZXhwIjoxNzcxODQ3ODA2fQ.wJtYpNCuZAV-5H0Y3qNfCguEmg47RfdpeTb6K4DDPgw"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/group/get-all-group","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 403","name":"AxiosError","stack":"AxiosError: Request failed with status code 403\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:4789:49)\n    at async Promise.all (index 0)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":403}
+[23:39:10.585] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[23:39:10.585] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[23:39:11.473] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkyODU4NywiZXhwIjoxNzcxOTMyMTg3fQ.7rtls1R5gAv-FVOK8luRJTwtnrV1zOiRQOHuZFwF3tU"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[23:39:12.029] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkyODU4NywiZXhwIjoxNzcxOTMyMTg3fQ.7rtls1R5gAv-FVOK8luRJTwtnrV1zOiRQOHuZFwF3tU"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_4479610a._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[23:39:28.666] Server  LOG     ✓ Compiled in 84ms
+[23:41:20.342] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:41:20.463] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/adminss" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+            <SegmentViewNode type="page" pagePath="(main)/adm...">
+              <SegmentTrieNode>
+              <ClientPageRoot Component={function AdminPanel} serverProvidedParams={{...}}>
+                <AdminPanel params={Promise} searchParams={Promise}>
+                  <div className="w-full p-2...">
+                    <div className="max-w-6xl ...">
+                      <div>
+                      <div className="rounded-xl...">
+                        <table className="w-full tex...">
+                          <thead>
+                          <tbody className="text-xs md...">
+                            <SkeletonRow>
++                             <tr className="border-t border-zinc-200 dark:border-zinc-800 animate-pulse">
+                            ...
+            ...
+          ...
+
+[23:43:17.038] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkyODU4NywiZXhwIjoxNzcxOTMyMTg3fQ.7rtls1R5gAv-FVOK8luRJTwtnrV1zOiRQOHuZFwF3tU"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_5eb2cc6b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_5eb2cc6b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_5eb2cc6b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[23:43:17.645] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkyODU4NywiZXhwIjoxNzcxOTMyMTg3fQ.7rtls1R5gAv-FVOK8luRJTwtnrV1zOiRQOHuZFwF3tU"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_5eb2cc6b._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_5eb2cc6b._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_5eb2cc6b._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[23:43:17.928] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading '_id')
+[23:43:21.602] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:43:21.714] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/adminss" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+            <SegmentViewNode type="page" pagePath="(main)/adm...">
+              <SegmentTrieNode>
+              <ClientPageRoot Component={function AdminPanel} serverProvidedParams={{...}}>
+                <AdminPanel params={Promise} searchParams={Promise}>
+                  <div className="w-full p-2...">
+                    <div className="max-w-6xl ...">
+                      <div>
+                      <div className="rounded-xl...">
+                        <table className="w-full tex...">
+                          <thead>
+                          <tbody className="text-xs md...">
+                            <SkeletonRow>
++                             <tr className="border-t border-zinc-200 dark:border-zinc-800 animate-pulse">
+                            ...
+            ...
+          ...
+
+[23:43:24.728] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading '_id')
+[23:45:33.244] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[23:45:33.301] Server  LOG     ✓ Compiled in 502ms
+[23:45:33.370] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[23:45:33.371] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[23:45:33.412] Server  LOG     ✓ Compiled in 0ms
+[23:45:33.524] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:45:33.855] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading '_id')
+[23:45:34.916] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:45:35.026] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading '_id')
+[23:46:16.139] Server  LOG     ✓ Compiled in 59ms
+[23:46:17.138] Browser ERROR   ./app/layout.tsx:210:7
+Parsing ecmascript source code failed
+  208 | }
+  209 |
+> 210 | Ushbu xatolik (`Runtime TypeError: Cannot read properties of null (reading '_id')`) sizning `handleUpdate` funksiyangizda yuz bermoqda. Buning sababi shundaki, funksiya ishga tushgan vaqtda `selectedCourse` o'zgaruvchisi `null` bo'lib turibdi.
+      |       ^^^^^^^
+  211 |
+  212 | Skrinshotda ko'rsatilgan `162`-qatordagi muammoni hal qilish uchun quyidagi o'zgarishlarni kiritishingiz kerak:
+  213 |
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./app/layout.tsx [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/layout.tsx [Client Component SSR]
+    ./app/layout.tsx [Server Component]
+[23:46:52.177] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[23:46:52.279] Server  ERROR   ⨯ ReferenceError: handleUpdate is not defined
+[23:46:52.382] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:46:53.139] Browser ERROR   uncaughtError: ReferenceError: handleUpdate is not defined
+[23:47:19.638] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[23:47:19.694] Server  LOG     ✓ Compiled in 58ms
+[23:47:19.808] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:47:20.138] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading '_id')
+[23:48:37.726] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[23:48:37.787] Server  LOG     ✓ Compiled in 143ms
+[23:48:37.903] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:48:38.137] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="courses/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/courses" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                      <SegmentViewNode type="page" pagePath="(main)/cou...">
+                        <SegmentTrieNode>
+                        <ClientPageRoot Component={function Courses} serverProvidedParams={{...}}>
+                          <Courses params={Promise} searchParams={Promise}>
+                            <div className="w-full p-3...">
+                              <div>
+                              <div
++                               className="flex justify-center py-20"
+-                               className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                              >
+                                <LoaderCircle className="animate-sp..." size={40}>
++                                 <svg
++                                   ref={null}
++                                   xmlns="http://www.w3.org/2000/svg"
++                                   width={40}
++                                   height={40}
++                                   viewBox="0 0 24 24"
++                                   fill="none"
++                                   stroke="currentColor"
++                                   strokeWidth={2}
++                                   strokeLinecap="round"
++                                   strokeLinejoin="round"
++                                   className="lucide lucide-loader-circle animate-spin text-muted-foreground"
++                                   aria-hidden="true"
++                                 >
+                      ...
+                    ...
+          ...
+
+[23:48:44.401] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkyODU4NywiZXhwIjoxNzcxOTMyMTg3fQ.7rtls1R5gAv-FVOK8luRJTwtnrV1zOiRQOHuZFwF3tU"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_7f89e675._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_7f89e675._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_7f89e675._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[23:48:45.000] Browser ERROR   Dastlabki ma'lumotlarda xato: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkyODU4NywiZXhwIjoxNzcxOTMyMTg3fQ.7rtls1R5gAv-FVOK8luRJTwtnrV1zOiRQOHuZFwF3tU"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/course/get-all-courses","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_7f89e675._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_7f89e675._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_7f89e675._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Groups.useCallback[fetchInitialData] (http://localhost:3000/_next/static/chunks/app_(main)_groups_page_tsx_151d2944._.js:259:38)","status":404}
+[23:50:32.889] Server  LOG     ✓ Compiled in 224ms
+[23:59:34.034] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./app/(main)/menagers/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[23:59:34.111] Server  LOG     ✓ Compiled in 208ms
+[23:59:34.215] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[23:59:52.532] Server  ERROR   ⨯ Error: The default export is not a React Component in "/menagers/page"
+[23:59:52.661] Server  ERROR   ⨯ Error: The default export is not a React Component in "/menagers/page"
+[23:59:52.835] Server  ERROR   ⨯ Error: The default export is not a React Component in "/menagers/page"
+[23:59:52.954] Server  ERROR   ⨯ Error: The default export is not a React Component in "/menagers/page"
+[23:59:53.086] Server  ERROR   ⨯ Error: The default export is not a React Component in "/menagers/page"
+[23:59:53.226] Server  ERROR   ⨯ Error: The default export is not a React Component in "/menagers/page"
+[23:59:53.295] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/menagers/page"
+[23:59:59.416] Server  ERROR   ⨯ Error: The default export is not a React Component in "/menagers/page"
+[23:59:59.520] Server  ERROR   ⨯ Error: The default export is not a React Component in "/menagers/page"
+[23:59:59.609] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/menagers/page"
+[24:00:54.940] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:00:55.066] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <LoadingBoundary name="menagers/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/menagers" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+              <SegmentViewNode type="page" pagePath="(main)/men...">
+                <SegmentTrieNode>
+                <ClientPageRoot Component={function Menagers} serverProvidedParams={{...}}>
+                  <Menagers params={Promise} searchParams={Promise}>
+                    <div className="w-full p-3...">
+                      <div>
+                      <div className={"w-full o..."}>
+                        <table className="w-full tex...">
+                          <thead>
+                          <tbody className="text-xs sm...">
+                            <SkeletonRow>
++                             <tr className="border-t border-zinc-200 dark:border-zinc-800 animate-pulse">
+                            ...
+              ...
+            ...
+
+[24:01:03.092] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[24:01:03.092] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[24:01:04.167] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkyODU4NywiZXhwIjoxNzcxOTMyMTg3fQ.7rtls1R5gAv-FVOK8luRJTwtnrV1zOiRQOHuZFwF3tU"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_41188b34._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_41188b34._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_41188b34._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[24:01:04.742] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkyODU4NywiZXhwIjoxNzcxOTMyMTg3fQ.7rtls1R5gAv-FVOK8luRJTwtnrV1zOiRQOHuZFwF3tU"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_41188b34._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_41188b34._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_41188b34._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[24:24:53.699] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:27:27.870] Server  LOG     ✓ Compiled in 240ms
+[24:28:20.712] Server  LOG     ✓ Compiled in 183ms
+[24:29:27.804] Server  LOG     ✓ Compiled in 111ms
+[24:30:04.504] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[24:30:04.504] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[24:30:05.476] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkzMTY0MSwiZXhwIjoxNzcxOTM1MjQxfQ.Z6FxAuYl91__8NsPq4LYhkjnd1wzkah6ux8UBu_6y_k"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[24:30:06.039] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkzMTY0MSwiZXhwIjoxNzcxOTM1MjQxfQ.Z6FxAuYl91__8NsPq4LYhkjnd1wzkah6ux8UBu_6y_k"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[24:30:40.834] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[24:30:40.834] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[24:30:41.784] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkzMTY0MSwiZXhwIjoxNzcxOTM1MjQxfQ.Z6FxAuYl91__8NsPq4LYhkjnd1wzkah6ux8UBu_6y_k"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[24:30:42.382] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkzMTY0MSwiZXhwIjoxNzcxOTM1MjQxfQ.Z6FxAuYl91__8NsPq4LYhkjnd1wzkah6ux8UBu_6y_k"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[24:30:43.115] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[24:30:43.115] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[24:30:43.875] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkzMTY0MSwiZXhwIjoxNzcxOTM1MjQxfQ.Z6FxAuYl91__8NsPq4LYhkjnd1wzkah6ux8UBu_6y_k"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}
+[24:30:44.687] Browser ERROR   Dashboard xatosi: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2ZlMDQ2OWM4ZjQwM2ZiNTFjNGQ4ZiIsImlhdCI6MTc3MTkzMTY0MSwiZXhwIjoxNzcxOTM1MjQxfQ.Z6FxAuYl91__8NsPq4LYhkjnd1wzkah6ux8UBu_6y_k"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"legacyInterceptorReqResOrdering":true,"silentJSONParsing":true},"url":"https://admin-crm.onrender.com/api/student/get-all-student","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3465:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:3983:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_a2b965f9._.js:4789:49)\n    at async Promise.all (index 1)\n    at async Asosiy.useEffect.fetchDashboardData (http://localhost:3000/_next/static/chunks/app_page_tsx_dda9881a._.js:58:71)","status":404}

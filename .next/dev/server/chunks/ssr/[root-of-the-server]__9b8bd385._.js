@@ -99,7 +99,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$ellipsis$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MoreHorizontal$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/ellipsis.js [app-ssr] (ecmascript) <export default as MoreHorizontal>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-down.js [app-ssr] (ecmascript) <export default as ChevronDown>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.js [app-ssr] (ecmascript) <export default as Loader2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useMutation.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -114,12 +119,12 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-3/4"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/students/page.tsx",
-                    lineNumber: 19,
+                    lineNumber: 27,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/students/page.tsx",
-                lineNumber: 18,
+                lineNumber: 26,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -128,12 +133,12 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-full"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/students/page.tsx",
-                    lineNumber: 22,
+                    lineNumber: 30,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/students/page.tsx",
-                lineNumber: 21,
+                lineNumber: 29,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -142,12 +147,12 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-12"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/students/page.tsx",
-                    lineNumber: 25,
+                    lineNumber: 33,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/students/page.tsx",
-                lineNumber: 24,
+                lineNumber: 32,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -156,12 +161,12 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-16"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/students/page.tsx",
-                    lineNumber: 28,
+                    lineNumber: 36,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/students/page.tsx",
-                lineNumber: 27,
+                lineNumber: 35,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -170,23 +175,22 @@ const SkeletonRow = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
                     className: "h-8 w-16 bg-zinc-200 dark:bg-zinc-800 rounded ml-auto"
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/students/page.tsx",
-                    lineNumber: 31,
+                    lineNumber: 39,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/students/page.tsx",
-                lineNumber: 30,
+                lineNumber: 38,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/(main)/students/page.tsx",
-        lineNumber: 17,
+        lineNumber: 25,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 const Students = ()=>{
-    const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQueryClient"])();
     const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [activeMenu, setActiveMenu] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -198,40 +202,37 @@ const Students = ()=>{
     });
     const BASE_URL = ("TURBOPACK compile-time value", "https://admin-crm.onrender.com") || "http://localhost:7070";
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get("token");
-    const fetchStudents = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async ()=>{
-        if (!token) return;
-        try {
-            setLoading(true);
+    // Fetch Students Query
+    const { data: students = [], isLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQuery"])({
+        queryKey: [
+            "students",
+            filterStatus
+        ],
+        queryFn: async ()=>{
             const url = filterStatus ? `${BASE_URL}/api/student/get-all-students?status=${filterStatus}` : `${BASE_URL}/api/student/get-all-students`;
             const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(url, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
             });
-            setData(Array.isArray(res.data) ? res.data : res.data?.data || []);
-        } catch (err) {
-            console.error("Xatolik");
-        } finally{
-            setTimeout(()=>setLoading(false), 600);
-        }
-    }, [
-        BASE_URL,
-        token,
-        filterStatus
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        fetchStudents();
-    }, [
-        fetchStudents
-    ]);
-    const handleAddStudent = async (e)=>{
-        e.preventDefault();
-        if (!token) return;
-        try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/student/create-student`, formData, {
+            return Array.isArray(res.data) ? res.data : res.data?.data || [];
+        },
+        enabled: !!token
+    });
+    // Create Student Mutation
+    const createMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: async (newStudent)=>{
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/student/create-student`, newStudent, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
+            });
+        },
+        onSuccess: ()=>{
+            queryClient.invalidateQueries({
+                queryKey: [
+                    "students"
+                ]
             });
             setIsModalOpen(false);
             setFormData({
@@ -239,15 +240,13 @@ const Students = ()=>{
                 last_name: "",
                 phone: ""
             });
-            fetchStudents();
-        } catch (err) {
-            alert("Qo'shishda xatolik");
-        }
-    };
-    const handleDelete = async (id)=>{
-        if (!token || !confirm("Tasdiqlaysizmi?")) return;
-        try {
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`${BASE_URL}/api/student/delete-student`, {
+        },
+        onError: ()=>alert("Qo'shishda xatolik")
+    });
+    // Delete Student Mutation
+    const deleteMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: async (id)=>{
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`${BASE_URL}/api/student/delete-student`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 },
@@ -255,44 +254,70 @@ const Students = ()=>{
                     _id: id
                 }
             });
-            fetchStudents();
+        },
+        onSuccess: ()=>{
+            queryClient.invalidateQueries({
+                queryKey: [
+                    "students"
+                ]
+            });
             setActiveMenu(null);
-        } catch (err) {
-            alert("Xatolik");
+        },
+        onError: ()=>alert("Xatolik")
+    });
+    // Leave/Return Student Mutation
+    const statusMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
+        mutationFn: async ({ student, action, payload })=>{
+            const endpoint = action === "return" ? "return-student" : "leave-student";
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/student/${endpoint}`, payload, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+        },
+        onSuccess: ()=>{
+            queryClient.invalidateQueries({
+                queryKey: [
+                    "students"
+                ]
+            });
+            setActiveMenu(null);
+            alert("Muvaffaqiyatli bajarildi!");
+        },
+        onError: (err)=>{
+            alert(err.response?.data?.message || "Amalda xatolik yuz berdi");
+        }
+    });
+    const handleAddStudent = (e)=>{
+        e.preventDefault();
+        createMutation.mutate(formData);
+    };
+    const handleDelete = (id)=>{
+        if (confirm("Tasdiqlaysizmi?")) {
+            deleteMutation.mutate(id);
         }
     };
-    const handleLeaveReturn = async (student)=>{
-        if (!token) return;
-        try {
-            if (student.status === "ta'tilda" || student.status === "yakunladi") {
-                if (!confirm(`O'quvchini faol holatga qaytarishni tasdiqlaysizmi?`)) return;
-                await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/student/return-student`, {
+    const handleLeaveReturn = (student)=>{
+        if (student.status === "ta'tilda" || student.status === "yakunladi") {
+            if (!confirm(`O'quvchini faol holatga qaytarishni tasdiqlaysizmi?`)) return;
+            statusMutation.mutate({
+                action: "return",
+                payload: {
                     _id: student._id
-                }, {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-            } else if (student.status === "faol") {
-                const days = prompt("Necha kunlik ta'til? (Masalan: 4)", "4");
-                const reason = prompt("Sababi?", "Tobi yo'q");
-                if (!days || !reason) return;
-                await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/api/student/leave-student`, {
+                }
+            });
+        } else if (student.status === "faol") {
+            const days = prompt("Necha kunlik ta'til? (Masalan: 4)", "4");
+            const reason = prompt("Sababi?", "Tobi yo'q");
+            if (!days || !reason) return;
+            statusMutation.mutate({
+                action: "leave",
+                payload: {
                     student_id: student._id,
                     leave_days: days,
                     reason: reason
-                }, {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-            }
-            fetchStudents();
-            setActiveMenu(null);
-            alert("Muvaffaqiyatli bajarildi!");
-        } catch (err) {
-            console.error("Xato:", err.response?.data);
-            alert(err.response?.data?.message || "Amalda xatolik yuz berdi");
+                }
+            });
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -306,7 +331,7 @@ const Students = ()=>{
                         children: "Studentlar ro'yxati"
                     }, void 0, false, {
                         fileName: "[project]/app/(main)/students/page.tsx",
-                        lineNumber: 148,
+                        lineNumber: 161,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -328,7 +353,7 @@ const Students = ()=>{
                                                         children: "All"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                                        lineNumber: 157,
+                                                        lineNumber: 170,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -336,7 +361,7 @@ const Students = ()=>{
                                                         children: "Faol"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                                        lineNumber: 158,
+                                                        lineNumber: 171,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -344,7 +369,7 @@ const Students = ()=>{
                                                         children: "Ta'tilda"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                                        lineNumber: 159,
+                                                        lineNumber: 172,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -352,13 +377,13 @@ const Students = ()=>{
                                                         children: "Yakunladi"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                                        lineNumber: 160,
+                                                        lineNumber: 173,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 165,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
@@ -366,13 +391,13 @@ const Students = ()=>{
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                lineNumber: 162,
+                                                lineNumber: 175,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                        lineNumber: 151,
+                                        lineNumber: 164,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -382,18 +407,18 @@ const Students = ()=>{
                                             size: 20
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/students/page.tsx",
-                                            lineNumber: 172,
+                                            lineNumber: 185,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 181,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                lineNumber: 150,
+                                lineNumber: 163,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -404,23 +429,24 @@ const Students = ()=>{
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                        lineNumber: 177,
+                                        lineNumber: 190,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         type: "text",
                                         placeholder: "Qidiruv...",
                                         className: "w-full border rounded-lg py-2 pl-10 pr-4 text-sm outline-none",
+                                        value: searchTerm,
                                         onChange: (e)=>setSearchTerm(e.target.value)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 194,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                lineNumber: 176,
+                                lineNumber: 189,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -431,26 +457,26 @@ const Students = ()=>{
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 207,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " Student Qo'shish"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                lineNumber: 189,
+                                lineNumber: 203,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(main)/students/page.tsx",
-                        lineNumber: 149,
+                        lineNumber: 162,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(main)/students/page.tsx",
-                lineNumber: 147,
+                lineNumber: 160,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -469,7 +495,7 @@ const Students = ()=>{
                                             children: "Ism"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/students/page.tsx",
-                                            lineNumber: 203,
+                                            lineNumber: 217,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -477,7 +503,7 @@ const Students = ()=>{
                                             children: "Familiya"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/students/page.tsx",
-                                            lineNumber: 204,
+                                            lineNumber: 218,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -485,7 +511,7 @@ const Students = ()=>{
                                             children: "Telefon"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/students/page.tsx",
-                                            lineNumber: 205,
+                                            lineNumber: 219,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -493,7 +519,7 @@ const Students = ()=>{
                                             children: "Holat"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/students/page.tsx",
-                                            lineNumber: 206,
+                                            lineNumber: 220,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -501,29 +527,29 @@ const Students = ()=>{
                                             children: "Amallar"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(main)/students/page.tsx",
-                                            lineNumber: 207,
+                                            lineNumber: 221,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(main)/students/page.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 216,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                lineNumber: 201,
+                                lineNumber: 215,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
                                 className: "text-sm",
-                                children: loading ? [
+                                children: isLoading ? [
                                     ...Array(10)
                                 ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SkeletonRow, {}, i, false, {
                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                        lineNumber: 212,
+                                        lineNumber: 226,
                                         columnNumber: 48
-                                    }, ("TURBOPACK compile-time value", void 0))) : data.filter((s)=>s.first_name.toLowerCase().includes(searchTerm.toLowerCase())).map((student)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                    }, ("TURBOPACK compile-time value", void 0))) : students.filter((s)=>s.first_name.toLowerCase().includes(searchTerm.toLowerCase())).map((student)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                         className: "border-b last:border-0 hover:bg-gray-50/50 transition-colors",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -531,7 +557,7 @@ const Students = ()=>{
                                                 children: student.first_name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                lineNumber: 224,
+                                                lineNumber: 238,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -539,7 +565,7 @@ const Students = ()=>{
                                                 children: student.last_name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                lineNumber: 225,
+                                                lineNumber: 239,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -547,7 +573,7 @@ const Students = ()=>{
                                                 children: student.phone
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                lineNumber: 226,
+                                                lineNumber: 240,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -557,12 +583,12 @@ const Students = ()=>{
                                                     children: student.status
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(main)/students/page.tsx",
-                                                    lineNumber: 228,
+                                                    lineNumber: 242,
                                                     columnNumber: 27
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                lineNumber: 227,
+                                                lineNumber: 241,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -575,12 +601,12 @@ const Students = ()=>{
                                                             size: 20
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/(main)/students/page.tsx",
-                                                            lineNumber: 241,
+                                                            lineNumber: 255,
                                                             columnNumber: 29
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                                        lineNumber: 233,
+                                                        lineNumber: 247,
                                                         columnNumber: 27
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     activeMenu === student._id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -590,34 +616,56 @@ const Students = ()=>{
                                                                 onClick: ()=>setActiveMenu(null)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                                lineNumber: 246,
+                                                                lineNumber: 260,
                                                                 columnNumber: 31
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "absolute right-4 mt-2 w-48 border rounded-lg z-[100] text-black border-black shadow-lg bg-white",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                        disabled: statusMutation.isPending,
                                                                         onClick: ()=>handleLeaveReturn(student),
-                                                                        className: "w-full text-left px-4 py-2 text-xs border-b hover:bg-gray-50",
-                                                                        children: student.status === "ta'tilda" ? "Markazga qaytarish" : "Ta'tilga chiqarish"
-                                                                    }, void 0, false, {
+                                                                        className: "w-full text-left px-4 py-2 text-xs border-b hover:bg-gray-50 flex items-center justify-between",
+                                                                        children: [
+                                                                            student.status === "ta'tilda" ? "Markazga qaytarish" : "Ta'tilga chiqarish",
+                                                                            statusMutation.isPending && statusMutation.variables?.payload?._id === student._id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                                                                size: 12,
+                                                                                className: "animate-spin"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/(main)/students/page.tsx",
+                                                                                lineNumber: 276,
+                                                                                columnNumber: 39
+                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                        ]
+                                                                    }, void 0, true, {
                                                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                                                        lineNumber: 251,
+                                                                        lineNumber: 265,
                                                                         columnNumber: 33
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                        disabled: deleteMutation.isPending,
                                                                         onClick: ()=>handleDelete(student._id),
-                                                                        className: "w-full text-left px-4 py-2 text-xs hover:bg-gray-50",
-                                                                        children: "O'chirish"
-                                                                    }, void 0, false, {
+                                                                        className: "w-full text-left px-4 py-2 text-xs hover:bg-gray-50 flex items-center justify-between",
+                                                                        children: [
+                                                                            "O'chirish",
+                                                                            deleteMutation.isPending && deleteMutation.variables === student._id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                                                                size: 12,
+                                                                                className: "animate-spin"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/(main)/students/page.tsx",
+                                                                                lineNumber: 291,
+                                                                                columnNumber: 39
+                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                        ]
+                                                                    }, void 0, true, {
                                                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                                                        lineNumber: 259,
+                                                                        lineNumber: 282,
                                                                         columnNumber: 33
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                                lineNumber: 250,
+                                                                lineNumber: 264,
                                                                 columnNumber: 31
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
@@ -625,34 +673,34 @@ const Students = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                                lineNumber: 232,
+                                                lineNumber: 246,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, student._id, true, {
                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 234,
                                         columnNumber: 23
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/app/(main)/students/page.tsx",
-                                lineNumber: 210,
+                                lineNumber: 224,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(main)/students/page.tsx",
-                        lineNumber: 200,
+                        lineNumber: 214,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/app/(main)/students/page.tsx",
-                    lineNumber: 199,
+                    lineNumber: 213,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/students/page.tsx",
-                lineNumber: 198,
+                lineNumber: 212,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             isModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -668,7 +716,7 @@ const Students = ()=>{
                                     children: "Student qo'shish"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/students/page.tsx",
-                                    lineNumber: 280,
+                                    lineNumber: 312,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -677,18 +725,18 @@ const Students = ()=>{
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/app/(main)/students/page.tsx",
-                                        lineNumber: 284,
+                                        lineNumber: 316,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/students/page.tsx",
-                                    lineNumber: 283,
+                                    lineNumber: 315,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/students/page.tsx",
-                            lineNumber: 279,
+                            lineNumber: 311,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -706,7 +754,7 @@ const Students = ()=>{
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/students/page.tsx",
-                                    lineNumber: 288,
+                                    lineNumber: 320,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -720,7 +768,7 @@ const Students = ()=>{
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/students/page.tsx",
-                                    lineNumber: 297,
+                                    lineNumber: 329,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -734,39 +782,50 @@ const Students = ()=>{
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/app/(main)/students/page.tsx",
-                                    lineNumber: 306,
+                                    lineNumber: 338,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     type: "submit",
-                                    className: "border bg-black text-white py-2 rounded font-bold transition-opacity hover:opacity-90 text-sm",
-                                    children: "Saqlash"
-                                }, void 0, false, {
+                                    disabled: createMutation.isPending,
+                                    className: "border bg-black text-white py-2 rounded font-bold transition-opacity hover:opacity-90 text-sm flex items-center justify-center gap-2",
+                                    children: [
+                                        createMutation.isPending && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                            size: 16,
+                                            className: "animate-spin"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/(main)/students/page.tsx",
+                                            lineNumber: 353,
+                                            columnNumber: 19
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        "Saqlash"
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/app/(main)/students/page.tsx",
-                                    lineNumber: 315,
+                                    lineNumber: 347,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(main)/students/page.tsx",
-                            lineNumber: 287,
+                            lineNumber: 319,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(main)/students/page.tsx",
-                    lineNumber: 278,
+                    lineNumber: 310,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/(main)/students/page.tsx",
-                lineNumber: 277,
+                lineNumber: 309,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/(main)/students/page.tsx",
-        lineNumber: 146,
+        lineNumber: 159,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
